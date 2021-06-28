@@ -1,0 +1,89 @@
+// ------------------------------
+// タイトル共通フォント
+// ------------------------------
+.c-ttl {
+  @include font-didot;
+}
+
+
+// ------------------------------
+// ヘッダー部のサイトタイトル
+// ------------------------------
+.c-ttl {
+  &--site {
+    @extend .c-ttl;
+
+    @include breakpoint( pc ) {
+      letter-spacing: 0.24rem;
+      // margin-top: pxtovw-pc(70);
+      margin-left: pxtovw-pc(50);
+      font-size: pxtovw-pc(20);
+    }
+  }
+}
+
+// このクラスが付与されると非表示にする
+#js-ttl.fade {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease-out;
+}
+
+
+
+// ------------------------------
+// 各セクションのタイトル
+// ------------------------------
+.c-ttl {
+  &--content {
+    @extend .c-ttl;
+    font-size: pxtovw-sp(30);
+    letter-spacing: 1.5rem;
+    text-indent: 1.5rem;
+    text-align: center;
+
+    @include breakpoint( pc ) {
+      font-size: pxtovw-pc(50);
+      letter-spacing: 2.6rem;
+      text-indent: 2.6rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+// フェードインを使う場合
+// #js-ttl.fadein{
+//   animation: UpAnime 0.5s forwards;
+// }
+
+// @keyframes UpAnime{
+//   from {
+//     opacity: 1;
+//   }
+//   to {
+//     opacity: 0;
+//   }
+// }
+
+
+// フェードアウト
+// #js-ttl.fadeout{
+//   animation: DownAnime 0.5s forwards;
+// }
+// @keyframes DownAnime{
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }

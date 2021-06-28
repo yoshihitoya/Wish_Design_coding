@@ -1,0 +1,56 @@
+// ------------------------------
+// 各セクションのp段落
+// ------------------------------
+.c-txt {
+  &--content {
+    text-align: center;
+    @include font-didot;
+    font-size: pxtovw-sp(15);
+    line-height: 1.799999;
+    letter-spacing: .75rem;
+
+    @include breakpoint( pc ) {
+      font-size: pxtovw-pc(15);
+      line-height: 2.37;
+      letter-spacing: .45rem;
+      text-indent: .45rem;
+      }
+
+    &-flow {
+      @extend .c-txt--content;
+  
+      @include breakpoint( pc ) {
+        letter-spacing: .5rem;
+        text-indent: .5rem;
+        }
+      }
+
+    &-contact {
+      @extend .c-txt--content;
+  
+      @include breakpoint( pc ) {
+        line-height: 2;
+        letter-spacing: .15rem;
+        text-indent: .15rem;
+        }
+      }
+
+
+    &--about {
+      text-align: center;
+      font-size: pxtovw-sp(17);
+      letter-spacing: .51rem;
+      text-indent: .51rem;
+      clear:right;//上のボックスにfloatを使っているため
+
+      @include breakpoint( pc ) {
+      font-size: pxtovw-pc(25);
+      letter-spacing: .77rem;
+      text-indent: .77rem;
+      padding-top: unset;
+      }
+    }
+  }
+}
+
+

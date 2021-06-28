@@ -1,0 +1,58 @@
+// ------------------------------
+// ボタンの基本構造
+// ------------------------------
+// [class^="c-btn--"] {
+%btnBase {
+  position: relative;
+  cursor: pointer;
+  @include transform50;
+
+  background: $base-color;
+  box-shadow:
+  5px 5px 8px 1px $btnShadow-color,
+  -5px -5px 8px -1px #ffffff;
+
+  border-radius: 40px;
+  transition: .8s;
+  overflow: hidden;
+
+  // ホバー時の背景色
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -110%;
+    width: 100%;
+    z-index: -1;
+    background-color: $main-color;
+    transition: all .3s linear;
+  }
+
+  &:hover {
+    color: #ffffff;
+
+    // 疑似要素の色とスピード
+    span,
+    span::before,
+    span::after {
+      border-color: #ffffff;
+      transition: 1s;//すぐに色が変わらないように遅延させる
+    }
+
+    &:hover::before {
+      left: 0;
+    }
+  }
+
+  p {
+    @include font-yumincho;
+    font-size: pxtovw-sp(15);
+    width: 100%;
+    text-align: right;
+
+    @include breakpoint( pc ) {
+      font-size: pxtovw-pc(15);
+    }
+  }
+}

@@ -1,0 +1,87 @@
+// ------------------------------
+// メインビジュアル上のタイトル
+// ------------------------------
+.p-page-ttl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  &__heading {
+    @include font-didot;
+    font-size: pxtovw-sp(40);
+    line-height: 51 / 40;
+    letter-spacing: .45rem;
+    text-indent: .45rem;
+    white-space: nowrap;
+
+    position: absolute;
+    @include transform50;
+    transform: translate(-50%, -147%);
+    z-index: 950;
+
+    @include breakpoint( pc ) {
+      font-size: pxtovw-pc(70);
+      transform: translate(-50%, -88%);
+      letter-spacing: 0.79rem;
+      text-indent: .79rem;
+      line-height: 89 / 70;
+    }
+
+    &__shadow {
+      width: 100%;
+      height: 100%;
+      // background: red;
+      background: rgba(#ffffff, .52);
+      padding: 0 pxtovw-sp(10) pxtovw-sp(5) pxtovw-sp(10);
+      border-radius: 67px;
+      filter: blur(23px);
+  
+      position: absolute;
+      @include transform50;
+      z-index: -1;//マイナスにしないとシャドウに覆われてしまう
+  
+      @include breakpoint( pc ) {
+        left: 50%;
+        padding: 0 pxtovw-pc(15) pxtovw-pc(7) pxtovw-pc(15);
+        background: rgba(#ffffff, .58);
+        // background: red;
+      }
+    }
+  }
+
+  &__txt {
+    position: absolute;
+    @include transform50;
+
+    @include font-toppan;
+    line-height: 26 / 15;
+    letter-spacing: 0.25rem;
+    white-space: nowrap;
+
+    @include breakpoint( pc ){
+      font-size: pxtovw-pc(15);
+      transform: translate(-50%, 120%);
+      letter-spacing: 0.15rem;
+    }
+
+    &__shadow {
+      width: 100%;
+      height: 100%;
+      // background: red;
+      background: rgba(#ffffff, .52);
+      padding: pxtovw-sp(15) 0;
+      border-radius: 67px;
+      filter: blur(23px);
+  
+      position: absolute;
+      @include transform50;
+      z-index: -2;
+  
+      @include breakpoint( pc ) {
+        padding: pxtovw-pc(40) pxtovw-pc(140);
+        background: rgba(#ffffff, .58);
+        // background: red;
+      }
+    }
+  }
+}

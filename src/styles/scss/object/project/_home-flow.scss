@@ -1,0 +1,106 @@
+// ------------------------------
+// トップページのflow部分のグリッド
+// ------------------------------
+.p-home-flow {
+
+  &__list {
+    // --h1: 61px;
+    // --h2: 43px;
+
+    --h1: 16.3vw;
+    --h2: 11.4vw;
+
+    grid-template-rows: var(--h1) var(--h2) var(--h1) var(--h2) var(--h1) var(--h2) var(--h1) var(--h2) var(--h1) var(--h2) var(--h1);
+    grid-template-columns: repeat(2, auto);
+
+    @include breakpoint( pc ) {
+      grid-template-rows: auto;
+      grid-auto-flow: column;
+      column-gap: pxtovw-pc(70);
+      justify-items: center;
+    }
+
+    span {
+      @include font-yumincho;
+      font-size: pxtovw-sp(20);
+      letter-spacing: .25rem;
+
+      @include breakpoint( pc ) {
+        font-size: pxtovw-pc(15);
+      }
+    }
+  }
+}
+
+
+// ------------------------------
+// flowのボックス
+// ------------------------------
+.p-home-flow {
+
+  &--box {
+    @extend %boxbase;
+    cursor: unset;
+
+    width: pxtovw-sp(167);
+    height: pxtovw-sp(167);
+    // max-width: pxtovw-sp(167);
+    // max-height: pxtovw-sp(167);
+
+    @include breakpoint( pc ) {
+      width: pxtovw-pc(120);
+      height: pxtovw-pc(120);
+      // max-width: pxtovw-pc(120);
+      // max-height: pxtovw-pc(120);
+    }
+
+    // グリッドでジグザグ配置
+    &:nth-child(even) {
+      grid-column: 2;
+
+      @include breakpoint( pc ) {
+        grid-column: unset;
+      }
+    }
+
+    &:nth-child(1) {
+      grid-row: 1 / 4;
+
+      @include breakpoint( pc ) {
+        grid-row: unset;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-row: 3 / 6;
+
+      @include breakpoint( pc ) {
+        grid-row: unset;
+      }
+    }
+
+    &:nth-child(3) {
+      grid-row: 5 / 8;
+
+      @include breakpoint( pc ) {
+        grid-row: unset;
+      }
+    }
+
+    &:nth-child(4) {
+      grid-row: 7 / 10;
+
+      @include breakpoint( pc ) {
+        grid-row: unset;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-row: 9 / 12;
+
+      @include breakpoint( pc ) {
+        grid-row: unset;
+      }
+    }
+  }
+}
