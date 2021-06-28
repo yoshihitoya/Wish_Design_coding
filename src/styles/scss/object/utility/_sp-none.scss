@@ -1,0 +1,9 @@
+.sp-none {
+  // display: none;
+  visibility: hidden;
+
+  @include breakpoint( pc ) {
+    // display: block;
+    visibility: visible;
+  }
+}

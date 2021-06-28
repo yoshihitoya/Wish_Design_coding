@@ -1,8 +1,68 @@
 .l-sidebar {
+
+	right: -150%;//100%にすると左から右へのスライドになる
+
+	overflow-y: scroll;// 縦スクロール
+	transition: all .3s ease-out;//閉じるとき用
+
+	position: fixed;
+	top: 0;// 一番上にもってくる
+	bottom: 0;// これないとスクロールできない
+	z-index: 1100;// とりあえず一番上
+
+
+
+	&__nav {
+		width: 400px;
+		background: $base-color;
+		text-align: center;
+	}
+
 	@include breakpoint( tablet ) {
 	}
 	@include breakpoint( pc ) {
 	}
 	@include breakpoint( wide ) {
 	}
+
+
+}
+
+
+// ------------------------------
+// js連動:::is-openになったら……
+// ------------------------------
+// サイドバーを開く
+.is-open .l-sidebar {
+
+	// display: block;
+	right: 0;
+	transform: translateX(0);
+  transition: all .4s ease-out;
+
+	@include breakpoint( pc ) {
+
+	}
+}
+
+
+// ボディは固定する
+body.is-open {
+  position: fixed;
+}
+
+
+
+// ------------------------------
+// サイドバーが出たときの黒バック
+// ------------------------------
+.is-open .c-box--overlay {
+  position: absolute;
+  width: 100vw;
+  // height: 100vh;
+  top: 0;
+  bottom: 0;
+  z-index: 1001;
+  background: rgba($modal-color,.65);
+  transition: all .5s;
 }

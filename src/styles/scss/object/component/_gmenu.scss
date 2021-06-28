@@ -1,0 +1,33 @@
+.c-gmenu {
+  padding-bottom: 50px;
+  @include font-didot;
+  font-size: 2rem;
+  line-height: 2.8;
+
+  // ホバー無しの状態
+  a {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: -120%;
+      top: 50%;
+      width: 0;//線なしの初期状態
+      height: 1px;
+      background: $main-color;
+      transition: all 0.3s ease 0s;
+    }
+  
+    &:hover {
+      opacity: .5;
+  
+      &::after {
+        width: 100%;
+      }
+    }
+
+
+  }
+}
