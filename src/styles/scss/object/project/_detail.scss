@@ -1,0 +1,49 @@
+.p-detail {
+    padding-top: 15rem;
+
+    &__wrap {
+        text-align: center;
+    }
+
+    &__ttl {
+        @include font-didot;
+        font-weight: normal;
+        font-size: 40px;
+        color: #707070;
+        letter-spacing: 0.1em;
+        line-height: 0;
+    }
+
+    h2 {
+        margin-top: 5rem;
+    }
+
+    &__subTtl {
+        @include font-yumincho;
+        font-size: 26px;
+        color: #707070;
+        letter-spacing: 0.1em;
+        line-height: 1.3461538461538463;
+    }
+
+    &__txt,
+    &__list {
+        margin-top: 5rem;
+        @include font-yumincho;
+        font-weight: normal;
+        font-size: 15px;
+        color: #707070;
+        letter-spacing: 0.3em;
+        line-height: 1.73;
+    }
+
+    &__list li {
+        margin-top: 3rem;
+    }
+
+    &__img {
+        margin-top: 7.2rem;
+        width: 100%;
+        max-width: 100%;
+    }
+}

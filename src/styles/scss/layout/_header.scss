@@ -1,8 +1,9 @@
 .l-header {
-	@include breakpoint( tablet ) {
-	}
-	@include breakpoint( pc ) {
-	}
-	@include breakpoint( wide ) {
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+
+	@include breakpoint(pc) {
+		padding-top: pxtovw-pc(50);
 	}
 }

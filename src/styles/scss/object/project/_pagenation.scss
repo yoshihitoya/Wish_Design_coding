@@ -1,0 +1,66 @@
+.p-pagenation {
+    margin: 5rem auto 12.4rem;
+    width: 50%;
+    max-width: 40rem;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        @include font-yumincho;
+        font-weight: normal;
+        font-size: 15px;
+        color: #707070;
+        letter-spacing: 0.1em;
+        line-height: 2.3333333333333335;
+    }
+
+    &__prev {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 40%;
+            right: 190%;
+            width: 1.6rem;
+            height: 1rem;
+            border-top: 1px solid #707070;
+            transform: rotate(-45deg);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 15%;
+            right: 140%;
+            width: 5rem;
+            height: 1.6rem;
+            border-bottom: 1px solid #707070;
+        }
+    }
+
+    &__next {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 40%;
+            left: 190%;
+            width: 1.6rem;
+            height: 1rem;
+            border-top: 1px solid #707070;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 15%;
+            left: 140%;
+            width: 5rem;
+            height: 1.6rem;
+            border-bottom: 1px solid #707070;
+        }
+    }
+}

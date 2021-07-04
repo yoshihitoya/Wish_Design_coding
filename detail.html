@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- レスポンシブ対応：デバイスの幅を使うことを指定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wish Design</title>
+  <meta name="description" content="説明文を記述">
+  <meta name="keywords" content="検索ワードを記述（５つまで）">
+
+  <!-- グーグルフォント -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+
+  <!-- フォントオーサム -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+  <!-- スリックCSS -->
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+
+  <!-- 自作CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- ◇----------------------------------------------------------------------------------------------◇ -->
+
+<body class="home">
+  <div class="l-container">
+    <header class="l-header__contact u-display-between">
+      <a href="index.html" class="c-ttl--site contact">Wish Design</a>
+      <button class="p-btn--menu js-btn-menu u-grid">
+        <p>Menu</p><span>サイドバーを開く</span>
+      </button><!-- spanの文字はリーダブルのため -->
+    </header>
+
+    <main class="l-main p-detail">
+      <article class="p-detail__wrap">
+        <h1 class="p-detail__ttl">見出し</h1>
+
+        <h2 class="p-detail__subTtl">H2</h2>
+        <h3 class="p-detail__subTtl">H3</h3>
+        <h4 class="p-detail__subTtl">H4</h4>
+
+        <p class="p-detail__txt">
+          本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+        </p>
+
+        <ul class="p-detail__list">
+          <li>
+            リスト内容が入ります。リスト内容が入ります。リスト内容が入ります。
+          </li>
+          <li>
+            リスト内容が入ります。リスト内容が入ります。リスト内容が入ります。
+          </li>
+          <li>
+            リスト内容が入ります。リスト内容が入ります。リスト内容が入ります。
+          </li>
+        </ul>
+
+        <img src="images/sample.png" alt="" class="p-detail__img">
+      </article>
+
+      <div class="p-pagenation">
+        <a href="#" class="p-pagenation__prev">前の記事</a>
+        <a href="#" class="p-pagenation__next">次の記事</a>
+      </div>
+
+
+
+
+
+      <!-- :::::::::追従ボタン::::::::: -->
+      <button class="p-btn--fixed u-grid">
+        <p>Top</p><span>上へ戻る</span>
+      </button>
+
+    </main>
+
+    <footer class="p-detail__footer l-footer u-margin--18">
+      <small>&copy; 2021 Wish Design</small>
+    </footer>
+  </div>
+
+
+  <!-- ◇----------------------------------------------------------------------------------------------◇ -->
+  <!-- サイドメニューが表示されたときの背景画面 -->
+  <div class="c-box--overlay"></div>
+
+  <!-- サイドメニュー -->
+  <aside class="l-sidebar">
+
+    <!-- ナビゲーション -->
+    <nav class="l-sidebar__nav">
+      <!-- 閉じるボタン -->
+      <button class="p-btn--menu--close js-btn-close">
+        <div class="p-btn--menu--close__inner u-grid">
+          <!-- インナーにしないとサイドバーが崩れるため -->
+          <p>Close</p><span>ボタン</span>
+        </div>
+      </button>
+      <!-- メニュー -->
+      <ul class="c-gmenu u-wrap--align">
+        <li><a href="#">Top</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">Flow</a></li>
+        <li><a href="#">Price</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Media</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -4,11 +4,17 @@
 
 html {
 	height     : 100%;
-	font-weight: 500;
 	overflow-y: inherit;
+	// font-weight: 500;//游明朝体で500にすると表示崩れがあるかも
 }
 
 body {
+	@include font-yumincho;
+  color: $main-color;
+	background: $base-color;
+
+
+
 	min-width : 375px;
 	width     : 100%;
 	min-height: 100%;
@@ -16,10 +22,18 @@ body {
 	font-size : 1.4rem;
 	overflow-x: hidden;
 	position  : relative;
+
 	@include breakpoint( tablet ) {
-		overflow-x: inherit;
+	overflow-x: inherit;
 	}
 }
+
+
+
+
+
+
+
 
 img {
 	max-width: 100%;

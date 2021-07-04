@@ -1,0 +1,54 @@
+.p-media {
+    &__header {
+        position: static;
+        width: 100%;
+        @include breakpoint(pc) {
+            padding-top: pxtovw-pc(50);
+        }
+    }
+
+    &__mainvisual {
+        margin-top: -80px;
+        padding: 0;
+        img {
+            opacity: 1;
+        }
+    }
+
+    &__ttl {
+        top: 48%;
+    }
+
+    &__wrap {
+        margin-left: pxtovw-sp(28);
+        margin-right: pxtovw-sp(28);
+        margin-top: -250px;
+    }
+
+    &__grid {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .c-card {
+            &__ttl {
+                font-size: 20px;
+                color: #707070;
+                letter-spacing: 0.1em;
+                line-height: 1.4;
+            }
+
+            &__desc {
+                font-size: 15px;
+                color: #707070;
+                letter-spacing: 0.1em;
+                line-height: 1.3333333333333333;
+            }
+        }
+    }
+    &__btn {
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
+}

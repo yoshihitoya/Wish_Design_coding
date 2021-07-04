@@ -1,0 +1,117 @@
+.p-form {
+    &__header {
+        position: static;
+        width: 100%;
+        @include breakpoint(pc) {
+            padding-top: pxtovw-pc(50);
+        }
+    }
+
+    &__mainvisual {
+        margin-top: -80px;
+        padding: 0;
+        img {
+            opacity: 1;
+        }
+    }
+
+    &__ttl {
+        top: 48%;
+    }
+
+    &__wrap {
+        // margin-left: pxtovw-sp(28);
+        // margin-right: pxtovw-sp(28);
+        margin-top: -220px;
+        padding: 0;
+    }
+
+    &__txt {
+        // position: absolute;
+        // top: 75%;
+        width: 100%;
+        text-align: center;
+        width: calc(100vw-40px);
+        @include font-didot;
+        font-size: pxtovw-sp(15);
+        line-height: 1.799999;
+        letter-spacing: 0.3em;
+
+        @include breakpoint(pc) {
+            font-size: pxtovw-pc(15);
+            line-height: 2.37;
+            letter-spacing: 0.45rem;
+            text-indent: 0.45rem;
+        }
+    }
+
+    &__form {
+        margin-top: 25rem;
+    }
+
+    &__list {
+        margin-top: 50px;
+
+        label {
+            display: block;
+            @include font-yumincho;
+            font-size: 1.5rem;
+            color: #707070;
+            letter-spacing: 0.3em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            height: 50px;
+        }
+
+        textarea {
+            height: 224px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            margin-top: 10px;
+            padding: 17px;
+            max-width: 100%;
+            width: 100%;
+            background-color: #fff;
+            box-sizing: border-box;
+            border: 1px solid #707070;
+
+            &::placeholder {
+                font-family: sans-serif;
+                font-weight: normal;
+                color: #b9b9b9;
+                font-size: 1.6rem;
+                line-height: calc(27 / 16);
+            }
+        }
+    }
+
+    &__must::after {
+        content: "必須";
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 1.8rem;
+        width: 60px;
+        height: 24px;
+        font-size: 1.2rem;
+        letter-spacing: 0.3em;
+        line-height: 24px;
+        color: #fff;
+        background-color: #707070;
+    }
+
+    &__desc {
+        margin-top: 23px;
+    }
+
+    &__submit {
+        margin-top: 90px;
+    }
+}

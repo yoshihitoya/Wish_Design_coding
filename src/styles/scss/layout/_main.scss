@@ -1,8 +1,21 @@
 .l-main {
-	@include breakpoint( tablet ) {
+	// margin-left: 2rem;
+	// margin-right: 2rem;
+	margin-left: pxtovw-sp(20);
+	margin-right: pxtovw-sp(20);
+
+	padding-top: pxtovw-sp(150);
+
+	@include breakpoint(pc) {
+		padding-top: pxtovw-pc(190);
 	}
-	@include breakpoint( pc ) {
-	}
-	@include breakpoint( wide ) {
+
+	&__contact {
+		margin-left: pxtovw-sp(20);
+		margin-right: pxtovw-sp(20);
+
+		@include breakpoint(pc) {
+			padding-top: pxtovw-pc(190);
+		}
 	}
 }

@@ -1,0 +1,33 @@
+.c-card {
+    position: relative;
+    margin-top: 5rem;
+
+    img {
+        border-radius: 2%;
+        box-shadow: 5px 5px 8px 1px #b9b9b9;
+
+        &:hover {
+            filter: brightness(50%);
+            transition: all 0.8s;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        top: 57%;
+        max-width: 45rem;
+        max-height: 42%;
+        padding: 3rem;
+    }
+    &__ttl {
+        span {
+            display: block;
+        }
+    }
+
+    &__desc {
+        margin-top: 2.8rem;
+        max-height: 5.5rem;
+        overflow: hidden;
+    }
+}

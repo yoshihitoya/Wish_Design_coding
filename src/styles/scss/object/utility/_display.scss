@@ -1,37 +1,52 @@
-.u-disp {
-	&--sp {
-		display: block;
-		@include breakpoint( tablet ) { display: none; }
-		@include breakpoint( pc ) { display    : none; }
-		@include breakpoint( wide ) { display  : none; }
-		@include breakpoint( full ) { display  : none; }
-	}
-	&--tablet {
-		display: none;
-		@include breakpoint( tablet ) { display: block; }
-		@include breakpoint( pc ) { display    : none; }
-		@include breakpoint( wide ) { display  : none; }
-		@include breakpoint( full ) { display  : none; }
-	}
-	&--pc {
-		display: none;
-		@include breakpoint( tablet ) { display: none; }
-		@include breakpoint( pc ) { display    : block; }
-		@include breakpoint( wide ) { display  : block; }
-		@include breakpoint( full ) { display  : block; }
-	}
-	&--wide {
-		display: none;
-		@include breakpoint( tablet ) { display: none; }
-		@include breakpoint( pc ) { display    : none; }
-		@include breakpoint( wide ) { display  : block; }
-		@include breakpoint( full ) { display  : block; }
-	}
-	&--full {
-		display: none;
-		@include breakpoint( tablet ) { display: none; }
-		@include breakpoint( pc ) { display    : none; }
-		@include breakpoint( wide ) { display  : none; }
-		@include breakpoint( full ) { display  : block; }
-	}
+.u-display-flex {
+  display: flex;
 }
+
+.u-display-center {
+  display: flex;
+  justify-content: center;
+}
+
+.u-display-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// .u-disp {
+// 	&--sp {
+// 		display: block;
+// 		@include breakpoint( tablet ) { display: none; }
+// 		@include breakpoint( pc ) { display    : none; }
+// 		@include breakpoint( wide ) { display  : none; }
+// 		@include breakpoint( full ) { display  : none; }
+// 	}
+// 	&--tablet {
+// 		display: none;
+// 		@include breakpoint( tablet ) { display: block; }
+// 		@include breakpoint( pc ) { display    : none; }
+// 		@include breakpoint( wide ) { display  : none; }
+// 		@include breakpoint( full ) { display  : none; }
+// 	}
+// 	&--pc {
+// 		display: none;
+// 		@include breakpoint( tablet ) { display: none; }
+// 		@include breakpoint( pc ) { display    : block; }
+// 		@include breakpoint( wide ) { display  : block; }
+// 		@include breakpoint( full ) { display  : block; }
+// 	}
+// 	&--wide {
+// 		display: none;
+// 		@include breakpoint( tablet ) { display: none; }
+// 		@include breakpoint( pc ) { display    : none; }
+// 		@include breakpoint( wide ) { display  : block; }
+// 		@include breakpoint( full ) { display  : block; }
+// 	}
+// 	&--full {
+// 		display: none;
+// 		@include breakpoint( tablet ) { display: none; }
+// 		@include breakpoint( pc ) { display    : none; }
+// 		@include breakpoint( wide ) { display  : none; }
+// 		@include breakpoint( full ) { display  : block; }
+// 	}
+// }

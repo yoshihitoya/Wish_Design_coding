@@ -1,0 +1,175 @@
+// ------------------------------
+// カルーセル
+// ------------------------------
+.p-slick {
+  width: pxtovw-sp(320);
+  height: auto;
+  margin: auto;
+
+  @include breakpoint( pc ) {
+    width: pxtovw-pc(500);
+  }
+
+
+  img {
+    width: 100%;
+
+    &:hover {
+      filter: brightness(50%);// 画像を暗くする
+      transition: all .8s;
+    }
+  }
+}
+
+// ------------------------------
+// 矢印
+// ------------------------------
+// 左向き矢印
+.slick-prev {
+  // スマホでは非表示のため設定無し
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &:before {
+    display: none;//デフォルトを非表示
+  }
+
+  // pcで表示設定
+  @include breakpoint( pc ) {
+    left: -8.5%;
+    top: 44%;
+
+    width: pxtovw-pc(25);
+    height: pxtovw-pc(25);
+    border-top: 1px solid $main-color;
+    border-right: 1px solid $main-color;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+}
+
+
+// 右向き矢印
+.js-slick-next {
+  position: relative;
+  left: 29%;
+  margin-top: pxtovw-sp(46);
+
+  @include font-yumincho;
+  letter-spacing: pxtovw-sp(4.6);
+  text-indent: pxtovw-sp(4.6);
+
+
+  // 斜めの線
+  &::before {
+    position: absolute;
+    content: '';
+    top: 32%;
+    left: 190%;
+    width: pxtovw-sp(16);
+    height: pxtovw-sp(14);
+
+    border-top: 1px solid $main-color;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  // 下の棒線
+  &:after {
+    position: absolute;
+    content: '';
+    top: 7.8%;
+    left: 143%;
+    width: pxtovw-sp(47);
+    height: pxtovw-sp(14);
+
+    border-bottom: 1px solid $main-color;
+  }
+
+  &:hover {
+    opacity: .5;
+  }
+
+
+  // pcでは形変更
+  @include breakpoint( pc ) {
+    position: absolute;
+    left: 104.1%;
+    top: -18.5%;
+
+    width: pxtovw-pc(25);
+    height: pxtovw-pc(25);
+
+
+    border-top: 1px solid $main-color;
+    border-right: 1px solid $main-color;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+
+    span,
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+
+// .slick-next {
+//   top: 113.5%;
+//   left: 50%;
+
+//   width: pxtovw-sp(16);
+//   height: pxtovw-sp(16);
+
+//   border-top: 1px solid $main-color;
+//   // border-right: 1px solid $main-color;
+//   -webkit-transform: rotate(45deg);
+//   transform: rotate(45deg);
+
+//   &::before {
+//     top: 113.5%;
+//     left: 50%;
+  
+//     width: pxtovw-sp(16);
+//     height: pxtovw-sp(16);
+  
+//     border-top: 1px solid $main-color;
+//     // border-right: 1px solid $main-color;
+//     -webkit-transform: rotate(45deg);
+//     transform: rotate(45deg);
+//   } 
+
+//   // background: url("/images/slick_next_sp.svg") no-repeat;
+//   // background-size: 100%;
+//   // filter: brightness(100%);//色が濃すぎるため
+//   // color: black;
+
+
+//   // pcでは形変更
+//   @include breakpoint( pc ) {
+//     background: none;//画像無し
+//     width: pxtovw-pc(25);
+//     height: pxtovw-pc(25);
+//     right: -8.5%;
+//     top: 45%;
+
+//     border-top: 1px solid $main-color;
+//     border-right: 1px solid $main-color;
+//     -webkit-transform: rotate(45deg);
+//     transform: rotate(45deg);
+//   }
+
+//   &:hover {
+//     opacity: .5;
+//   }
+
+//   &:before {
+//     display: none;//デフォルトを非表示
+//   }
+// }
+
+
