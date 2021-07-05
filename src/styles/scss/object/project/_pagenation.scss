@@ -1,9 +1,13 @@
 .p-pagenation {
     margin: 5rem auto 12.4rem;
     width: 50%;
-    max-width: 40rem;
+    max-width: 27rem;
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint(pc) {
+        margin: 10rem auto 5.8rem;
+    }
 
     a {
         @include font-yumincho;

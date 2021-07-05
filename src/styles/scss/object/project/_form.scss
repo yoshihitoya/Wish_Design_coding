@@ -8,27 +8,48 @@
     }
 
     &__mainvisual {
-        margin-top: -80px;
-        padding: 0;
-        img {
-            opacity: 1;
+        width: 100%;
+        height: pxtovw-sp(667);
+        background-image: url(../images/mainvisual_contact_sp.png);
+        background-position-x: 0%;
+        background-position-y: -8rem;
+        background-size: cover;
+        @include breakpoint(pc) {
+            width: 100%;
+            height: pxtovw-pc(800);
+            background-image: url(../images/mainvisual_contact_pc.png);
+            background-position-x: center;
+            background-position-y: -11.2rem;
+            background-size: cover;
+        }
+    }
+    &__ttl {
+        top: 48%;
+
+        .p-page-ttl__heading {
+            @include breakpoint(pc) {
+                letter-spacing: pxtovw-pc(36);
+            }
+        }
+
+        .p-page-ttl__txt {
+            @include breakpoint(pc) {
+                letter-spacing: pxtovw-pc(6);
+            }
         }
     }
 
-    &__ttl {
-        top: 48%;
-    }
-
     &__wrap {
-        // margin-left: pxtovw-sp(28);
-        // margin-right: pxtovw-sp(28);
-        margin-top: -220px;
+        margin-top: -22rem;
         padding: 0;
+
+        @include breakpoint(pc) {
+            // width: 58%;
+            margin: 0 auto;
+        }
     }
 
     &__txt {
-        // position: absolute;
-        // top: 75%;
         width: 100%;
         text-align: center;
         width: calc(100vw-40px);
@@ -47,10 +68,11 @@
 
     &__form {
         margin-top: 25rem;
+        width: 58%;
     }
 
     &__list {
-        margin-top: 50px;
+        margin-top: 5rem;
 
         label {
             display: block;
@@ -63,19 +85,19 @@
         input[type="text"],
         input[type="email"],
         input[type="number"] {
-            height: 50px;
+            height: 5rem;
         }
 
         textarea {
-            height: 224px;
+            height: 22.4rem;
         }
 
         input[type="text"],
         input[type="email"],
         input[type="number"],
         textarea {
-            margin-top: 10px;
-            padding: 17px;
+            margin-top: 1rem;
+            padding: 1.7rem;
             max-width: 100%;
             width: 100%;
             background-color: #fff;
@@ -92,26 +114,54 @@
         }
     }
 
-    &__must::after {
-        content: "必須";
-        display: inline-block;
-        text-align: center;
-        vertical-align: middle;
-        margin-left: 1.8rem;
-        width: 60px;
-        height: 24px;
-        font-size: 1.2rem;
-        letter-spacing: 0.3em;
-        line-height: 24px;
-        color: #fff;
-        background-color: #707070;
+    &__must {
+        padding-left: 1rem;
+
+        &::after {
+            content: "必須";
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            margin-left: 1.8rem;
+            width: 60px;
+            height: 2.4rem;
+            font-size: 1.2rem;
+            letter-spacing: 0.3em;
+            line-height: 2.4rem;
+
+            color: #fff;
+            background-color: #707070;
+        }
     }
 
     &__desc {
-        margin-top: 23px;
+        margin-top: 2.3rem;
+        font-size: 1.2rem;
+        color: #707070;
+        letter-spacing: 0.3em;
+        line-height: 2.9166666666666665;
+
+        @include breakpoint(pc) {
+            margin-top: 0;
+        }
+
+        span {
+            display: block;
+            @media (min-width: 800px) {
+                display: inline;
+            }
+        }
     }
 
     &__submit {
         margin-top: 90px;
+    }
+
+    &__flex {
+        @media (min-width: 1080px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }

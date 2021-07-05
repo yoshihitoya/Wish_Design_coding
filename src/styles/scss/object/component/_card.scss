@@ -2,6 +2,10 @@
     position: relative;
     margin-top: 5rem;
 
+    @include breakpoint(pc) {
+        margin-top: pxtovw-pc(80);
+    }
+
     img {
         border-radius: 2%;
         box-shadow: 5px 5px 8px 1px #b9b9b9;

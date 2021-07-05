@@ -1,5 +1,10 @@
 .p-detail {
     padding-top: 15rem;
+    @include breakpoint(pc) {
+        margin-left: pxtovw-pc(140);
+        margin-right: pxtovw-pc(140);
+        padding-top: pxtovw-pc(130);
+    }
 
     &__wrap {
         text-align: center;
@@ -12,10 +17,19 @@
         color: #707070;
         letter-spacing: 0.1em;
         line-height: 0;
+
+        @include breakpoint(pc) {
+            letter-spacing: 0.3em;
+            line-height: 1.75;
+        }
     }
 
     h2 {
         margin-top: 5rem;
+
+        @include breakpoint(pc) {
+            margin-top: 7rem;
+        }
     }
 
     &__subTtl {
@@ -35,15 +49,27 @@
         color: #707070;
         letter-spacing: 0.3em;
         line-height: 1.73;
+
+        @include breakpoint(pc) {
+            margin-top: 3rem;
+        }
     }
 
     &__list li {
         margin-top: 3rem;
+
+        @include breakpoint(pc) {
+            margin-top: 1rem;
+        }
     }
 
     &__img {
         margin-top: 7.2rem;
         width: 100%;
         max-width: 100%;
+
+        @include breakpoint(pc) {
+            margin-top: 3rem;
+        }
     }
 }

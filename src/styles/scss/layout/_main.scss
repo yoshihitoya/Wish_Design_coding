@@ -9,13 +9,4 @@
 	@include breakpoint(pc) {
 		padding-top: pxtovw-pc(190);
 	}
-
-	&__contact {
-		margin-left: pxtovw-sp(20);
-		margin-right: pxtovw-sp(20);
-
-		@include breakpoint(pc) {
-			padding-top: pxtovw-pc(190);
-		}
-	}
 }

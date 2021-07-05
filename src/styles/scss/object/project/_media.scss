@@ -8,21 +8,53 @@
     }
 
     &__mainvisual {
-        margin-top: -80px;
-        padding: 0;
-        img {
-            opacity: 1;
+        width: 100%;
+        height: pxtovw-sp(667);
+        background-image: url(../images/mainvisual_media_sp.png);
+        background-position-x: 0%;
+        background-position-y: -8rem;
+        background-size: cover;
+        @include breakpoint(pc) {
+            width: 100%;
+            height: pxtovw-pc(800);
+            background-image: url(../images/mainvisual_media_pc.png);
+            background-position-x: center;
+            background-position-y: -11.2rem;
+            background-size: cover;
         }
     }
 
     &__ttl {
-        top: 48%;
+        top: 36%;
+        left: 51%;
+
+        @include breakpoint(pc) {
+            top: 38%;
+        }
+
+        .p-page-ttl__heading {
+            @include breakpoint(pc) {
+                letter-spacing: pxtovw-pc(36);
+            }
+        }
+
+        .p-page-ttl__txt {
+            @include breakpoint(pc) {
+                letter-spacing: pxtovw-pc(6);
+            }
+        }
     }
 
     &__wrap {
+        margin-top: -35rem;
         margin-left: pxtovw-sp(28);
         margin-right: pxtovw-sp(28);
-        margin-top: -250px;
+
+        @include breakpoint(pc) {
+            margin-top: -4rem;
+            margin-left: pxtovw-pc(125);
+            margin-right: pxtovw-pc(125);
+        }
     }
 
     &__grid {
@@ -30,16 +62,26 @@
         justify-content: space-around;
         flex-wrap: wrap;
 
+        margin: 0 auto;
+
+        @media (min-width: 850px) {
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(335px, 450px));
+            column-gap: pxtovw-pc(90);
+            justify-content: center;
+        }
+
         .c-card {
             &__ttl {
-                font-size: 20px;
+                font-size: 2rem;
                 color: #707070;
                 letter-spacing: 0.1em;
                 line-height: 1.4;
             }
 
             &__desc {
-                font-size: 15px;
+                font-size: 1.5rem;
                 color: #707070;
                 letter-spacing: 0.1em;
                 line-height: 1.3333333333333333;
