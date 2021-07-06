@@ -2,6 +2,7 @@
     &__header {
         position: static;
         width: 100%;
+
         @include breakpoint(pc) {
             padding-top: pxtovw-pc(50);
         }
@@ -9,14 +10,15 @@
 
     &__mainvisual {
         width: 100%;
-        height: pxtovw-sp(667);
+        opacity: 1;
+        height: calc(66.7rem + (1vw - 0.38rem) * 14.6961);
+
         background-image: url(../images/mainvisual_contact_sp.png);
         background-position-x: 0%;
         background-position-y: -8rem;
         background-size: cover;
         @include breakpoint(pc) {
             width: 100%;
-            height: pxtovw-pc(800);
             background-image: url(../images/mainvisual_contact_pc.png);
             background-position-x: center;
             background-position-y: -11.2rem;
@@ -24,15 +26,19 @@
         }
     }
     &__ttl {
-        top: 48%;
+        // top: 36.5%;
+        top: calc(35.6% + (1vw - 0.38rem) * -6.7);
+        left: 51%;
 
         .p-page-ttl__heading {
+            letter-spacing: 0.5rem;
             @include breakpoint(pc) {
                 letter-spacing: pxtovw-pc(36);
             }
         }
 
         .p-page-ttl__txt {
+            letter-spacing: 0;
             @include breakpoint(pc) {
                 letter-spacing: pxtovw-pc(6);
             }
@@ -40,26 +46,24 @@
     }
 
     &__wrap {
-        margin-top: -22rem;
+        margin-top: calc(-30.4rem + (1vw - 0.38rem) * -18.1436);
         padding: 0;
 
-        @include breakpoint(pc) {
-            // width: 58%;
-            margin: 0 auto;
+        @media (min-width: 128rem) {
+            margin-top: -46.7rem;
         }
     }
 
     &__txt {
         width: 100%;
         text-align: center;
-        width: calc(100vw-40px);
+        width: calc(100vw-4rem);
         @include font-didot;
-        font-size: pxtovw-sp(15);
+        font-size: 1.5rem;
         line-height: 1.799999;
         letter-spacing: 0.3em;
 
         @include breakpoint(pc) {
-            font-size: pxtovw-pc(15);
             line-height: 2.37;
             letter-spacing: 0.45rem;
             text-indent: 0.45rem;
@@ -67,12 +71,22 @@
     }
 
     &__form {
-        margin-top: 25rem;
-        width: 58%;
+        margin-top: calc(12.3rem + (1vw - 0.38rem) * 50.0994);
+
+        @include breakpoint(pc) {
+            width: 64.7%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__list {
-        margin-top: 5rem;
+        // margin-top: 4.9rem;
+        margin-top: calc(4.9rem + (1vw - 0.38rem) * -2.6519);
+
+        @media (min-width: 128rem) {
+            margin-top: 2.5rem;
+        }
 
         label {
             display: block;
@@ -102,7 +116,7 @@
             width: 100%;
             background-color: #fff;
             box-sizing: border-box;
-            border: 1px solid #707070;
+            border: 0.1rem solid #707070;
 
             &::placeholder {
                 font-family: sans-serif;
@@ -112,18 +126,21 @@
                 line-height: calc(27 / 16);
             }
         }
+        input[type="number"] {
+            margin-top: calc(1rem + (1vw - 0.38rem) * -0.5525);
+        }
     }
 
     &__must {
-        padding-left: 1rem;
+        padding-left: 1.5rem;
 
         &::after {
             content: "必須";
             display: inline-block;
             text-align: center;
             vertical-align: middle;
-            margin-left: 1.8rem;
-            width: 60px;
+            margin-left: 1.4rem;
+            width: 6rem;
             height: 2.4rem;
             font-size: 1.2rem;
             letter-spacing: 0.3em;
@@ -135,7 +152,8 @@
     }
 
     &__desc {
-        margin-top: 2.3rem;
+        margin-top: calc(0.7rem + (1vw - 0.38rem) * (-2.5414));
+        padding-left: 1.6rem;
         font-size: 1.2rem;
         color: #707070;
         letter-spacing: 0.3em;
@@ -147,18 +165,28 @@
 
         span {
             display: block;
-            @media (min-width: 800px) {
+            @media (min-width: 80rem) {
                 display: inline;
             }
         }
     }
 
     &__submit {
-        margin-top: 90px;
+        margin-top: calc(9rem + (1vw - 0.38rem) * -3.3149);
+        transform: translate(-50%, 0);
+        @media (min-width: 128rem) {
+            margin-top: 6rem;
+        }
     }
 
     &__flex {
-        @media (min-width: 1080px) {
+        margin-top: calc(4.9rem + (1vw - 0.38rem) * -6.1878);
+
+        @media (min-width: 128rem) {
+            margin-top: -0.7rem;
+        }
+
+        @media (min-width: 108rem) {
             display: flex;
             justify-content: space-between;
             align-items: center;

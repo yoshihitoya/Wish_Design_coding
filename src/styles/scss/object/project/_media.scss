@@ -9,14 +9,16 @@
 
     &__mainvisual {
         width: 100%;
-        height: pxtovw-sp(667);
+        opacity: 1;
+        height: calc(66.7rem + (1vw - 0.38rem) * 14.6961);
+
+        width: 100%;
         background-image: url(../images/mainvisual_media_sp.png);
         background-position-x: 0%;
         background-position-y: -8rem;
         background-size: cover;
         @include breakpoint(pc) {
             width: 100%;
-            height: pxtovw-pc(800);
             background-image: url(../images/mainvisual_media_pc.png);
             background-position-x: center;
             background-position-y: -11.2rem;
@@ -25,12 +27,8 @@
     }
 
     &__ttl {
-        top: 36%;
+        top: calc(36% + (1vw - 0.38rem) * 1.6);
         left: 51%;
-
-        @include breakpoint(pc) {
-            top: 38%;
-        }
 
         .p-page-ttl__heading {
             @include breakpoint(pc) {
@@ -39,21 +37,18 @@
         }
 
         .p-page-ttl__txt {
-            @include breakpoint(pc) {
-                letter-spacing: pxtovw-pc(6);
-            }
+            letter-spacing: calc(0.3rem + (1vw - 0.38rem) * 0.2);
+            text-indent: calc(0rem + (1vw - 0.38rem) * -2.3204);
         }
     }
 
     &__wrap {
-        margin-top: -35rem;
-        margin-left: pxtovw-sp(28);
-        margin-right: pxtovw-sp(28);
+        margin-top: calc(-35.2rem + (1vw - 0.38rem) * 40.3);
+        margin-left: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
+        margin-right: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
 
-        @include breakpoint(pc) {
-            margin-top: -4rem;
-            margin-left: pxtovw-pc(125);
-            margin-right: pxtovw-pc(125);
+        @media (min-width: 128rem) {
+            margin-top: 1.07rem;
         }
     }
 
@@ -64,11 +59,12 @@
 
         margin: 0 auto;
 
-        @media (min-width: 850px) {
+        @media (min-width: 85rem) {
             max-width: 100%;
             display: grid;
-            grid-template-columns: repeat(2, minmax(335px, 450px));
-            column-gap: pxtovw-pc(90);
+            grid-template-columns: repeat(2, minmax(33.5rem, 45rem));
+            column-gap: calc(6rem + (1vw - 0.85rem) * 11.4);
+            row-gap: calc(5.8rem + (1vw - 0.85rem) * 8.7);
             justify-content: center;
         }
 
@@ -76,21 +72,29 @@
             &__ttl {
                 font-size: 2rem;
                 color: #707070;
-                letter-spacing: 0.1em;
+                letter-spacing: 0.11em;
                 line-height: 1.4;
+
+                @media (min-width: 85rem) {
+                    font-size: calc(2rem + (1vw - 0.85rem) * 0.4651);
+                    letter-spacing: calc(0.24rem + (1vw - 0.85rem) * 0.4186);
+                    line-height: calc(3.2rem + (1vw - 0.85rem) * 0.5116);
+                }
             }
 
             &__desc {
                 font-size: 1.5rem;
                 color: #707070;
                 letter-spacing: 0.1em;
-                line-height: 1.3333333333333333;
+                line-height: 1.5;
+
+                @media (min-width: 85rem) {
+                    line-height: 2;
+                }
             }
         }
     }
-    &__btn {
-        position: static;
-        transform: none;
-        margin: 0 auto;
+    &__footer {
+        margin-top: 10rem;
     }
 }
