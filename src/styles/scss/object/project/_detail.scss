@@ -1,9 +1,14 @@
 .p-detail {
-    padding-top: 15rem;
-    @include breakpoint(pc) {
-        margin-left: pxtovw-pc(140);
-        margin-right: pxtovw-pc(140);
-        padding-top: pxtovw-pc(130);
+    padding-top: calc(6.9rem + (1vw - 0.38rem) * -0.1);
+    margin-left: calc(2rem + (1vw - 0.38rem) * 13.2597);
+    margin-right: calc(2rem + (1vw - 0.38rem) * 13.2597);
+
+    &__header {
+        position: static;
+        width: 100%;
+        @include breakpoint(pc) {
+            padding-top: pxtovw-pc(50);
+        }
     }
 
     &__wrap {
@@ -13,63 +18,96 @@
     &__ttl {
         @include font-didot;
         font-weight: normal;
-        font-size: 40px;
+        font-size: 4rem;
         color: #707070;
-        letter-spacing: 0.1em;
-        line-height: 0;
-
-        @include breakpoint(pc) {
-            letter-spacing: 0.3em;
-            line-height: 1.75;
-        }
-    }
-
-    h2 {
-        margin-top: 5rem;
-
-        @include breakpoint(pc) {
-            margin-top: 7rem;
-        }
+        line-height: calc(5rem + (1vw - 0.38rem) * 2.2099);
+        letter-spacing: calc(0.4rem + (1vw - 0.38rem) * 0.884);
+        text-indent: calc(0.4rem + (1vw - 0.38rem) * 0.884);
     }
 
     &__subTtl {
         @include font-yumincho;
-        font-size: 26px;
         color: #707070;
         letter-spacing: 0.1em;
-        line-height: 1.3461538461538463;
+        text-indent: 0.1em;
     }
 
-    &__txt,
-    &__list {
-        margin-top: 5rem;
+    h2.p-detail__subTtl {
+        margin-top: calc(4.2rem + (1vw - 0.38rem) * 0.884);
+        font-size: 3rem;
+        line-height: calc(35 / 30);
+    }
+    h3.p-detail__subTtl {
+        font-size: 2.8rem;
+        line-height: calc(35 / 28);
+    }
+    h4.p-detail__subTtl {
+        font-size: 2.6rem;
+        line-height: calc(35 / 26);
+        text-indent: 0;
+    }
+
+    &__txt {
+        margin-top: calc(4rem + (1vw - 0.38rem) * -2.3);
         @include font-yumincho;
         font-weight: normal;
-        font-size: 15px;
+        font-size: calc(1.5rem + (1vw - 0.38rem) * 0.5525);
         color: #707070;
-        letter-spacing: 0.3em;
-        line-height: 1.73;
+        letter-spacing: calc(0.45rem + (1vw - 0.38rem) * -0.29);
+        line-height: calc(2.7rem + (1vw - 0.38rem) * 0.9);
 
-        @include breakpoint(pc) {
-            margin-top: 3rem;
+        @media (min-width: 1280px) {
+            margin-top: 1.93rem;
+            letter-spacing: 0.189rem;
+            line-height: 3.51rem;
         }
     }
 
-    &__list li {
-        margin-top: 3rem;
+    &__list {
+        margin-top: calc(3.7rem + (1vw - 0.38rem) * -2.2);
+        @include font-yumincho;
+        font-weight: normal;
+        font-size: calc(1.5rem + (1vw - 0.38rem) * 0.5525);
+        color: #707070;
+        letter-spacing: calc(0.46rem + (1vw - 0.38rem) * -0.29);
+        text-indent: calc(0.4rem + (1vw - 0.38rem) * -0.442);
+        line-height: calc(2.8rem + (1vw - 0.38rem) * 0.7);
 
-        @include breakpoint(pc) {
-            margin-top: 1rem;
+        @media (min-width: 1280px) {
+            margin-top: 1.72rem;
+            letter-spacing: 0.199rem;
+            text-indent: 0.343rem;
+        }
+
+        li {
+            margin-top: calc(2.5rem + (1vw - 0.38rem) * -2.7624);
+
+            @media (min-width: 1280px) {
+                margin-top: 0;
+            }
         }
     }
 
     &__img {
-        margin-top: 7.2rem;
+        margin-top: calc(6.7rem + (1vw - 0.38rem) * -4.8);
         width: 100%;
         max-width: 100%;
 
-        @include breakpoint(pc) {
-            margin-top: 3rem;
+        @media (min-width: 1280px) {
+            margin-top: 2.4rem;
+        }
+    }
+
+    .p-btn--fixed {
+        bottom: 2%;
+    }
+
+    &__footer {
+        margin-top: calc(11rem + (1vw - 0.38rem) * -7.7348);
+        padding-bottom: 2.5rem;
+
+        @media (min-width: 1280px) {
+            margin-top: 4rem;
         }
     }
 }

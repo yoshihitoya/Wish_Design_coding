@@ -33,6 +33,7 @@
         .p-page-ttl__heading {
             @include breakpoint(pc) {
                 letter-spacing: pxtovw-pc(36);
+                text-indent: 1.3rem;
             }
         }
 
@@ -43,11 +44,11 @@
     }
 
     &__wrap {
-        margin-top: calc(-35.2rem + (1vw - 0.38rem) * 40.3);
+        margin-top: calc(-34.7rem + (1vw - 0.38rem) * 40.3);
         margin-left: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
         margin-right: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
 
-        @media (min-width: 128rem) {
+        @media (min-width: 1280px) {
             margin-top: 1.07rem;
         }
     }
@@ -59,7 +60,7 @@
 
         margin: 0 auto;
 
-        @media (min-width: 85rem) {
+        @media (min-width: 850px) {
             max-width: 100%;
             display: grid;
             grid-template-columns: repeat(2, minmax(33.5rem, 45rem));
@@ -75,10 +76,14 @@
                 letter-spacing: 0.11em;
                 line-height: 1.4;
 
-                @media (min-width: 85rem) {
+                @media (min-width: 850px) {
                     font-size: calc(2rem + (1vw - 0.85rem) * 0.4651);
-                    letter-spacing: calc(0.24rem + (1vw - 0.85rem) * 0.4186);
+                    letter-spacing: calc(0.24rem + (1vw - 0.85rem) * 0.8);
                     line-height: calc(3.2rem + (1vw - 0.85rem) * 0.5116);
+
+                    span {
+                        letter-spacing: calc(0.24rem + (1vw - 0.85rem) * 0.4186);
+                    }
                 }
             }
 
@@ -86,15 +91,17 @@
                 font-size: 1.5rem;
                 color: #707070;
                 letter-spacing: 0.1em;
-                line-height: 1.5;
+                line-height: 1.4;
 
-                @media (min-width: 85rem) {
+                @media (min-width: 850px) {
                     line-height: 2;
                 }
             }
         }
     }
+
     &__footer {
         margin-top: 10rem;
+        padding-bottom: 2.5rem;
     }
 }

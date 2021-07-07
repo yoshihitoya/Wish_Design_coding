@@ -1,7 +1,7 @@
 .c-card {
     position: relative;
     margin-top: 5.8rem;
-    overflow: hidden;
+    // overflow: hidden;
 
     @media (min-width: 850px) {
         margin-top: 0;
@@ -40,7 +40,7 @@
     }
 
     &__desc {
-        margin-top: 2.4rem;
+        margin-top: calc(2.7rem + (1vw - 0.38rem) * -0.9);
         max-height: 50%;
         overflow: hidden;
     }
