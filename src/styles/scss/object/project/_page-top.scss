@@ -1,0 +1,23 @@
+.p-page-top {
+  @extend .p-base-btn;
+  width: pxtovw-sp(143);
+  height: pxtovw-sp(32);
+  margin-top: pxtovw-sp(65);
+
+  @include breakpoint( pc ) {
+    width: pxtovw-pc(143);
+    height: pxtovw-pc(32);
+    margin-top: pxtovw-pc(90);
+  }
+
+  p {
+    letter-spacing: .4rem;
+    text-indent: .4rem;
+    text-align: center;
+  }
+
+  // 矢印
+  span {
+    display: none;
+  }
+}

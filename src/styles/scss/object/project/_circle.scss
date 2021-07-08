@@ -1,0 +1,47 @@
+/* about内使用 */
+.p-circle {
+	@extend %boxbase;
+	pointer-events: none;
+	width: pxtovw-sp(96);
+	height: pxtovw-sp(96);
+	line-height: pxtovw-sp(96);
+	
+	text-align: center;
+	font-size: pxtovw-sp(15);
+	letter-spacing: pxtovw-sp(2);
+	text-indent: pxtovw-sp(2);
+
+	@include breakpoint( pc ){
+		font-size: pxtovw-pc(15);
+		width: pxtovw-pc(96);
+		height: pxtovw-pc(96);
+		line-height: pxtovw-pc(96);
+		letter-spacing: pxtovw-pc(2);
+		text-indent: pxtovw-pc(2);
+		grid-row: 1;
+	}
+
+	@media (min-width:480px) and ( max-width: 811px ) {
+		letter-spacing: 0;
+		text-indent: 0;
+	}
+}
+
+.flow {
+	.p-circle {
+		width: pxtovw-sp(67);
+		height: pxtovw-sp(67);
+		line-height: pxtovw-sp(67);
+
+		@include font-didot;
+		font-size: pxtovw-sp(20);
+
+		@include breakpoint( pc ){
+			font-size: pxtovw-pc(20);
+			width: pxtovw-pc(67);
+			height: pxtovw-pc(67);
+			line-height: pxtovw-pc(67);
+		}
+	}
+}
+

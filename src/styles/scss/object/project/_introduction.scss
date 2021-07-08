@@ -1,0 +1,36 @@
+.p-introduction{
+  margin: auto;
+  text-align: center;
+
+  @include breakpoint( pc ){
+  }
+
+  span{
+    display: inline-block;// spanタグごとに改行が入る
+  }
+
+  ul{
+    li{
+      font-size: pxtovw-sp(15);
+      letter-spacing: .4em;
+      text-indent: .4em;
+      line-height: 3.5rem;
+
+      @include breakpoint( pc ) {
+        font-size: pxtovw-pc(15);
+        letter-spacing: .24em;
+        text-indent: .24em;
+        }
+    }
+  }
+
+  p{
+    line-height: 2.7rem;
+    letter-spacing: .5rem;
+
+    @include breakpoint( pc ){
+      letter-spacing: .45vw;
+      text-indent: .45vw;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.c-copyright {
+  display: block;
+}
+
+
+.about,
+.flow {
+  .c-copyright {
+    padding-top: pxtovw-sp(72);
+
+    @include breakpoint( pc ) {
+      padding-top: pxtovw-pc(30);
+    }
+  }
+}
+
+
+//paddingを広くとらないと、ラインアニメーションが最後までいかない
+@media (min-width:480px) and ( max-width: 1100px ) {
+.about {
+  .c-copyright {
+  padding-top: pxtovw-pc(300);
+  }
+}
+
+.flow {
+  .c-copyright {
+      padding-top: pxtovw-pc(400);
+    }
+  }
+}
+
+
+
+.page404 {
+  .c-copyright {
+    margin-top: pxtovw-pc(20);
+  }
+}
+

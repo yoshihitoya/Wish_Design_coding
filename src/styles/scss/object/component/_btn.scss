@@ -6,6 +6,7 @@
   position: relative;
   cursor: pointer;
   @include transform50;
+  top: unset;
 
   background: $base-color;
   box-shadow:

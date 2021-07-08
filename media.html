@@ -21,20 +21,16 @@
   <!-- リセットCSS -->
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 
-  <!-- スリックCSS -->
-  <link rel="stylesheet" type="text/css" href="css/slick.css">
-  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-
   <!-- 自作CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <!-- ◇----------------------------------------------------------------------------------------------◇ -->
 
-<body class="home">
+<body class="media">
   <div class="l-container">
     <header class="l-header p-media__header u-display-between">
-      <a href="index.html" class="c-ttl--site contact">Wish Design</a>
-      <button class="p-btn--menu js-btn-menu u-grid">
+      <span id="js-ttl"><a href="index.html" class="p-site-ttl">Wish Design</a></span>
+      <button class="p-menu-btn-sub js-btn-menu u-grid">
         <p>Menu</p><span>サイドバーを開く</span>
       </button><!-- spanの文字はリーダブルのため -->
     </header>
@@ -106,7 +102,7 @@
       </section>
 
       <!-- :::::::::追従ボタン::::::::: -->
-      <button class="p-btn--fixed u-grid">
+      <button class="p-back-to-top u-grid">
         <p>Top</p><span>上へ戻る</span>
       </button>
 
@@ -128,8 +124,8 @@
     <!-- ナビゲーション -->
     <nav class="l-sidebar__nav">
       <!-- 閉じるボタン -->
-      <button class="p-btn--menu--close js-btn-close">
-        <div class="p-btn--menu--close__inner u-grid">
+      <button class="p-menu-btn--close js-btn-close">
+        <div class="p-menu-btn--close__inner u-grid">
           <!-- インナーにしないとサイドバーが崩れるため -->
           <p>Close</p><span>ボタン</span>
         </div>
@@ -147,9 +143,11 @@
     </nav>
   </aside>
 
+
   <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/toTopBtn.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/sidemenu.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,18 @@
+// iframe[src$=".pdf"]{
+//   width:100%;
+//   height:80vh;
+// }
+
+
+/*全て共通：モーダルのボタンの色を変更したい場合*/
+.modaal-close:after, 
+.modaal-close:before{
+	background:#ccc;	
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+	background:#707070;
+}

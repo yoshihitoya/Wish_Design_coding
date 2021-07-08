@@ -1,0 +1,59 @@
+// ------------------------------
+// ヘッダー部のサイトタイトル
+// ------------------------------
+.p-site-ttl {
+  @extend %c-ttl;
+
+    font-size: pxtovw-sp(10);
+    margin-left: pxtovw-sp(10);
+    letter-spacing: .1rem;
+    text-indent: .1rem;
+    white-space: nowrap;
+
+  @include breakpoint( pc ) {
+    letter-spacing: 0.24rem;
+    text-indent: .24rem;
+    top: 10%;
+    margin-left: pxtovw-pc(50);
+    font-size: pxtovw-pc(20);
+    white-space: nowrap;
+  }
+}
+
+
+// このクラスが付与されると非表示にする
+#js-ttl.fade {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease-out;
+}
+
+
+
+// フェードインを使う場合
+// #js-ttl.fadein{
+//   animation: UpAnime 0.5s forwards;
+// }
+
+// @keyframes UpAnime{
+//   from {
+//     opacity: 1;
+//   }
+//   to {
+//     opacity: 0;
+//   }
+// }
+
+
+// フェードアウト
+// #js-ttl.fadeout{
+//   animation: DownAnime 0.5s forwards;
+// }
+// @keyframes DownAnime{
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }

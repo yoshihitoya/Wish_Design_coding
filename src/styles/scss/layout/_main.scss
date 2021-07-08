@@ -1,12 +1,7 @@
 .l-main {
+
 	// margin-left: 2rem;
 	// margin-right: 2rem;
 	margin-left: pxtovw-sp(20);
 	margin-right: pxtovw-sp(20);
-
-	padding-top: pxtovw-sp(150);
-
-	@include breakpoint(pc) {
-		padding-top: pxtovw-pc(190);
-	}
 }

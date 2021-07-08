@@ -2,6 +2,10 @@
 	font-size: 62.5%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
 	height     : 100%;
 	overflow-y: inherit;

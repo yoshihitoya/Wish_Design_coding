@@ -1,16 +1,100 @@
 .p-mainvisual {
-  height: 66.7rem;
   width: 100%;
-  object-position: center;
+  height: pxtovw-sp(667);
 
-  @include breakpoint(pc) {
-    height: 80rem;
-  }
+  background-image: url(../images/home_mainvisual_sp.svg);
+  background-position-x: 0%;
+  background-position-y: -7%;
+  background-size: cover;//これがないと切れる
 
-  img {
+  @include breakpoint( pc ) {
     width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    object-fit: cover;
+    height: pxtovw-pc(800);
+    background-image: url(../images/home_mainvisual_pc.svg);
+    background-position-x: center;
+    background-position-y: 3%;
+    background-size: cover;
+	}
+}
+
+
+.about {
+  .p-mainvisual {
+    background-image: url(../images/about_mainvisual_sp.svg);
+
+    @include breakpoint( pc ) {
+      background-image: url(../images/about_mainvisual_pc.svg);
+    }
+  }
+}
+
+
+.flow {
+  .p-mainvisual {
+    background-image: url(../images/flow_mainvisual_sp.svg);
+
+    @include breakpoint( pc ) {
+      background-image: url(../images/flow_mainvisual_pc.svg);
+    }
+  }
+}
+
+
+
+.price {
+  .p-mainvisual {
+    background-image: url(../images/price_mainvisual_sp.svg);
+
+    @include breakpoint( pc ) {
+      background-image: url(../images/price_mainvisual_pc.svg);
+    }
+  }
+}
+
+
+.qanda {
+  .p-mainvisual {
+    background-image: url(../images/qa_mainvisual_sp.svg);
+
+    @include breakpoint( pc ) {
+      background-image: url(../images/qa_mainvisual_pc.svg);
+    }
+  }
+}
+
+
+
+
+
+.works {
+  .p-mainvisual {
+    background-image: url(../images/works_mainvisual_sp.svg);
+
+    @include breakpoint( pc ) {
+      background-image: url(../images/works_mainvisual_pc.svg);
+    }
+  }
+}
+
+
+.contact {
+  .p-mainvisual {
+    background-image: url(../images/contact_mainvisual_sp.svg);
+
+    @include breakpoint( pc ) {
+      background-image: url(../images/contact_mainvisual_pc.svg);
+    }
+  }
+}
+
+
+
+.media {
+  .p-mainvisual {
+    background-image: url(../images/media_mainvisual_sp.svg);
+
+    @include breakpoint( pc ) {
+      background-image: url(../images/media_mainvisual_pc.svg);
+    }
   }
 }

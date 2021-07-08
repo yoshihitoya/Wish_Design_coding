@@ -1,0 +1,19 @@
+// 料金表
+.c-img-item {
+  @include breakpoint( pc ) {
+    width: 75%;
+    margin: auto;
+  }
+}
+
+
+
+// 画像をクリックしたら1.1倍に拡大
+
+// .modaal-gallery-item {
+//   transition: .3s;
+
+//   &:hover {
+//     transform: scale(1.1);
+//   }
+// }

@@ -1,0 +1,7 @@
+.sp-hidden {
+  visibility: hidden;
+
+  @include breakpoint( pc ) {
+    visibility: visible;
+  }
+}

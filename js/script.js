@@ -32,24 +32,8 @@ jQuery(function($){
 })
 
 
-// ヘッダータイトル：スクロールしたら消える
-$(function() {
-  let ttl = $('#js-ttl');
-  
-  //スクロールしてページトップから100に達したらボタンを表示
-  $(window).on('load scroll', function(){
-    if($(this).scrollTop() > 100) {
-      ttl.addClass('fade');
-    }else{
-      ttl.removeClass('fade');
-    }
-  });
-});
-
-
-
-
 // スリック
+jQuery(function($) {
 $('.js-slick').slick({
   slidesToShow:1,
   autoplay:true,
@@ -69,18 +53,33 @@ $('.js-slick').slick({
     },
   ]
 });
+});
 
+
+// ヘッダータイトル：スクロールしたら消える
+jQuery(function($) {
+  let ttl = $('#js-ttl');
+  
+  //スクロールしてページトップから100に達したらボタンを表示
+  $(window).on('load scroll', function(){
+    if($(this).scrollTop() > 100) {
+      ttl.addClass('fade');
+    }else{
+      ttl.removeClass('fade');
+    }
+  });
+});
 
 
 
 // アニメーション：スクロールしたら順番に表示
-$(function(){
+jQuery(function($){
 	$(window).scroll(function (){
 		$('.js-fadein').each(function(i){
 			let elemPos = $(this).offset().top;
 			let scroll = $(window).scrollTop();
 			let windowHeight = $(window).height();
-			let speed = 200;//0.1秒=100
+			let speed = 100;//0.1秒=100
 			if(scroll > elemPos - windowHeight){
         $(this).delay(i * speed).queue(function(next){
           $(this).addClass('show');
@@ -93,12 +92,9 @@ $(function(){
 
 
 
-
-
-
 // 追従ボタンの表示
-$(function() {
-  let btn = $('.p-btn--fixed');
+jQuery(function($) {
+  let btn = $('.p-back-to-top');
   
   //スクロールしてページトップから100に達したらボタンを表示
   $(window).on('load scroll', function(){
@@ -124,6 +120,21 @@ $(function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+// 文字サイズ：親要素に合わせて伸縮
+// fitty('[js-fitty]', {
+//   maxSize: 15,
+//   minSize: 8,
+// });
 
 
 

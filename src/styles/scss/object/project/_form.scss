@@ -25,8 +25,8 @@
             background-size: cover;
         }
     }
-    &__ttl {
-        top: calc(35.6% + (1vw - 0.38rem) * -6.7);
+    &__ttl.p-page-ttl {
+        top: calc(38.6% + (1vw - 0.38rem) * -9.4);
         left: 51%;
 
         .p-page-ttl__heading {
@@ -54,7 +54,7 @@
     }
 
     &__wrap {
-        margin-top: calc(-30rem + (1vw - 0.38rem) * -18.6);
+        margin-top: calc(-28.2rem + (1vw - 0.38rem) * -20.6);
         padding: 0;
 
         @media (min-width: 1280px) {
@@ -200,9 +200,9 @@
         }
     }
 
-    &__wrap .p-btn--fixed {
-        bottom: 2rem;
-    }
+    // &__wrap .p-back-to-top {
+    //     bottom: 2rem;
+    // }
 
     &__footer {
         margin-top: calc(9rem + (1vw - 0.38rem) * -2.0994);

@@ -30,11 +30,11 @@
 </head>
 <!-- ◇----------------------------------------------------------------------------------------------◇ -->
 
-<body class="home">
+<body class="contact">
   <div class="l-container">
     <header class="l-header u-display-between p-form__header">
-      <a href="index.html" class="c-ttl--site">Wish Design</a>
-      <button class="p-btn--menu js-btn-menu u-grid">
+      <span id="js-ttl"><a href="index.html" class="p-site-ttl">Wish Design</a></span>
+      <button class="p-menu-btn-sub js-btn-menu u-grid">
         <p>Menu</p><span>サイドバーを開く</span>
       </button><!-- spanの文字はリーダブルのため -->
     </header>
@@ -87,13 +87,13 @@
           <textarea name="content" placeholder="ご相談内容をご記入ください（お見積り、サイト制作、サイトリニューアル）"></textarea>
         </div>
 
-        <button class="p-form__submit p-btn--base u-grid">
+        <button class="p-form__submit p-base-btn u-grid u-margin--54">
           <input type="submit" class="btn" value="送信">
         </button>
       </form>
 
       <!-- :::::::::追従ボタン::::::::: -->
-      <button class="p-btn--fixed u-grid">
+      <button class="p-back-to-top u-grid">
         <p>Top</p><span>上へ戻る</span>
       </button>
 
@@ -115,8 +115,8 @@
     <!-- ナビゲーション -->
     <nav class="l-sidebar__nav">
       <!-- 閉じるボタン -->
-      <button class="p-btn--menu--close js-btn-close">
-        <div class="p-btn--menu--close__inner u-grid">
+      <button class="p-menu-btn--close js-btn-close">
+        <div class="p-menu-btn--close__inner u-grid">
           <!-- インナーにしないとサイドバーが崩れるため -->
           <p>Close</p><span>ボタン</span>
         </div>
@@ -135,8 +135,9 @@
   </aside>
 
   <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/toTopBtn.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/sidemenu.js"></script>
 </body>
 
 </html>

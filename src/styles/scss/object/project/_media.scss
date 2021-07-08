@@ -26,9 +26,9 @@
         }
     }
 
-    &__ttl {
-        top: calc(36% + (1vw - 0.38rem) * 1.6);
-        left: 51%;
+    &__ttl.p-page-ttl {
+        top: calc(38.5% + (1vw - 0.38rem) * -0.4);
+        left: calc(50% + (1vw - 0.38rem) * 1.1);
 
         .p-page-ttl__heading {
             @include breakpoint(pc) {
@@ -44,7 +44,7 @@
     }
 
     &__wrap {
-        margin-top: calc(-34.7rem + (1vw - 0.38rem) * 40.3);
+        margin-top: calc(-33.3rem + (1vw - 0.38rem) * 40.3);
         margin-left: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
         margin-right: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
 

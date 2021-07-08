@@ -1,0 +1,73 @@
+// ------------------------------
+// 各セクションのタイトル
+// ------------------------------
+.p-content-ttl {
+  @extend %c-ttl;
+  font-size: pxtovw-sp(30);
+  letter-spacing: 1.5rem;
+  text-indent: 1.5rem;
+  text-align: center;
+
+  @include breakpoint( pc ) {
+    font-size: pxtovw-pc(50);
+    letter-spacing: 2.6rem;
+    text-indent: 2.6rem;
+  }
+}
+
+
+
+.about {
+  .p-content-ttl {
+    @include font-yumincho;
+    letter-spacing: .9rem;
+    text-indent: .9rem;
+    line-height: 1.7;
+
+    @include breakpoint( pc ) {
+      font-size: pxtovw-pc(30);
+      letter-spacing: .62vw;
+      text-indent: .62vw;
+      }
+
+    &--02 {
+      @extend .p-content-ttl;
+      letter-spacing: 1.1rem;
+      text-indent: 1.1rem;
+    }
+  }
+}
+
+
+
+.flow {
+  .p-content-ttl {
+    text-align: left;
+    text-indent: -.5rem;
+
+    @include breakpoint( pc ) {
+      font-size: pxtovw-pc(30);
+      letter-spacing: .9rem;
+      text-indent: -.1rem;
+    }
+  }
+}
+
+
+
+
+
+
+.price {
+  .p-content-ttl {
+    letter-spacing: .68rem;
+    text-indent: .5rem;
+
+    @include breakpoint( pc ) {
+      font-size: pxtovw-pc(30);
+      letter-spacing: .9rem;
+      text-indent: .9rem;
+    }
+  }
+}
+

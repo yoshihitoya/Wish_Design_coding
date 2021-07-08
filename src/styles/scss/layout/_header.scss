@@ -2,8 +2,18 @@
 	position: fixed;
 	width: 100%;
 	z-index: 1000;
+	align-items: center;
 
-	@include breakpoint(pc) {
+	@include breakpoint( pc ) {
 		padding-top: pxtovw-pc(50);
+		align-items: unset;
+	}
+}
+
+
+// 404ページではfixedをはずさないとおかしくなる
+.page404 {
+	.l-header {
+		position: static;
 	}
 }

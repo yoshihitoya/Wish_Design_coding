@@ -36,6 +36,7 @@
       }
 
 
+    // その言葉でデザインを作ります
     &--about {
       text-align: center;
       font-size: pxtovw-sp(17);
@@ -44,10 +45,26 @@
       clear:right;//上のボックスにfloatを使っているため
 
       @include breakpoint( pc ) {
-      font-size: pxtovw-pc(25);
-      letter-spacing: .77rem;
-      text-indent: .77rem;
-      padding-top: unset;
+        font-size: pxtovw-pc(25);
+        letter-spacing: .77rem;
+        text-indent: .77rem;
+      }
+    }
+  }
+}
+
+// プライスページ
+.price {
+  .c-txt {
+    &--content {
+      line-height: 2.4;
+      letter-spacing: .39rem;
+      text-indent: .39rem;
+      
+      @include breakpoint( pc ) {
+        line-height: 2.35;
+        letter-spacing: .39rem;
+        text-indent: .39rem;
       }
     }
   }

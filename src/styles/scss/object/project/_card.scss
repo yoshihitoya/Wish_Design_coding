@@ -1,0 +1,31 @@
+.p-card{
+	&--profile{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@include breakpoint( pc ){
+			flex-direction: row;
+			align-items: flex-end;
+		}
+
+		img {
+			width: pxtovw-sp(195);
+			height: pxtovw-sp(140);
+			border-radius: 4%;
+			box-shadow: 11px 8px 14px -3px rgba($btnShadow-color, .7);
+	
+			@include breakpoint( pc ){
+				width: pxtovw-pc(343);
+				height: pxtovw-pc(244);
+			}
+		}
+
+		&__caption{
+			@include breakpoint( pc ){
+				text-align: left;/* dlタグ内左揃え */
+			}
+		}
+	}
+}

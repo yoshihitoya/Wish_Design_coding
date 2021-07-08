@@ -1,0 +1,23 @@
+.p-qanda-txt {
+  // margin-right: pxtovw-sp(20);
+  // margin-left: pxtovw-sp(20);
+  font-size: pxtovw-sp(15);
+  text-align: center;
+  line-height: 1.75;
+  letter-spacing: .44rem;
+  text-indent: .44rem;
+
+  // text-align: justify;
+
+  @include breakpoint( pc ) {
+    font-size: pxtovw-pc(15);
+    text-align: left;
+    text-indent: -2em;//マイナスすることで2行目以降がインデントされる
+
+    margin-right: pxtovw-pc(212);
+    margin-left: pxtovw-pc(212);
+
+    width: pxtovw-pc(754);
+    line-height: 2.2;
+  }
+}

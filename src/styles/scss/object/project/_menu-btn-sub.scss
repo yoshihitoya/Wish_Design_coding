@@ -1,0 +1,78 @@
+// ------------------------------
+// 下層ページのメニューボタン
+// ------------------------------
+  .p-menu-btn-sub {
+    @extend .p-menu-btn;
+    left: 9.6%;//leftにしないとホバーの背景色が効かない
+    width: pxtovw-sp(98);
+    height: pxtovw-sp(31);
+    margin-top: pxtovw-sp(30);
+    column-gap: 16px;
+    opacity: 1;
+
+    @include breakpoint( pc ) {
+      left: 2%;
+      margin-top: pxtovw-pc(12);
+      width: pxtovw-pc(157);
+      height: pxtovw-pc(50);
+    }
+
+    p {
+      font-size: pxtovw-sp(12);
+
+      @include breakpoint( pc ) {
+        font-size: pxtovw-pc(20);
+        letter-spacing: -0.04rem;
+        text-indent: -0.04rem;
+      }
+    }
+
+    span {
+      background-size: auto .1px;
+    }
+
+    span,
+    span::before,
+    span::after {
+      width: pxtovw-sp(12.83);
+
+      @include breakpoint( pc ) {
+        width: pxtovw-pc(21);
+        height: pxtovw-pc(.5);
+  
+        // firefox用
+        @-moz-document url-prefix() {
+            width: pxtovw-pc(21);
+            height: .1vw;
+        }
+      }
+    }
+
+    span {
+      &::before {
+        top: pxtovw-sp(9);
+
+        @include breakpoint( pc ) {
+          top: pxtovw-pc(16);
+        }
+      }
+
+      &::after {
+        top: pxtovw-sp(20);
+
+        @include breakpoint( pc ) {
+          top: pxtovw-pc(33);
+        }
+      }
+    }
+  }
+
+
+
+// ------------------------------
+// js連動:::is-closeになったら……
+// ------------------------------
+// サイドバーを開く
+.p-menu-btn-sub.is-close {
+  opacity: 0;
+}

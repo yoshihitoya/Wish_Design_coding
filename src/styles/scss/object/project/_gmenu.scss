@@ -1,74 +1,33 @@
-
-
-
-
-// body {
-// 	overflow-x: hidden;
-// }
 // .p-gmenu {
-// 	height: 60px;
-// 	position: relative;
-// 	> .list {
-// 		transition: all 300ms 0s ease;
-// 		width         : 100vw;
-// 		height        : 100vh;
-// 		padding       : 70px 50px;
-// 		position      : fixed;
-// 		top           : 60px;
-// 		background    : rgba( 44, 184, 216, .9 );
-// 		display       : flex;
-// 		flex-direction: column;
-// 		align-items   : center;
-// 		z-index       : 100;
-// 		overflow-y    : auto;
-// 		left: 100%;
-// 		@include breakpoint( pc ) {
-// 			width         : inherit;
-// 			height        : inherit;
-// 			padding       : inherit;
-// 			position      : static;
-// 			background    : inherit;
-// 			flex-direction: row;
-// 			transition: inherit;
-// 		}
-// 		> li {
-// 			margin-bottom: 50px;
-// 			&:last-child {
-// 				margin-bottom: 0;
-// 			}
-// 			@include breakpoint( pc ) {
-// 				margin-bottom: 0;
-// 			}
-// 		}
-// 	}
-// 	> .list {
-// 		@include breakpoint( pc ) {
-// 			height: 60px;
-// 			display: flex;
-// 			align-items: center;
-// 		}
-// 		li {
-// 			font-size: 1.4rem;
-// 			@include breakpoint( pc ) {
-// 				margin-right: 20px;
-// 				font-size   : 1.2rem;
-// 			}
-// 			a {
-// 				@include breakpoint( pc ) {
-// 					font-weight: normal;
-// 					white-space: nowrap;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	&.is-open {
-// 		> .list {
-// 			left: 0;
-// 		}
-// 		.c-arrow--top-l {
-// 			&::before {
-// 				display: none;
-// 			}
-// 		}
-// 	}
+//   padding-bottom: 50px;
+//   @include font-didot;
+//   font-size: 2rem;
+//   line-height: 2.8;
+
+//   // ホバー無しの状態
+//   a {
+//     position: relative;
+
+//     &::after {
+//       position: absolute;
+//       content: '';
+//       bottom: 0;
+//       left: -120%;
+//       top: 50%;
+//       width: 0;//線なしの初期状態
+//       height: 1px;
+//       background: $main-color;
+//       transition: all 0.3s ease 0s;
+//     }
+  
+//     &:hover {
+//       opacity: .5;
+  
+//       &::after {
+//         width: 100%;
+//       }
+//     }
+
+
+//   }
 // }

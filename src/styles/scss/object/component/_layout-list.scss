@@ -1,0 +1,36 @@
+/*
+.c-layout-list
+	timelineの ulタグに使用
+	p（ボタン）,dl（c-dl--level1）を重ねるか並べるかの設定
+	ボタンサークル間の線をborder-leftで設定
+
+.c-layout-list__item
+	timelineの ul>liタグに使用
+
+.c-dl--pro
+	profileの figure>figcaption>dlタグに使用
+	カーニングの設定、余白の設定
+*/
+.c-layout-list{
+	display: flex;              /* 親要素に指定 */
+	flex-direction: column;     /* 積み重なるように配置する */
+	justify-content: center;    /* 水平方向の指定 */
+	align-items: flex-start;    /* 垂直方向の指定 */
+
+	/* ボタン内年号のカーニング */
+	letter-spacing: 0.1em;  // 文字間（XDの数値からの計算：数値/1000)
+	text-indent: 0.1em;			// ↑左に同値の余白を追加
+	&__item{    // .c-layout-list__item
+		min-width: 80%;
+		&:last-of-type{
+			.c-dl--level1{
+				border-left: none;	// タイムラインの最後の子要素のボーダー
+			}
+		}
+		/* レスポンシブ対応 */
+		@include breakpoint( pc ){
+			display: flex;
+			flex-direction: row;     /* 横並び */
+		}
+	}
+}

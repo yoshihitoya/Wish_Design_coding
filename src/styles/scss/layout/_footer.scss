@@ -1,12 +1,41 @@
 .l-footer {
 	text-align: center;
-	padding-bottom: 50px;
-
-	@include breakpoint( tablet ) {
-	}
+	padding-bottom: pxtovw-sp(50);
 	@include breakpoint( pc ) {
-	}
-	@include breakpoint( wide ) {
+		padding-bottom: pxtovw-pc(50);
 	}
 }
 
+
+.about,
+.flow {
+	.l-footer {
+		padding-top: pxtovw-sp(155);
+		@include breakpoint( pc ) {
+			padding-top: pxtovw-pc(100);
+		}
+	}
+}
+
+
+.page404 {
+	.l-footer {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		padding-bottom: pxtovw-sp(10);
+		@include breakpoint( pc ) {
+			padding-bottom: pxtovw-pc(10);
+		}
+	}
+}
+
+
+.price {
+	.l-footer {
+		padding-bottom: pxtovw-sp(29);
+		@include breakpoint( pc ) {
+			padding-bottom: pxtovw-pc(29);
+		}
+	}
+}

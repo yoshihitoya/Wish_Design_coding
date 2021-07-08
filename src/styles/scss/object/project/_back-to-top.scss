@@ -1,0 +1,73 @@
+// ------------------------------
+// 追従ボタン
+// ------------------------------
+.p-back-to-top {
+  @extend %btnBase;
+  width: pxtovw-sp(50);
+  height: pxtovw-sp(50);
+
+  border-radius: 50%;
+  position: fixed;
+  bottom: 5rem;
+  right: -.5%;
+  top: unset;
+  left: unset;
+  z-index: 99;
+
+  justify-content: center;
+  align-items: flex-end;
+  row-gap: 1px;
+
+  box-shadow:
+  -2px -1px 3px 1px #ffffff,
+  1px 4px 4px -.5px $btnShadow-color;
+
+  // デフォルトで非表示にする
+  opacity: 0;
+  visibility: hidden;
+
+  &::before {
+    left: -100%;//safariで幅が足りなくなるため
+  }
+
+  @include breakpoint( pc ) {
+    width: pxtovw-pc(69);
+    height: pxtovw-pc(69);
+    row-gap: pxtovw-pc(1);
+    right: 8.5%;
+  }
+
+  p {
+    grid-row: 2;
+    font-size: pxtovw-sp(8);
+    align-self: flex-start;
+
+    @include breakpoint( pc ) {
+      font-size: pxtovw-pc(10);
+    }
+  }
+
+  // 矢印
+  span {
+    grid-row: 1;
+    font-size: 0;//テキスト非表示
+    align-self: flex-end;
+    justify-self: center;
+
+    width: pxtovw-pc(13);
+    height: pxtovw-pc(13);
+    border-top: 1px solid $main-color;
+    border-right: 1px solid $main-color;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+
+/*このクラスが付与されると表示する*/
+.p-back-to-top.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+

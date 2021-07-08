@@ -4,20 +4,22 @@
 
 .p-home-about {
   &__list {
+
     // spではfloat対応
-    width: calc(100vw - 40px); //左右の余白を除く
+    width: calc(100vw - 40px);//左右の余白を除く
 
     li:nth-child(odd) {
-      clear: right;
+      clear:right;
     }
 
     li:nth-child(even) {
-      float: right;
+      float:right;
     }
 
-    // もしもグリッドにする場合
+    // グリッドにする場合
     // grid-template-columns: repeat(3, calc((100vw - 40px) / 3));
     // grid-template-rows: repeat(6, auto);
+
 
     // @media ( min-width: 875px ) {
     //   display: grid;
@@ -26,52 +28,65 @@
     //   // row-gap: pxtovw-pc(100);
     // }
 
+    
     // pcではグリッド対応
-    @include breakpoint(pc) {
+    @include breakpoint( pc ) {
+
       --side: pxtovw-pc(221);
 
       display: grid;
       width: calc((100vw - var(--side)));
       margin-left: var(--side);
       margin-right: var(--side);
-      grid-template-columns: repeat(3, pxtovw-pc(213));
+      grid-template-columns: repeat(3, pxtovw-pc(213) );
       grid-template-rows: repeat(2, auto);
       column-gap: pxtovw-pc(100);
       row-gap: pxtovw-pc(28);
       justify-items: center;
       width: auto;
-    }
+      }
+
 
     span {
       @include font-yumincho;
       font-size: pxtovw-sp(15);
       line-height: 2.39;
-      letter-spacing: 0.45rem;
+      letter-spacing: .45rem;
+      text-indent: .45rem;
 
-      @include breakpoint(pc) {
+      @include breakpoint( pc ) {
         font-size: pxtovw-pc(15);
+      }
+
+      @media (min-width:480px) and ( max-width: 811px ) {
+        line-height: 1.5;
+        letter-spacing: 0;
+        text-indent: 0;
       }
     }
   }
 }
 
+
 // ------------------------------
 // 「その言葉でデザインを作ります」のbox
 // ------------------------------
+
 .p-home-about {
-  &--box {
+  &--box{
+    
     @extend %boxbase;
     cursor: unset;
 
     // width: 213px;
     // height: 213px;
-
+    
     width: pxtovw-sp(213);
     height: pxtovw-sp(213);
     max-width: pxtovw-sp(213);
     max-height: pxtovw-sp(213);
 
-    @include breakpoint(pc) {
+    @include breakpoint( pc ) {
       width: pxtovw-pc(213);
       height: pxtovw-pc(213);
       // min-width: pxtovw-pc(200);
@@ -85,21 +100,20 @@
     //   height: 146px;
     // }
 
+
     // グリッドでジグザグ配置
-    &:nth-child(odd) {
-      //奇数
+    &:nth-child(odd) { //奇数
       grid-column: 1 / 3;
 
-      @include breakpoint(pc) {
+      @include breakpoint( pc ) {
         grid-column: unset;
       }
     }
 
-    &:nth-child(even) {
-      //偶数
+    &:nth-child(even) { //偶数
       grid-column: 2 / 4;
 
-      @include breakpoint(pc) {
+      @include breakpoint( pc ) {
         grid-column: unset;
       }
     }
@@ -107,7 +121,7 @@
     &:nth-child(1) {
       grid-row: 1;
 
-      @include breakpoint(pc) {
+      @include breakpoint( pc ) {
         grid-row: unset;
       }
     }
@@ -115,7 +129,7 @@
     &:nth-child(2) {
       grid-row: 2;
 
-      @include breakpoint(pc) {
+      @include breakpoint( pc ) {
         grid-row: unset;
       }
     }
@@ -123,7 +137,7 @@
     &:nth-child(3) {
       grid-row: 3;
 
-      @include breakpoint(pc) {
+      @include breakpoint( pc ) {
         grid-row: unset;
       }
     }
@@ -131,7 +145,7 @@
     &:nth-child(4) {
       grid-row: 4;
 
-      @include breakpoint(pc) {
+      @include breakpoint( pc ) {
         grid-row: unset;
       }
     }
@@ -139,7 +153,7 @@
     &:nth-child(5) {
       grid-row: 5;
 
-      @include breakpoint(pc) {
+      @include breakpoint( pc ) {
         grid-row: unset;
       }
     }
@@ -147,7 +161,7 @@
     &:nth-child(6) {
       grid-row: 6;
 
-      @include breakpoint(pc) {
+      @include breakpoint( pc ) {
         grid-row: unset;
       }
     }

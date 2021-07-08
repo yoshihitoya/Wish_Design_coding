@@ -1,0 +1,134 @@
+.p-timeline{
+  margin: auto;
+
+  @include breakpoint( pc ) {
+    font-size: pxtovw-pc(15);
+  }
+
+  li{
+    /*線の起点とするためrelativeを設定*/
+    position: relative;
+    list-style: none;
+    padding:0 0 pxtovw-sp(20) 0;
+
+    @include breakpoint( pc ) {
+      display: flex;
+      justify-content: center;
+      display: grid;
+      grid-template-columns: pxtovw-pc(96) pxtovw-pc(567);
+      grid-template-rows: pxtovw-pc(35) auto;
+      column-gap: pxtovw-pc(50);
+      padding:0 0 pxtovw-pc(20) 0;
+    }
+
+    &::after{
+      content:'';
+      position: absolute;
+      top:0;
+      left:0;
+    }
+
+    dl{
+      margin:pxtovw-sp(20) 0 pxtovw-sp(20) pxtovw-sp(62);
+      letter-spacing: .5rem;
+
+      @include breakpoint( pc ) {
+        margin:0 0 0 0;
+        grid-column: 2;
+        grid-row: 2;
+        letter-spacing: .45rem;
+      }
+    }
+
+    dd {
+      line-height: 1.9;
+      @include breakpoint( pc ) {
+        line-height: 2.2;
+        letter-spacing: .16rem;
+      }
+    }
+  }
+}
+
+
+/*絶対配置で線を設定*/
+.border-line {
+  /*線の位置*/
+  position: absolute;
+  left: pxtovw-sp(48);
+  top: 0;
+  width: 1px;/*線の太さ*/
+  height: 0;/*はじめは高さを0に*/
+  background: #C1C1C1;
+  opacity: 2;
+  z-index: -1;
+
+  @include breakpoint( pc ) {
+    left: pxtovw-pc(48);
+    grid-column: 1;
+  }
+}
+
+
+
+.flow {
+  .p-timeline {
+    li {
+      padding:0 0 pxtovw-sp(40) 0;
+      grid-template-columns: pxtovw-sp(67) pxtovw-sp(10) auto;
+      grid-template-rows: auto auto;
+
+      @include breakpoint( pc ) {
+        display: flex;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: pxtovw-pc(67) pxtovw-pc(55) pxtovw-pc(560);
+        grid-template-rows: auto auto;
+        column-gap: 0;
+        padding:0 0 pxtovw-pc(38) 0;
+      }
+  
+    dl{
+      margin:0 0 0 0;
+      letter-spacing: .5rem;
+      grid-column: 3;
+
+      // dlの中のgrid
+      grid-template-rows: pxtovw-sp(40) auto pxtovw-sp(5) auto;
+  
+        @include breakpoint( pc ) {
+          margin:0 0 0 0;
+          grid-column: 3;
+          grid-row: 1;
+          letter-spacing: .45rem;
+
+          // dlの中のgrid
+          grid-template-rows: pxtovw-sp(4) auto pxtovw-sp(4) auto;
+        }
+
+      dt { // h2：見出し
+        grid-row: 2;
+      }
+    
+      dd {
+        grid-row: 4;
+        line-height: 1.9;
+          @include breakpoint( pc ) {
+            line-height: 2.35;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.flow {
+  .border-line {
+    left: pxtovw-sp(33.5);
+
+    @include breakpoint( pc ) {
+      left: pxtovw-pc(33.5);
+    }
+  }
+}

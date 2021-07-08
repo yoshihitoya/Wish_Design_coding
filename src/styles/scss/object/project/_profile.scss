@@ -1,0 +1,18 @@
+.p-profile {
+  margin: auto;
+  text-align: center;
+
+  p {
+    padding-top: pxtovw-sp(15);
+    line-height: 2.6rem;
+    letter-spacing: .6rem;
+    text-indent: .6rem;
+
+    @include breakpoint( pc ){
+      padding-top: pxtovw-pc(15);
+      line-height: 3.5rem;
+      letter-spacing: .4em;
+      text-indent: .4em;
+    }
+  }
+}

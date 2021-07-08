@@ -1,0 +1,36 @@
+.c-dl {
+	&--level1{
+		margin-left: pxtovw-sp(48);
+		padding-left: pxtovw-sp(14);
+		border-left: solid 1px $timeline-color;
+		line-height: 1.9;
+
+		@include breakpoint( pc ){
+			margin-left: pxtovw-pc(-48);
+			padding: 0;
+			padding-left: calc( 14px + 48px );
+			margin-top: pxtovw-pc(37.5);
+		}
+
+		dt, dd {
+			letter-spacing: .4em;
+		}
+	}
+
+	&--pro{
+		letter-spacing: .3em;
+    font-size: pxtovw-sp(15);
+
+		@include breakpoint( pc ){
+			font-size: pxtovw-pc(15);
+			padding-left: pxtovw-pc(75);
+		}
+
+		dd{
+			line-height: 3.5rem;
+			@include breakpoint( pc ){
+				margin-top: pxtovw-pc(10);
+			}
+		}
+	}
+}
