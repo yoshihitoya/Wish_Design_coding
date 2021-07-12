@@ -26,7 +26,9 @@
         }
     }
     &__ttl.p-page-ttl {
-        top: calc(38.6% + (1vw - 0.38rem) * -9.4);
+        top: calc(47.6% + (1vw - 0.38rem) * -4.4); //headerがfixedの時
+
+        // top: calc(38.6% + (1vw - 0.38rem) * -9.4);
         left: 51%;
 
         .p-page-ttl__heading {
@@ -54,11 +56,15 @@
     }
 
     &__wrap {
-        margin-top: calc(-28.2rem + (1vw - 0.38rem) * -20.6);
+        margin-top: calc(-22.2rem + (1vw - 0.38rem) * -14.6); //headerがfixedの時
+
+        // margin-top: calc(-28.2rem + (1vw - 0.38rem) * -20.6);
         padding: 0;
 
         @media (min-width: 1280px) {
-            margin-top: -46.7rem;
+            margin-top: -35.3rem; //headerがfixedの時
+
+            // margin-top: -46.7rem;
         }
     }
 
@@ -138,10 +144,10 @@
         }
     }
 
-    &__must {
+    &__item {
         padding-left: 1.5rem;
 
-        &::after {
+        &--must::after {
             content: "必須";
             display: inline-block;
             text-align: center;

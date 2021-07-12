@@ -7,17 +7,17 @@
     display: flex;
     justify-content: space-between;
 
-    // @include breakpoint(pc) {
-    //     margin: 10rem auto 5.8rem;
-    // }
-
-    a {
+    li {
         @include font-yumincho;
         font-weight: normal;
         font-size: calc(1.5rem + (1vw - 0.38rem) * 0.5525);
         color: #707070;
         letter-spacing: 0.1em;
         line-height: 2.3333333333333335;
+
+        &:hover {
+            opacity: 0.6;
+        }
 
         @media (min-width: 1280px) {
             font-size: 2rem;
@@ -92,5 +92,9 @@
                 right: 11rem;
             }
         }
+    }
+
+    &__none {
+        content: "";
     }
 }

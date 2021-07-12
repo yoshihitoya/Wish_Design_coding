@@ -1,19 +1,35 @@
 .c-card {
     position: relative;
     margin-top: 5.8rem;
-    // overflow: hidden;
+
+    &:hover {
+        filter: brightness(50%);
+        transition: all 0.8s;
+    }
 
     @media (min-width: 850px) {
         margin-top: 0;
     }
 
-    img {
+    &__bg {
         border-radius: 2%;
         box-shadow: 5px 5px 8px 1px #b9b9b9;
+    }
 
-        &:hover {
-            filter: brightness(50%);
-            transition: all 0.8s;
+    &__eyecatch {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        max-width: 45rem;
+        max-height: 58%;
+        overflow: hidden;
+
+        &-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 2% 2% 0 0;
         }
     }
 
@@ -34,7 +50,7 @@
         max-height: 37.2%;
         overflow: hidden;
 
-        span {
+        &--sub {
             display: block;
         }
     }

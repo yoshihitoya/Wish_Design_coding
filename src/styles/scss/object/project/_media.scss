@@ -27,7 +27,9 @@
     }
 
     &__ttl.p-page-ttl {
-        top: calc(38.5% + (1vw - 0.38rem) * -0.4);
+        top: calc(47.8% + (1vw - 0.38rem) * 3.6); //headerがfixedの時
+
+        // top: calc(38.5% + (1vw - 0.38rem) * -0.4);
         left: calc(50% + (1vw - 0.38rem) * 1.1);
 
         .p-page-ttl__heading {
@@ -44,12 +46,16 @@
     }
 
     &__wrap {
-        margin-top: calc(-33.3rem + (1vw - 0.38rem) * 40.3);
+        margin-top: calc(-27.3rem + (1vw - 0.38rem) * 43.3); //headerがfixedの時
+
+        // margin-top: calc(-33.3rem + (1vw - 0.38rem) * 40.3);
         margin-left: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
         margin-right: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
 
         @media (min-width: 1280px) {
-            margin-top: 1.07rem;
+            margin-top: 11.7rem; //headerがfixedの時
+
+            // margin-top: 1.07rem;
         }
     }
 
