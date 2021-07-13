@@ -55,27 +55,38 @@ Template Name: contact
 
 <!-- メインビジュアル -->
 <!-- 画像：画面幅によって取り込みサイズを変える -->
+
+<?php
+if (have_posts()):
+    while (have_posts()):the_post();
+?>
+
 <section class="l-mainvisual p-mainvisual p-form__mainvisual">
     <div class="p-page-ttl p-form__ttl">
-        <h1 class="p-page-ttl__heading">Contact
+        <h1 class="p-page-ttl__heading"><?php echo($post->post_name); ?>
             <div class="p-page-ttl__heading__shadow"></div></a>
         </h1>
-        <div class="p-page-ttl__txt">お問い合わせ</a>
+        <div class="p-page-ttl__txt"><?php the_title(); ?></a>
             <div class="p-page-ttl__txt__shadow"></div>
         </div>
     </div>
 </section>
+
+
 
 <!-- ◇----------------------------------------------------------------------------------------------◇ -->
 
 
 <main class="l-main p-form__wrap">
 
-    <p class="p-form__txt">
-        WishDesignでは「傾聴」を大切にしています。<br>
-        新規サイトの作成、既存サイトのリニューアル、サイト周りの相談等<br>
-        承っておりますので、まずは一度ご相談ください。
-    </p>
+    <div class="p-form__txt">
+        <?php the_content(); ?>
+    </div>
+
+    <?php
+endwhile;
+endif;
+ ?>
 
     <!-- action: 情報の送信先, method:  -->
     <?php $page = get_page_by_path('thanks'); ?>

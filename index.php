@@ -1,9 +1,9 @@
 <?php
 /*
-Template Name: top
+Template Name: Top
 */
 ?>
-<!-- ----ヘッダーのテンプレート化 -> header.php---- -->
+
 <?php get_header(); ?>
 
 <!-- メインビジュアル -->
@@ -37,8 +37,14 @@ Template Name: top
                     それを魅力に変える提案をし、そこに喜びを感じており、<br>
                     その経験はデザイナーとして活動する上でのベースとなっています。
                 </p>
-                <button class="p-base-btn u-grid u-margin--02">
-                    <p>大切にしていること</p><span>リンクページへ移動</span>
+
+                <button class="p-base-btn u-margin--02">
+                    <?php
+                  $page = get_page_by_path('about');
+                ?>
+                    <a class="u-grid" href="<?php echo esc_url(get_permalink($page -> ID)); ?>">
+                        <p>大切にしていること</p><span>リンクページへ移動</span>
+                    </a>
                 </button>
             </div>
         </section>
@@ -67,40 +73,45 @@ Template Name: top
             <ul class="p-slick js-slick u-margin--04" id="slider">
                 <li><a href="#">
                         <picture>
-                            <source srcset="<?php echo get_template_directory_uri(); ?>/images/home_slick_bg_sp.png"
+                            <source srcset="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_sp.png"
                                 media="(max-width: 480px)">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_slick_bg_pc.png">
+                            <img src="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_pc.png">
                         </picture>
                     </a>
                 </li>
                 <li><a href="#">
                         <picture>
-                            <source srcset="<?php echo get_template_directory_uri(); ?>/images/home_slick_bg_sp.png"
+                            <source srcset="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_sp.png"
                                 media="(max-width: 480px)">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_slick_bg_pc.png">
+                            <img src="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_pc.png">
                         </picture>
                     </a>
                 </li>
                 <li><a href="#">
                         <picture>
-                            <source srcset="<?php echo get_template_directory_uri(); ?>/images/home_slick_bg_sp.png"
+                            <source srcset="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_sp.png"
                                 media="(max-width: 480px)">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_slick_bg_pc.png">
+                            <img src="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_pc.png">
                         </picture>
                     </a>
                 </li>
                 <li><a href="#">
                         <picture>
-                            <source srcset="<?php echo get_template_directory_uri(); ?>/images/home_slick_bg_sp.png"
+                            <source srcset="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_sp.png"
                                 media="(max-width: 480px)">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/home_slick_bg_pc.png">
+                            <img src="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_pc.png">
                         </picture>
                     </a>
                 </li>
             </ul>
 
-            <button class="p-base-btn u-grid u-margin--05 sp-hidden">
-                <p>制作実績へ</p><span>リンクページへ移動</span>
+            <button class="p-base-btn u-margin--05 sp-hidden">
+                <?php
+                  $page = get_page_by_path('works');
+              ?>
+                <a class="u-grid" href="<?php echo esc_url(get_permalink($page -> ID)); ?>">
+                    <p>制作実績へ</p><span>リンクページへ移動</span>
+                </a>
             </button>
         </div>
     </article>
@@ -123,8 +134,13 @@ Template Name: top
                 <li class="p-home-flow--box fadein js-fadein"><span>開発</span></li>
             </ul>
 
-            <button class="p-base-btn u-grid u-margin--08">
-                <p>お取引の流れへ</p><span>リンクページへ移動</span>
+            <button class="p-base-btn u-margin--08">
+                <?php
+                  $page = get_page_by_path('flow');
+              ?>
+                <a class="u-grid" href="<?php echo esc_url(get_permalink($page -> ID)); ?>">
+                    <p>お取引の流れへ</p><span>リンクページへ移動</span>
+                </a>
             </button>
         </div>
     </article>
@@ -138,8 +154,13 @@ Template Name: top
                 WishDesignでは、テンプレートでの制作は承っておりません。<br>
                 ヒアリングをして、すべてオーダーメイドであなただけのサイトを制作します。
             </p>
-            <button class="p-base-btn u-grid u-margin--10">
-                <p>料金詳細へ</p><span>リンクページへ移動</span>
+            <button class="p-base-btn u-margin--10">
+                <?php
+                  $page = get_page_by_path('price');
+              ?>
+                <a class="u-grid" href="<?php echo esc_url(get_permalink($page -> ID)); ?>">
+                    <p>料金詳細へ</p><span>リンクページへ移動</span>
+                </a>
             </button>
         </div>
     </article>
@@ -153,11 +174,14 @@ Template Name: top
                 まずは一度相談ください。<br>
                 あなたの「オモイ」を「カタチ」にします。
             </p>
-            <button class="p-base-btn u-grid u-margin--12">
-                <p>お問い合わせへ</p><span>リンクページへ移動</span>
+            <button class="p-base-btn u-margin--12">
+                <?php
+                  $page = get_page_by_path('contact');
+              ?>
+                <a class="u-grid" href="<?php echo esc_url(get_permalink($page -> ID)); ?>">
+                    <p>お問い合わせへ</p><span>リンクページへ移動</span>
+                </a>
             </button>
-
-            <small class="c-copyright u-margin--13 u-display-center">&copy; 2021 Wish Design</small>
         </div>
     </article>
 
@@ -167,6 +191,4 @@ Template Name: top
 
 </main>
 </div>
-
-<!-- ----フッターのテンプレート化 -> footer.php---- -->
 <?php get_footer(); ?>

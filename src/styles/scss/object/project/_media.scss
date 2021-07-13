@@ -27,6 +27,7 @@
     }
 
     &__ttl.p-page-ttl {
+        text-transform: capitalize;
         top: calc(47.8% + (1vw - 0.38rem) * 3.6); //headerがfixedの時
 
         // top: calc(38.5% + (1vw - 0.38rem) * -0.4);

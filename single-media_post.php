@@ -12,7 +12,7 @@ Template Name: Media Detail
     if (have_posts()):
         while (have_posts()):the_post();
     ?>
-    <article class="p-detail__wrap">
+    <article <?php post_class('p-detail__wrap'); ?>>
         <h1 class="p-detail__ttl"><?php the_title(); ?></h1>
 
         <div class="p-detail__content">
@@ -20,6 +20,7 @@ Template Name: Media Detail
         </div>
 
         <?php the_post_thumbnail('thunmbnail', array('class'=>'p-detail__img')); ?>
+        <?php wp_link_pages(); ?>
 
     </article>
 
@@ -39,8 +40,10 @@ Template Name: Media Detail
 
     </ul>
 
-    <?php endwhile;
-    endif; ?>
+    <?php
+    endwhile;
+    endif;
+    ?>
 
 
     <!-- :::::::::追従ボタン::::::::: -->

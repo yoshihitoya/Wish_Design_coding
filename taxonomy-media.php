@@ -22,11 +22,14 @@ Template Name: Media
 <main class="p-media__wrap">
 
     <section class="p-media__grid">
-        <?php while (have_posts()):the_post(); ?>
+        <?php
+        if (have_posts()):
+        while (have_posts()):the_post();
+        ?>
         <div class="c-card">
             <a href="<?php the_permalink(); ?>">
-                <img class="c-card__bg" src="<?php echo get_template_directory_uri(); ?>/images/media_card_bg.png"
-                    alt="">
+                <img class="c-card__bg"
+                    src="<?php echo esc_url(get_template_directory_uri()); ?>/images/media_card_bg.png" alt="">
                 <div class="c-card__eyecatch">
                     <?php the_post_thumbnail('thumbnail', array('class'=>'c-card__eyecatch-img')); ?>
 
@@ -41,7 +44,10 @@ Template Name: Media
                 </div>
             </a>
         </div>
-        <?php endwhile; ?>
+        <?php
+        endwhile;
+        endif;
+        ?>
 
     </section>
 

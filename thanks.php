@@ -8,17 +8,28 @@ Template Name: thanks
 
 <!-- メインビジュアル -->
 <!-- 画像：画面幅によって取り込みサイズを変える -->
-<section class="l-mainvisual p-mainvisual p-thanks__mainvisual">
-    <div class="p-page-ttl p-thanks__ttl">
-        <h1 class="p-page-ttl__heading p-thanks__ttl--heading">
-            お問い合わせ完了しました。
-        </h1>
-        <p class="p-page-ttl__txt p-thanks__ttl--txt">
-            ご入力頂きありがとうございます。<br>
-            3営業日以内に返信させて頂きます。
 
-        </p>
+<?php
+if (have_posts()):
+    while (have_posts()):the_post();
+?>
+
+<section class="l-mainvisual p-mainvisual p-thanks__mainvisual">
+    <div class="p-thanks__ttl">
+        <h1 class="p-thanks__ttl--heading">
+            <?php the_title(); ?>
+        </h1>
+        <div class="p-thanks__ttl--txt">
+            <?php remove_filter('the_content', 'wpautop'); ?>
+            <?php the_content(); ?>
+
+        </div>
     </div>
+
+    <?php
+endwhile;
+endif;
+?>
 
     <button class="p-thanks__submit p-base-btn u-grid u-margin--54">
         <?php $page = get_page_by_path('top'); ?>
@@ -27,8 +38,6 @@ Template Name: thanks
 
 
 </section>
-
-
 
 <!-- :::::::::追従ボタン::::::::: -->
 <button class="p-back-to-top u-grid">

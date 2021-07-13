@@ -5,6 +5,8 @@ function init_func()
 {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails', array('media_post'));
+    add_theme_support('automatic-feed-links');//フィードの利用を許可する
+
 
     /*カスタム投稿の追加*/
     register_post_type('media_post', [
@@ -44,7 +46,7 @@ function wishdesign_script()
     wp_enqueue_script('jquery.min', get_template_directory_uri(). '/js/jquery-3.6.0.min.js');
     wp_enqueue_script('slick.min', get_template_directory_uri(). '/js/slick.min.js');
     wp_enqueue_script('mySlick', get_template_directory_uri(). '/js/mySlick.js');
-    wp_enqueue_script('easing.min', '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js');
+    wp_enqueue_script('easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array(), '', true);
     wp_enqueue_script('scrollify', get_template_directory_uri(). '/js/jquery.scrollify.js');
     wp_enqueue_script('myScrollify', get_template_directory_uri(). '/js/myScrollify.js');
     wp_enqueue_script('sectionscroller', get_template_directory_uri(). '/js/sectionscroller.min.js');
