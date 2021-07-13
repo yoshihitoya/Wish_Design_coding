@@ -1,7 +1,12 @@
 .p-detail {
     padding-top: calc(6.9rem + (1vw - 0.38rem) * -0.1);
+    padding-bottom: calc(11rem + (1vw - 0.38rem) * -7.7348);
     margin-left: calc(2rem + (1vw - 0.38rem) * 13.2597);
     margin-right: calc(2rem + (1vw - 0.38rem) * 13.2597);
+
+    @media (min-width: 1280px) {
+        padding-bottom: 4rem;
+    }
 
     &__header {
         position: static;

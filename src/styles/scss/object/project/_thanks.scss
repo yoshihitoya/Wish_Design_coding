@@ -1,0 +1,61 @@
+.p-thanks {
+    &__mainvisual {
+        background-image: none;
+        width: 100%;
+        height: calc(64rem + (1vw - 0.38rem) * 12.7072);
+    }
+
+    &__ttl {
+        top: calc(31.8rem + (1vw - 0.38rem) * -0.3315);
+        @media (min-width: 1280px) {
+            top: 31.5rem;
+        }
+
+        &--heading {
+            @include font-yumincho;
+            font-weight: normal;
+            font-size: calc(2rem + (1vw - 0.38rem) * 1.105);
+            color: #707070;
+            letter-spacing: calc(0.1rem + (1vw - 0.38rem) * 0.1105);
+            text-indent: -0.5rem;
+            line-height: 1.75;
+
+            @media (min-width: 1280px) {
+                font-size: 3rem;
+                letter-spacing: 0.2rem;
+            }
+        }
+
+        &--txt {
+            @include font-yumincho;
+            font-weight: normal;
+            font-size: 15px;
+            color: #707070;
+            letter-spacing: 0.3em;
+            line-height: calc(2.5rem + (1vw - 0.38rem) * 0.9);
+            transform: translate(-15rem, calc(2rem + (1vw - 0.38rem) * 2));
+
+            @media (min-width: 1280px) {
+                line-height: 3.3rem;
+                transform: translate(-16rem, 3.8rem);
+            }
+        }
+    }
+
+    &__submit {
+        transform: translate(-7.3rem, calc(43.8rem + (1vw - 0.38rem) * 2.9834));
+        width: 14.5rem;
+        height: 3rem;
+
+        @media (min-width: 1280px) {
+            transform: translate(-7.3rem, 46.5rem);
+        }
+
+        a {
+            transform: translate(calc(0.8rem + (1vw - 0.38rem) * -0.2), calc(-0.2rem + (1vw - 0.38rem) * 0));
+            font-size: 1.5rem;
+            letter-spacing: 0.3em;
+            line-height: 1.2666666666666666;
+        }
+    }
+}

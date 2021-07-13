@@ -61,54 +61,61 @@ add_action('wp_enqueue_scripts', 'wishdesign_script');
 
  //::::お問い合わせフォームの実装::::
  
- function form_init()
+ function send_mail()
  {
-     if (! is_page(array('confirm'))) {
+     if (! is_page('thanks')) {
          return;
      }
-     global $office_name, $user_name, $email, $budget, $contact;
+
+     session_start();
      
-     $office_name = htmlspecialchars($_POST['office_name'], ENT_QUOTES);
-     $user_name = htmlspecialchars($_POST['user_name'], ENT_QUOTES);
-     $email = htmlspecialchars($_POST['email'], ENT_QUOTES);
-     $budget = htmlspecialchars($_POST['budget'], ENT_QUOTES);
-     $contact = htmlspecialchars($_POST['contact'], ENT_QUOTES);
+     $_SESSION['office_name'] = htmlspecialchars($_POST['office_name'], ENT_QUOTES);
+     $_SESSION['user_name'] = htmlspecialchars($_POST['user_name'], ENT_QUOTES);
+     $_SESSION['email'] = htmlspecialchars($_POST['email'], ENT_QUOTES);
+     $_SESSION['budget'] = htmlspecialchars($_POST['budget'], ENT_QUOTES);
+     $_SESSION['contact'] = htmlspecialchars($_POST['contact'], ENT_QUOTES);
      $myform_nonce = $_POST['myform_nonce'];
-     $count = 0;
+     $_SESSION['error_user_name'] ="";
+     $_SESSION['erooe_email']  ="";
+     $_SESSION['error_contact'] ="";
+     
 
      if (! wp_verify_nonce($myform_nonce, 'my-form')) {
          wp_die('不正な遷移です');
      }
+
+     /* 必須項目が無い時contactページへ戻る */
+     if (empty($_SESSION['user_name'])) {
+         $_SESSION['error_user_name'] = '＊未入力です。';
+     }
+     
+     if (empty($_SESSION['email'])) {
+         $_SESSION['error_email'] = '＊未入力です。';
+     }
+     
+     if (empty($_SESSION['contact'])) {
+         $_SESSION['error_contact'] = '＊未入力です。';
+     }
+     
+     if (empty($_SESSION['user_name']) || empty($_SESSION['email']) || empty($_SESSION['contact'])) {
+         header("location: contact");
+         exit();
+     }
+
+     /* お問い合わせ内容をメールで送信 */
+     $to = "kent.mosstar@gmail.com";//送信先のメールアドレス
+     $subject = "お問合せがありました";
+     $body =
+    "会社名 : ".$_SESSION['office_name']."\n"
+    ."お名前 :" .$_SESSION['user_name']."\n"
+    . "メールアドレス :" .$_SESSION['email']."\n"
+    . "ご予算感 : ".$_SESSION['budget']."\n"
+    . "お問合せ内容 : ".$_SESSION['contact']."\n";
+     $fromname = "Wish-Design";
+     $from = "kent.mosstar@gmail.com";
+     $headers = "From: {$fromname} <{$from}>\r\n";
+     $response = wp_mail($to, $subject, $body, $headers) ;
+
+     session_destroy();
  }
-add_action('template_redirect', 'form_init');
-    
-function send_mail()
-{
-    if (! is_page('thanks')) {
-        return;
-    }
-    $office_name = htmlspecialchars($_POST['office_name'], ENT_QUOTES);
-    $user_name = htmlspecialchars($_POST['user_name'], ENT_QUOTES);
-    $email = htmlspecialchars($_POST['email'], ENT_QUOTES);
-    $budget = htmlspecialchars($_POST['budget'], ENT_QUOTES);
-    $contact = htmlspecialchars($_POST['contact'], ENT_QUOTES);
-
-    /* お問い合わせ内容をメールで送信 */
-    $to = "kent.mosstar@gmail.com";//送信先のメールアドレス
-    $subject = "お問合せがありました";
-    $body =
-    "会社名 : ".$office_name."\n"
-    ."お名前 :" .$user_name."\n"
-    . "メールアドレス :" .$email."\n"
-    . "ご予算感 : ".$budget."\n"
-    . "お問合せ内容 : ".$contact."\n";
-    $fromname = "Wish-Design";
-    $from = "kent.mosstar@gmail.com";
-    $headers = "From: {$fromname} <{$from}>\r\n";
-    $response = wp_mail($to, $subject, $body, $headers) ;
-
-    // if ($response) {
-    //     wp_safe_redirect(get_page_link(get_page_by_path('contact')->ID));
-    // }
-}
 add_action('template_redirect', 'send_mail');

@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: top
+*/
+?>
 <!-- ----ヘッダーのテンプレート化 -> header.php---- -->
 <?php get_header(); ?>
 
