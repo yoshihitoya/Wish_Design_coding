@@ -2,9 +2,18 @@
   display: block;
 }
 
+.home,
+.page-template-index,
+.page-template-default {
+  .c-copyright {
+    @include breakpoint( pc ) {
+      padding-top: pxtovw-pc(50);
+    }
+  }
+}
 
-.about,
-.flow {
+.page-template-about,
+.page-template-flow {
   .c-copyright {
     padding-top: pxtovw-sp(72);
 
@@ -17,13 +26,13 @@
 
 //paddingを広くとらないと、ラインアニメーションが最後までいかない
 @media (min-width:480px) and ( max-width: 1100px ) {
-.about {
+.page-template-about {
   .c-copyright {
   padding-top: pxtovw-pc(300);
   }
 }
 
-.flow {
+.page-template-flow {
   .c-copyright {
       padding-top: pxtovw-pc(400);
     }
@@ -32,7 +41,7 @@
 
 
 
-.page404 {
+.error404 {
   .c-copyright {
     margin-top: pxtovw-pc(20);
   }

@@ -1,102 +1,106 @@
-.u-margin {
+.home,
+.page-template-index,
+.page-template-default {
+  .u-margin {
 
-  &--01 {
-    margin-top: pxtovw-sp(45);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(60);
+    &--01 {
+      margin-top: pxtovw-sp(45);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(60);
+      }
     }
-  }
 
-  &--02 {
-    margin-top: pxtovw-sp(80);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(91);
+    &--02 {
+      margin-top: pxtovw-sp(80);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(91);
+      }
     }
-  }
 
-  &--03 {
-    // margin-top: pxtovw-sp(145);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(62);
+    &--03 {
+      // margin-top: pxtovw-sp(145);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(62);
+      }
     }
-  }
 
-  &--04 {
-    margin-top: pxtovw-sp(-26);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(40);
+    &--04 {
+      margin-top: pxtovw-sp(-26);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(40);
+      }
     }
-  }
 
-  &--05 {
-    margin-top: 0;
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(100);
+    &--05 {
+      margin-top: 0;
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(100);
+      }
     }
-  }
 
-  // はじめてサイトをお持ちになるお客様でも
-  &--06 {
-    margin-top: pxtovw-sp(45);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(62);
+    // はじめてサイトをお持ちになるお客様でも
+    &--06 {
+      margin-top: pxtovw-sp(45);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(62);
+      }
     }
-  }
 
-  &--07 {
-    margin-top: pxtovw-sp(75);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(60);
+    &--07 {
+      margin-top: pxtovw-sp(75);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(60);
+      }
     }
-  }
 
-  &--08 {
-    margin-top: pxtovw-sp(83);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(100);
+    &--08 {
+      margin-top: pxtovw-sp(83);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(100);
+      }
     }
-  }
 
-  &--09 {
-    margin-top: pxtovw-sp(45);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(62);
+    &--09 {
+      margin-top: pxtovw-sp(45);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(62);
+      }
     }
-  }
 
-  &--10 {
-    margin-top: pxtovw-sp(76);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(90);
+    &--10 {
+      margin-top: pxtovw-sp(76);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(90);
+      }
     }
-  }
 
-  &--11 {
-    margin-top: pxtovw-sp(45);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(62);
+    &--11 {
+      margin-top: pxtovw-sp(45);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(62);
+      }
     }
-  }
 
-  &--12 {
-    margin-top: pxtovw-sp(78);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(94);
+    &--12 {
+      margin-top: pxtovw-sp(78);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(94);
+      }
     }
-  }
 
-  &--13 {
-    margin-top: pxtovw-sp(70);
-    padding-bottom: pxtovw-sp(70);
-    @include breakpoint( pc ) {
-      margin-top: pxtovw-pc(173);
-      padding-bottom: pxtovw-pc(30);
+    &--13 {
+      margin-top: pxtovw-sp(70);
+      padding-bottom: pxtovw-sp(70);
+      @include breakpoint( pc ) {
+        margin-top: pxtovw-pc(173);
+        padding-bottom: pxtovw-pc(30);
+      }
     }
   }
 }
 
 
-.about {
+.page-template-about {
   .u-margin {
     &--20 {
       margin-top: pxtovw-sp(99);
@@ -183,7 +187,7 @@
 
 
 
-.flow {
+.page-template-flow {
   .u-margin {
     &--35 {
       margin-top: pxtovw-sp(85);
@@ -206,7 +210,7 @@
 
 
 
-.price {
+.page-template-price {
   .u-margin {
     &--50 {
       margin-top: pxtovw-sp(2);
@@ -255,7 +259,7 @@
 
 
 
-.qanda {
+.page-template-qanda {
   .u-margin {
     &--60 {
       margin-top: pxtovw-sp(8);

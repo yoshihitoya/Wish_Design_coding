@@ -15,13 +15,16 @@
     font-size: pxtovw-pc(15);
   }
 
-  grid-auto-flow: column;
-  grid-template-columns: repeat(2, auto);
-  align-items: center;
-  column-gap: pxtovw-sp(12);
-
-  @include breakpoint( pc ) {
-    column-gap: pxtovw-pc(8);
+  // aタグをグリッドにする
+  a {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    column-gap: pxtovw-sp(12);
+  
+    @include breakpoint( pc ) {
+      column-gap: pxtovw-pc(8);
+    }
   }
 
   p {

@@ -9,31 +9,21 @@ Template Name: thanks
 <!-- メインビジュアル -->
 <!-- 画像：画面幅によって取り込みサイズを変える -->
 
-<?php
-if (have_posts()):
-    while (have_posts()):the_post();
-?>
+
 
 <section class="l-mainvisual p-mainvisual p-thanks__mainvisual">
     <div class="p-thanks__ttl">
         <h1 class="p-thanks__ttl--heading">
-            <?php the_title(); ?>
+            お問い合わせ完了しました。
         </h1>
-        <div class="p-thanks__ttl--txt">
-            <?php remove_filter('the_content', 'wpautop'); ?>
-            <?php the_content(); ?>
-
-        </div>
+        <p class="p-thanks__ttl--txt">
+            ご入力頂きありがとうございます。<br>
+            3営業日以内に返信させて頂きます。
+        </p>
     </div>
 
-    <?php
-endwhile;
-endif;
-?>
-
-    <button class="p-thanks__submit p-base-btn u-grid u-margin--54">
-        <?php $page = get_page_by_path('top'); ?>
-        <a href="<?php echo esc_url(get_permalink($page->ID)); ?>">Top</a>
+    <button class="p-thanks__submit p-base-btn u-margin--02">
+        <a href="<?php echo esc_url(home_url('/')); ?>">Top</a>
     </button>
 
 

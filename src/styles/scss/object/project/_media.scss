@@ -13,13 +13,13 @@
         height: calc(66.7rem + (1vw - 0.38rem) * 14.6961);
 
         width: 100%;
-        background-image: url(../images/mainvisual_media_sp.png);
+        background-image: url(../images/media_mainvisual_sp.svg);
         background-position-x: 0%;
         background-position-y: -8rem;
         background-size: cover;
         @include breakpoint(pc) {
             width: 100%;
-            background-image: url(../images/mainvisual_media_pc.png);
+            background-image: url(../images/media_mainvisual_pc.svg);
             background-position-x: center;
             background-position-y: -11.2rem;
             background-size: cover;
@@ -47,16 +47,16 @@
     }
 
     &__wrap {
-        margin-top: calc(-27.3rem + (1vw - 0.38rem) * 43.3); //headerがfixedの時
-
-        // margin-top: calc(-33.3rem + (1vw - 0.38rem) * 40.3);
+        margin-top: calc(-31.3rem + (1vw - 0.38rem) * 46.3); //headerがfixedの時
         margin-left: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
         margin-right: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
 
-        @media (min-width: 1280px) {
-            margin-top: 11.7rem; //headerがfixedの時
+        @include breakpoint(pc) {
+            margin-top: calc(-10rem + (1vw - 0.38rem) * 23);
+        }
 
-            // margin-top: 1.07rem;
+        @media (min-width: 1280px) {
+            margin-top: 10.7rem;
         }
     }
 

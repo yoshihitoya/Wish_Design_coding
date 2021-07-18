@@ -17,7 +17,7 @@
   }
 }
 
-.about {
+.page-template-about {
   .p-mainvisual {
     background-image: url(../images/about_mainvisual_sp.svg);
 
@@ -27,7 +27,7 @@
   }
 }
 
-.flow {
+.page-template-flow {
   .p-mainvisual {
     background-image: url(../images/flow_mainvisual_sp.svg);
 
@@ -37,7 +37,7 @@
   }
 }
 
-.price {
+.page-template-price {
   .p-mainvisual {
     background-image: url(../images/price_mainvisual_sp.svg);
 
@@ -47,7 +47,7 @@
   }
 }
 
-.qanda {
+.page-template-qanda {
   .p-mainvisual {
     background-image: url(../images/qa_mainvisual_sp.svg);
 
@@ -57,7 +57,8 @@
   }
 }
 
-.works {
+.page-template-works,
+.tax-works {
   .p-mainvisual {
     background-image: url(../images/works_mainvisual_sp.svg);
 
@@ -67,7 +68,7 @@
   }
 }
 
-.contact {
+.page-template-contact {
   .p-mainvisual {
     background-image: url(../images/contact_mainvisual_sp.svg);
 
@@ -77,7 +78,8 @@
   }
 }
 
-.media {
+.page-template-media,
+.tax-media {
   .p-mainvisual {
     background-image: url(../images/media_mainvisual_sp.svg);
 

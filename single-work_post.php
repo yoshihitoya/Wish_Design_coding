@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Media Detail
+Template Name: work Detail
 */
 ?>
 
@@ -28,13 +28,13 @@ Template Name: Media Detail
     <ul class="p-pagenation">
 
         <?php if (get_next_post_link()): ?>
-        <li class="p-pagenation__prev"><?php next_post_link('%link', '前の記事', true, '', 'media'); ?></li>
+        <li class="p-pagenation__prev"><?php next_post_link('%link', '前の記事', true, '', 'works'); ?></li>
         <?php else: ?>
         <li class="p-pagenation__none"></li>
         <?php endif; ?>
 
         <?php if (get_previous_post_link()): ?>
-        <li class="p-pagenation__next"><?php previous_post_link('%link', '次の記事', true, '', 'media'); ?></li>
+        <li class="p-pagenation__next"><?php previous_post_link('%link', '次の記事', true, '', 'works'); ?></li>
         <?php else: ?>
         <li class="p-pagenation__none"></li>
         <?php endif; ?>

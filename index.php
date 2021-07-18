@@ -70,46 +70,45 @@ Template Name: Top
             <h2 class="p-content-ttl">Works</h2>
             <p class="c-txt--content u-margin--03 sp-hidden">今までいろんなお客様の「オモイ」を「カタチ」に変えてきました。</p>
 
+
+            <!-- カルーセル：直近のWorks記事を表示 -->
             <ul class="p-slick js-slick u-margin--04" id="slider">
-                <li><a href="#">
-                        <picture>
-                            <source srcset="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_sp.png"
-                                media="(max-width: 480px)">
-                            <img src="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_pc.png">
-                        </picture>
-                    </a>
+                <?php
+  $args = array(
+    'posts_per_page' => 5, // 表示件数の指定
+    'post_type'=>'work_post'//表示したカスタム投稿名の指定
+  );
+  $posts = get_posts($args);
+  foreach ($posts as $post): // ループの開始
+  setup_postdata($post); // 記事データの取得
+?>
+                <li>
+                    <div class="c-slick-card">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="c-slick-card__flex">
+                                <div class="c-slick-card__eyecatch">
+                                    <?php the_post_thumbnail('thumbnail', array('class'=>'c-slick-card__eyecatch-img')); ?>
+                                </div>
+                                <div class="c-slick-card__info">
+                                    <h2 class="c-slick-card__ttl">
+                                        <?php the_title(); ?>
+                                    </h2>
+                                    <div class="c-slick-card__desc">
+                                        <?php echo the_content(); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </li>
-                <li><a href="#">
-                        <picture>
-                            <source srcset="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_sp.png"
-                                media="(max-width: 480px)">
-                            <img src="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_pc.png">
-                        </picture>
-                    </a>
-                </li>
-                <li><a href="#">
-                        <picture>
-                            <source srcset="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_sp.png"
-                                media="(max-width: 480px)">
-                            <img src="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_pc.png">
-                        </picture>
-                    </a>
-                </li>
-                <li><a href="#">
-                        <picture>
-                            <source srcset="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_sp.png"
-                                media="(max-width: 480px)">
-                            <img src="<?php echo do_shortcode('[uri]'); ?>/images/home_slick_bg_pc.png">
-                        </picture>
-                    </a>
-                </li>
+                <?php
+  endforeach; // ループの終了
+  wp_reset_postdata(); // 直前のクエリを復元する
+?>
             </ul>
 
             <button class="p-base-btn u-margin--05 sp-hidden">
-                <?php
-                  $page = get_page_by_path('works');
-              ?>
-                <a class="u-grid" href="<?php echo esc_url(get_permalink($page -> ID)); ?>">
+                <a class="u-grid" href="<?php echo esc_html(get_term_link('works', 'works')); ?>">
                     <p>制作実績へ</p><span>リンクページへ移動</span>
                 </a>
             </button>

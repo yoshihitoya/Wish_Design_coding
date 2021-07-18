@@ -4,9 +4,23 @@ Template Name: contact
 */
 ?>
 <?php
+
+
+//::::お問い合わせフォームの実装::::
+
+/**$_SESSION['']を利用
+ *
+ * $_SESSION['']について
+ * 値の引き継ぎが可能な変数
+ * 処理の最後にdestroyする（値の破棄）
+ */
     session_start();
     
-    /* 入力値の初期化 */
+/**入力値の初期化
+ *
+ * valueへ入れ込む値を変数として定義
+ * 表示初めは何も入ってない状態なので””を表示
+ */
     $office_name = "";
     $user_name ="";
     $email ="";
@@ -14,7 +28,12 @@ Template Name: contact
     $contact ="";
     $error_user_name ="";
 
-/* 入力値の引き継ぎ */
+/**値の代入
+ *
+ * $_SESSIONに値が入っている場合に動作させる
+ * functions.phpで作成した$_SESSIONの値を変数に代入
+ *
+ */
     if (! empty($_SESSION['office_name'])) {
         $office_name = $_SESSION['office_name'];
     }
@@ -47,46 +66,39 @@ Template Name: contact
         $error_contact = $_SESSION['error_contact'];
     }
 
+/**$_SESSIONの破棄
+ *
+ * 使用した$_SESSIONの値を引き継がないための処理
+ */
     session_destroy();
 ?>
 
 
 <?php get_header(); ?>
 
-<!-- メインビジュアル -->
-<!-- 画像：画面幅によって取り込みサイズを変える -->
 
-<?php
-if (have_posts()):
-    while (have_posts()):the_post();
-?>
+<article class="l-mainvisual p-mainvisual">
+    <section class="c-section-content">
+        <div class="p-page-ttl p-form__ttl">
+            <h1 class="p-page-ttl__heading ">Contact
+                <div class="p-page-ttl__heading__shadow"></div>
+            </h1>
+            <div class="p-page-ttl__txt">お問い合わせ
+                <div class="p-page-ttl__txt__shadow"></div>
+            </div>
 
-<section class="l-mainvisual p-mainvisual p-form__mainvisual">
-    <div class="p-page-ttl p-form__ttl">
-        <h1 class="p-page-ttl__heading"><?php echo($post->post_name); ?>
-            <div class="p-page-ttl__heading__shadow"></div></a>
-        </h1>
-        <div class="p-page-ttl__txt"><?php the_title(); ?></a>
-            <div class="p-page-ttl__txt__shadow"></div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-
+</article>
 <!-- ◇----------------------------------------------------------------------------------------------◇ -->
-
-
 <main class="l-main p-form__wrap">
 
-    <div class="p-form__txt">
-        <?php the_content(); ?>
-    </div>
-
-    <?php
-endwhile;
-endif;
- ?>
+    <p class="p-form__txt">
+        WishDesignでは「傾聴」を大切にしています。<br>
+        新規サイトの作成、既存サイトのリニューアル、サイト周りの相談等<br>
+        承っておりますので、まずは一度ご相談ください。
+    </p>
 
     <!-- action: 情報の送信先, method:  -->
     <?php $page = get_page_by_path('thanks'); ?>
@@ -130,7 +142,7 @@ endif;
                 placeholder="ご相談内容をご記入ください（お見積り、サイト制作、サイトリニューアル）"><?php echo $contact; ?></textarea>
         </div>
 
-        <button class="p-form__submit p-base-btn u-grid u-margin--54">
+        <button class="p-form__submit p-base-btn u-margin--54">
             <input type="submit" class="btn" value="送信">
         </button>
     </form>

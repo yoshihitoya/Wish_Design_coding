@@ -13,24 +13,19 @@
         opacity: 1;
         height: calc(66.7rem + (1vw - 0.38rem) * 14.6961);
 
-        background-image: url(../images/mainvisual_contact_sp.png);
+        background-image: url(../images/contact_mainvisual_sp.svg);
         background-position-x: 0%;
         background-position-y: -8rem;
         background-size: cover;
         @include breakpoint(pc) {
             width: 100%;
-            background-image: url(../images/mainvisual_contact_pc.png);
+            background-image: url(../images/contact_mainvisual_pc.svg);
             background-position-x: center;
             background-position-y: -11.2rem;
             background-size: cover;
         }
     }
-    &__ttl.p-page-ttl {
-        top: calc(47.6% + (1vw - 0.38rem) * -4.4); //headerがfixedの時
-
-        // top: calc(38.6% + (1vw - 0.38rem) * -9.4);
-        left: 51%;
-
+    &__ttl {
         .p-page-ttl__heading {
             text-transform: capitalize;
             letter-spacing: calc(0.5rem + (1vw - 0.38rem) * 3.4917);
@@ -50,17 +45,16 @@
             @include breakpoint(pc) {
                 transform: translate(-50%, 120%);
             }
-            @media (min-width: 1280px) {
-                text-indent: -2rem;
-            }
         }
     }
 
     &__wrap {
-        margin-top: calc(-22.2rem + (1vw - 0.38rem) * -14.6); //headerがfixedの時
-
-        // margin-top: calc(-28.2rem + (1vw - 0.38rem) * -20.6);
+        margin-top: calc(-22.2rem + (1vw - 0.38rem) * -14.6);
         padding: 0;
+
+        @include breakpoint(pc) {
+            margin-top: calc(-7rem + (1vw - 0.38rem) * -31.6);
+        }
 
         @media (min-width: 1280px) {
             margin-top: -35.3rem; //headerがfixedの時
@@ -69,7 +63,7 @@
         }
     }
 
-    &__txt p {
+    &__txt {
         width: 100%;
         text-align: center;
         width: calc(100vw-4rem);
@@ -79,9 +73,10 @@
         letter-spacing: 0.3em;
 
         @include breakpoint(pc) {
-            line-height: 2.37;
-            letter-spacing: 0.45rem;
-            text-indent: 0.45rem;
+            font-size: pxtovw-pc(15);
+            line-height: 2.2;
+            letter-spacing: pxtovw-pc(4.4);
+            text-indent: pxtovw-pc(4.4);
         }
     }
 

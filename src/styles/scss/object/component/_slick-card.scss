@@ -1,0 +1,119 @@
+.c-slick-card {
+    width: calc(30rem + (1vw - 0.38rem) * 86.5385);
+    height: calc(42rem + (1vw - 0.38rem) * 115.3846);
+    margin: 0 auto;
+
+    @include breakpoint(pc) {
+        width: calc(39rem + (1vw - 0.48rem) * 13.75);
+        height: calc(20rem + (1vw - 0.48rem) * 6.25);
+    }
+
+    @media (min-width: 1280px) {
+        width: 50rem;
+        height: 25rem;
+    }
+
+    &__flex {
+        height: 100%;
+        background-color: #f7f7f7;
+        border-radius: 2%;
+        box-shadow: 5px 5px 8px 1px #b9b9b9;
+
+        @include breakpoint(pc) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__eyecatch {
+        max-width: 45rem;
+        height: 58%;
+        overflow: hidden;
+
+        @include breakpoint(pc) {
+            width: 50%;
+            height: auto;
+        }
+
+        &-img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2% 2% 0 0;
+
+            @include breakpoint(pc) {
+                border-radius: 2% 0 0 2%;
+            }
+        }
+    }
+
+    &__info {
+        max-width: 45rem;
+        height: 42%;
+        padding: 2.3rem 2.8rem 3rem;
+        overflow: hidden;
+
+        @include breakpoint(pc) {
+            height: auto;
+            width: 50%;
+            padding: 2rem 1.5rem;
+        }
+    }
+
+    &__ttl {
+        max-height: 37.2%;
+        overflow: hidden;
+        font-size: 2rem;
+        color: #707070;
+        letter-spacing: 0.11em;
+        line-height: 1.4;
+
+        @include breakpoint(pc) {
+            font-size: 1.5rem;
+            color: #707070;
+            letter-spacing: 0.1em;
+            line-height: 2;
+        }
+    }
+
+    &__desc {
+        margin-top: calc(2.7rem + (1vw - 0.38rem) * -0.9);
+        max-height: 50%;
+        overflow: hidden;
+        font-size: 1.5rem;
+        color: #707070;
+        letter-spacing: 0.1em;
+        line-height: 1.4;
+
+        @include breakpoint(pc) {
+            margin-top: 3rem;
+            font-size: 1rem;
+            color: #707070;
+            letter-spacing: 0em;
+            line-height: 1.7;
+        }
+    }
+}
+
+/* 
+ttl
+    pc
+        font-style: YuMincho;
+        font-weight: Demibold;
+        font-size: 15px;
+        color: #707070;
+        letter-spacing: 0.1em;
+        line-height: 2;
+
+    
+desc
+    pc
+    font-style: YuMincho;
+    font-weight: Demibold;
+    font-size: 10px;
+    color: #707070;
+    letter-spacing: 0em;
+    line-height: 1.7;
+    
+
+
+ * ==================================== */

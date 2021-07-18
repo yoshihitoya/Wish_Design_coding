@@ -1,4 +1,6 @@
-.home {
+.home,
+.page-template-index,
+.page-template-default {
   .u-padding {
     // about
     &--10 {
@@ -77,7 +79,7 @@
 
 
 
-.about {
+.page-template-about {
   .u-padding {
     &--20 {
       padding-top: pxtovw-sp(15);
@@ -92,7 +94,7 @@
 
 
 
-.price {
+.page-template-price {
   .u-padding {
     &--50 {
       padding-top: pxtovw-sp(83);
@@ -105,7 +107,7 @@
 }
 
 
-.qanda {
+.page-template-qanda {
   .u-padding {
     &--60 {
       @include breakpoint( pc ) {

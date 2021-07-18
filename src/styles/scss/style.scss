@@ -40,6 +40,7 @@
 @import "object/component/dl";
 @import "object/component/layout-list";
 @import "object/component/card";
+@import "object/component/slick-card";
 
 // -----------------------------------------------------------------
 // Project
@@ -69,10 +70,17 @@
 @import "object/project/profile";
 @import "object/project/timeline";
 @import "object/project/form";
-@import "object/project/media";
 @import "object/project/detail";
+@import "object/project/media";
 @import "object/project/pagenation";
 @import "object/project/thanks";
+
+// ↓エラー回避のため漸次的に設定
+@import "object/project/screen-reader-text";
+@import "object/project/wp-caption";
+@import "object/project/sticky";
+@import "object/project/gallery-caption";
+@import "object/project/bypostauthor";
 
 // -----------------------------------------------------------------
 // Utility

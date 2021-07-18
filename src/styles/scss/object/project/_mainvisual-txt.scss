@@ -9,14 +9,15 @@
   letter-spacing: pxtovw-sp(5);
   text-indent: pxtovw-sp(5);
 
-  @include breakpoint( pc ) {
-    width: pxtovw-pc(1000);
+  @include breakpoint(pc) {
+    width: auto;
     left: 50%;
     transform: translateX(-50%);
 
     margin: unset;
     margin-top: pxtovw-pc(107);
 
+    white-space: nowrap;
     font-size: pxtovw-pc(15);
     line-height: 2.2;
     letter-spacing: pxtovw-pc(4.4);
@@ -24,73 +25,66 @@
   }
 }
 
-.about {
+.page-template-about {
   .p-mainvisual-txt {
     transform: translate(-55%, 83%);
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       transform: translate(-50%, 0);
     }
   }
 }
 
-.flow {
+.page-template-flow {
   .p-mainvisual-txt {
     margin-top: pxtovw-sp(445);
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       margin-top: pxtovw-pc(460);
-      width: 100%;
     }
   }
 }
 
-
-.price {
+.page-template-price {
   .p-mainvisual-txt {
     margin: 0 pxtovw-sp(20) 0 pxtovw-sp(20);
     top: 66.8%;
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       margin: unset;
       top: 55.2%;
     }
   }
 }
 
-
-
-.qanda {
+.page-template-qanda {
   .p-mainvisual-txt {
     margin: 0 pxtovw-sp(20) 0 pxtovw-sp(20);
     top: 65.2%;
   }
 }
 
-
-.works {
+.page-template-works,
+.tax-works {
   .p-mainvisual-txt {
     margin: 0 pxtovw-sp(20) 0 pxtovw-sp(20);
     top: 66.5%;
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       top: 60%;
-      width: 100%;
       margin: unset;
     }
   }
 }
 
-
-.contact {
+.page-template-contact {
   .p-mainvisual-txt {
     margin-top: pxtovw-sp(1);
     top: 66.5%;
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       top: 55.6%;
       margin: unset;
-      width: 100%;
     }
   }
 }

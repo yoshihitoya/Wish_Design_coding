@@ -1,0 +1,11 @@
+// エラー回避のため設定
+
+// 投稿に画像を挿入した際のキャプション
+.wp-caption {
+  font-size: 1.3rem
+}
+
+// .wp-caption 内部のテキスト箇所
+.wp-caption-text {
+  margin-top: -20px;
+}

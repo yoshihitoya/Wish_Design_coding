@@ -13,11 +13,11 @@
         position: absolute;
         text-align: center;
         top: calc(23.8rem + (1vw - 0.38rem) * 3.4254);
-        left: calc(5rem + (1vw - 0.38rem) * 44.1989);
+        left: calc(3.5rem + (1vw - 0.38rem) * 41);
 
         @media (min-width: 1280px) {
             top: 26.9rem;
-            left: calc(45rem + (1vw - 1.28rem) * 50.7813);
+            left: calc(40.4rem + (1vw - 1.28rem) * 50.7813);
         }
 
         &--heading {
@@ -26,7 +26,7 @@
             font-size: calc(2rem + (1vw - 0.38rem) * 1.105);
             color: #707070;
             letter-spacing: calc(0.3rem + (1vw - 0.38rem) * 0.3315);
-            text-indent: -2.5rem;
+            text-indent: 1rem;
             line-height: 1.75;
 
             @media (min-width: 1280px) {
@@ -37,25 +37,19 @@
 
         &--txt {
             margin-top: calc(3.7rem + (1vw - 0.38rem) * -0.7735);
+            @include font-yumincho;
+            font-weight: normal;
+            font-size: 1.5rem;
+            color: #707070;
+            letter-spacing: calc(0.4rem + (1vw - 0.38rem) * 0.1105);
+            text-indent: calc(0rem + (1vw - 0.38rem) * -1.105);
+            line-height: calc(2.7rem + (1vw - 0.38rem) * 0.663);
 
             @media (min-width: 1280px) {
                 margin-top: 3rem;
-            }
-
-            p {
-                @include font-yumincho;
-                font-weight: normal;
-                font-size: 1.5rem;
-                color: #707070;
-                letter-spacing: calc(0.4rem + (1vw - 0.38rem) * 0.1105);
-                text-indent: calc(-1rem + (1vw - 0.38rem) * -1.105);
-                line-height: calc(2.7rem + (1vw - 0.38rem) * 0.663);
-
-                @media (min-width: 1280px) {
-                    letter-spacing: 0.5rem;
-                    text-indent: -2rem;
-                    line-height: 3.3rem;
-                }
+                letter-spacing: 0.5rem;
+                text-indent: -2rem;
+                line-height: 3.3rem;
             }
         }
     }
@@ -65,15 +59,16 @@
         width: 14.5rem;
         height: 3rem;
 
-        // @media (min-width: 1280px) {
-        //     transform: translate(-7.3rem, 46.5rem);
-        // }
+        @media (min-width: 1280px) {
+            font-size: 0.2vw;
+        }
 
         a {
-            transform: translate(calc(0.8rem + (1vw - 0.38rem) * -0.2), calc(-0.2rem + (1vw - 0.38rem) * 0));
+            // transform: translate(calc(0.8rem + (1vw - 0.38rem) * -0.2), calc(-0.2rem + (1vw - 0.38rem) * 0));
             font-size: 1.5rem;
             letter-spacing: 0.3em;
             line-height: 1.2666666666666666;
+            padding-left: 1rem;
         }
     }
 }

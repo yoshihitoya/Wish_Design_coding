@@ -17,7 +17,7 @@
 
 
 
-.about {
+.page-template-about {
   .p-content-ttl {
     @include font-yumincho;
     letter-spacing: .9rem;
@@ -40,10 +40,10 @@
 
 
 
-.flow {
+.page-template-flow {
   .p-content-ttl {
     text-align: left;
-    text-indent: -.5rem;
+    text-indent: 0rem;
 
     @include breakpoint( pc ) {
       font-size: pxtovw-pc(30);
@@ -58,7 +58,7 @@
 
 
 
-.price {
+.page-template-price {
   .p-content-ttl {
     letter-spacing: .68rem;
     text-indent: .5rem;

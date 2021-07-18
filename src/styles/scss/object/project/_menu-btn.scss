@@ -108,7 +108,8 @@
 // ------------------------------
 .p-menu-btn--close {
   @extend .p-menu-btn;
-  left: 46%;
+  position: absolute;
+  left: 70%;
 
   @include breakpoint( pc ) {
     margin-top: pxtovw-pc(62);
@@ -122,6 +123,9 @@
 
   // インナーにしないとサイドバーが崩れる
   &__inner {
+    position: absolute;
+    @include transform50;
+  
     grid-auto-flow: column;
     grid-template-columns: repeat(2, auto);
     column-gap: 20px;

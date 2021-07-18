@@ -7,8 +7,8 @@
 }
 
 
-.about,
-.flow {
+.page-template-about,
+.page-template-flow {
 	.l-footer {
 		padding-top: pxtovw-sp(155);
 		@include breakpoint( pc ) {
@@ -18,7 +18,7 @@
 }
 
 
-.page404 {
+.error404 {
 	.l-footer {
 		width: 100%;
 		position: absolute;
@@ -31,7 +31,7 @@
 }
 
 
-.price {
+.page-template-price {
 	.l-footer {
 		padding-bottom: pxtovw-sp(29);
 		@include breakpoint( pc ) {
