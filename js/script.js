@@ -1,12 +1,12 @@
 // Menuボタンを押したら
-jQuery(function($) {
-  $(".js-btn-menu").on("click", function(){
+jQuery(function ($) {
+  $(".js-btn-menu").on("click", function () {
     $(".l-sidebar").toggleClass("is-open");
     $(".c-box--overlay").toggleClass("is-open");
     $("body").toggleClass("is-open");
   });
 
-  $('.js-btn-close').on('click', function(){
+  $('.js-btn-close').on('click', function () {
     $(".l-sidebar").toggleClass("is-open");
     $(".c-box--overlay").toggleClass("is-open");
     $("body").toggleClass("is-open");
@@ -15,56 +15,55 @@ jQuery(function($) {
 
 
 // 全画面でハンバーガーメニューの設定をリセットする
-jQuery(function($){
-  $(window).resize(function(){
+jQuery(function ($) {
+  $(window).resize(function () {
     //windowの幅をxに代入
     let x = $(window).width();
     //windowの分岐幅をyに代入
     let y = 1201;
     if (x >= y) {
-        $(".l-sidebar").removeClass("is-open");
-        $("body").removeClass("is-open");
+      $(".l-sidebar").removeClass("is-open");
+      $("body").removeClass("is-open");
     }
-    else
-    {
+    else {
     }
-});
+  });
 })
 
 
 // スリック
-jQuery(function($) {
-$('.js-slick').slick({
-  slidesToShow:1,
-  autoplay:true,
-  autoplaySpeed:800,
-  dots:false,//下の３つのドット
-  arrows:true,//デフォルトの矢印
-  nextArrow:'<button class="js-slick-next"><span>Slide</span></button>',//次へを変更
-  // dotsClass: "slide-dots", //ここでclass名を変更する（デフォルトはslick-dots）
-  // variableWidth: true,
+jQuery(function ($) {
+  $('.js-slick').slick({
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 800,
+    dots: false,//下の３つのドット
+    arrows: true,//デフォルトの矢印
+    nextArrow: '<button class="js-slick-next"><span>Slide</span></button>',//次へを変更
+    // dotsClass: "slide-dots", //ここでclass名を変更する（デフォルトはslick-dots）
+    // variableWidth: true,
 
-  responsive:[
-    {
-      breakpoint: 481,
-      settings: {
+    responsive: [
+      {
+        breakpoint: 481,
+        settings: {
 
-      }
-    },
-  ]
-});
+        }
+      },
+    ]
+  });
 });
 
 
 // ヘッダータイトル：スクロールしたら消える
-jQuery(function($) {
+jQuery(function ($) {
   let ttl = $('#js-ttl');
-  
+
   //スクロールしてページトップから100に達したらボタンを表示
-  $(window).on('load scroll', function(){
-    if($(this).scrollTop() > 100) {
+  $(window).on('load scroll', function () {
+    if ($(this).scrollTop() > 100) {
       ttl.addClass('fade');
-    }else{
+    } else {
       ttl.removeClass('fade');
     }
   });
@@ -73,44 +72,60 @@ jQuery(function($) {
 
 
 // アニメーション：スクロールしたら順番に表示
-jQuery(function($){
-	$(window).scroll(function (){
-		$('.js-fadein').each(function(i){
-			let elemPos = $(this).offset().top;
-			let scroll = $(window).scrollTop();
-			let windowHeight = $(window).height();
-			let speed = 100;//0.1秒=100
-			if(scroll > elemPos - windowHeight){
-        $(this).delay(i * speed).queue(function(next){
+jQuery(function ($) {
+  $(window).scroll(function () {
+    $('.js-fadein').each(function (i) {
+      let elemPos = $(this).offset().top;
+      let scroll = $(window).scrollTop();
+      let windowHeight = $(window).height();
+      let speed = 100;//0.1秒=100
+      if (scroll > elemPos - windowHeight) {
+        $(this).delay(i * speed).queue(function (next) {
           $(this).addClass('show');
           next();
-				});
-			}
-		});
-	});
+        });
+      }
+    });
+  });
 });
 
 
 
 // 追従ボタンの表示
-jQuery(function($) {
+jQuery(function ($) {
   let btn = $('.p-back-to-top');
-  
+
   //スクロールしてページトップから100に達したらボタンを表示
-  $(window).on('load scroll', function(){
-    if($(this).scrollTop() > 200) {
+  $(window).on('load scroll', function () {
+    if ($(this).scrollTop() > 200) {
       btn.addClass('is-active');
-    }else{
+    } else {
       btn.removeClass('is-active');
     }
   });
 
   //スクロールしてトップへ戻る
-  btn.on('click',function () {
+  btn.on('click', function () {
     $('body,html').animate({
       scrollTop: 0
     });
   });
+});
+
+/*カード：ホバーアクション
+ホバーすると暗くする 
+* ==========================  */
+jQuery(function () {
+  $('.js-postcard').hover(
+    function () {
+      $(this).addClass("is-active");
+    },
+    function () {
+      $(this).removeClass("is-active");
+    },
+
+  );
+
 });
 
 
@@ -217,6 +232,6 @@ jQuery(function($) {
 //   $('#js-ttl').fadeOut()
 //   $('#js-ttl').addClass('is-out');//#にクラス名を追加
 // }
-  
+
 //   beforePos = scroll;//現在のスクロール値を比較用のbeforePosに格納
 // }

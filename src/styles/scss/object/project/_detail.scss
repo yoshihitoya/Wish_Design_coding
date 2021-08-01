@@ -1,11 +1,15 @@
 .p-detail {
     padding-top: calc(15rem + (1vw - 0.38rem) * 3);
     padding-bottom: calc(11rem + (1vw - 0.38rem) * -7.7348);
-    margin-left: calc(2rem + (1vw - 0.38rem) * 13.2597);
-    margin-right: calc(2rem + (1vw - 0.38rem) * 13.2597);
+
+    //ここ変更　PCで900px
+    margin-left: calc(2rem + (1vw - 0.38rem) * 18.7845);
+    margin-right: calc(2rem + (1vw - 0.38rem) * 18.7845);
 
     @media (min-width: 1280px) {
+        max-width: 900px;
         padding-bottom: 4rem;
+        margin: 0 auto;
     }
 
     &__header {
@@ -28,6 +32,12 @@
         line-height: calc(5rem + (1vw - 0.38rem) * 2.2099);
         letter-spacing: calc(0.4rem + (1vw - 0.38rem) * 0.884);
         text-indent: calc(0.4rem + (1vw - 0.38rem) * 0.884);
+
+        @media (min-width: 1280px) {
+            line-height: 6.98891rem;
+            letter-spacing: 1.1956rem;
+            text-indent: 1.1956rem;
+        }
     }
 
     &__content {
@@ -39,6 +49,10 @@
             margin-top: calc(4.2rem + (1vw - 0.38rem) * 0.884);
             font-size: 3rem;
             line-height: calc(35 / 30);
+
+            @media (min-width: 1280px) {
+                margin-top: 4.9956rem;
+            }
         }
 
         h3 {
@@ -73,6 +87,7 @@
                 margin-top: 1.93rem;
                 letter-spacing: 0.189rem;
                 line-height: 3.51rem;
+                font-size: 1.9972rem;
             }
         }
 
@@ -90,6 +105,8 @@
                 margin-top: 1.72rem;
                 letter-spacing: 0.199rem;
                 text-indent: 0.343rem;
+                font-size: 1.9972rem;
+                line-height: 3.43rem;
             }
 
             li {

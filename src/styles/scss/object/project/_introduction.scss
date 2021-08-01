@@ -1,36 +1,39 @@
-.p-introduction{
+.p-introduction {
   margin: auto;
   text-align: center;
+  font-weight: 400;
 
-  @include breakpoint( pc ){
+  @include breakpoint(pc) {
   }
 
-  span{
-    display: inline-block;// spanタグごとに改行が入る
+  span {
+    display: inline-block; // spanタグごとに改行が入る
   }
 
-  ul{
-    li{
+  ul {
+    li {
       font-size: pxtovw-sp(15);
-      letter-spacing: .4em;
-      text-indent: .4em;
+      letter-spacing: 0.4em;
+      text-indent: 0.4em;
       line-height: 3.5rem;
 
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         font-size: pxtovw-pc(15);
-        letter-spacing: .24em;
-        text-indent: .24em;
-        }
+        letter-spacing: 0.24em;
+        text-indent: 0.24em;
+      }
     }
   }
 
-  p{
+  p {
     line-height: 2.7rem;
-    letter-spacing: .5rem;
+    letter-spacing: 0.5rem;
+    font-size: pxtovw-sp(15);
 
-    @include breakpoint( pc ){
-      letter-spacing: .45vw;
-      text-indent: .45vw;
+    @include breakpoint(pc) {
+      font-size: pxtovw-pc(15);
+      letter-spacing: 0.45vw;
+      text-indent: 0.45vw;
     }
   }
 }

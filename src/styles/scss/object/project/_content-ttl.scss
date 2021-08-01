@@ -8,27 +8,26 @@
   text-indent: 1.5rem;
   text-align: center;
 
-  @include breakpoint( pc ) {
+  @include breakpoint(pc) {
     font-size: pxtovw-pc(50);
     letter-spacing: 2.6rem;
     text-indent: 2.6rem;
   }
 }
 
-
-
 .page-template-about {
   .p-content-ttl {
     @include font-yumincho;
-    letter-spacing: .9rem;
-    text-indent: .9rem;
+    letter-spacing: 0.9rem;
+    text-indent: 0.9rem;
     line-height: 1.7;
+    font-weight: 400;
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       font-size: pxtovw-pc(30);
-      letter-spacing: .62vw;
-      text-indent: .62vw;
-      }
+      letter-spacing: 0.62vw;
+      text-indent: 0.62vw;
+    }
 
     &--02 {
       @extend .p-content-ttl;
@@ -38,36 +37,28 @@
   }
 }
 
-
-
 .page-template-flow {
   .p-content-ttl {
     text-align: left;
     text-indent: 0rem;
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       font-size: pxtovw-pc(30);
-      letter-spacing: .9rem;
-      text-indent: -.1rem;
+      letter-spacing: 0.9rem;
+      text-indent: -0.1rem;
     }
   }
 }
-
-
-
-
-
 
 .page-template-price {
   .p-content-ttl {
-    letter-spacing: .68rem;
-    text-indent: .5rem;
+    letter-spacing: 0.68rem;
+    text-indent: 0.5rem;
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       font-size: pxtovw-pc(30);
-      letter-spacing: .9rem;
-      text-indent: .9rem;
+      letter-spacing: 0.9rem;
+      text-indent: 0.9rem;
     }
   }
 }
-

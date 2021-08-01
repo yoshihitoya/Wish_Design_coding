@@ -5,14 +5,16 @@
   p {
     padding-top: pxtovw-sp(15);
     line-height: 2.6rem;
-    letter-spacing: .6rem;
-    text-indent: .6rem;
+    letter-spacing: 0.6rem;
+    text-indent: 0.6rem;
+    font-size: pxtovw-sp(15);
 
-    @include breakpoint( pc ){
+    @include breakpoint(pc) {
+      font-size: pxtovw-pc(15);
       padding-top: pxtovw-pc(15);
       line-height: 3.5rem;
-      letter-spacing: .4em;
-      text-indent: .4em;
+      letter-spacing: 0.4em;
+      text-indent: 0.4em;
     }
   }
 }

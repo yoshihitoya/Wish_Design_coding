@@ -2,82 +2,81 @@
 .page-template-index,
 .page-template-default {
   .u-padding {
-    // about
+    // about: 要素446→outer=354px padding=177
     &--10 {
       padding-top: pxtovw-sp(150);
 
-      @include breakpoint( pc ) {
-        padding-top: pxtovw-pc(190);
-        padding-bottom: pxtovw-pc(100);
+      @include breakpoint(pc) {
+        padding-top: pxtovw-pc(177); //190から変更
+        padding-bottom: pxtovw-pc(177); //100から変更
       }
     }
 
-    // あなたの話を聞かせてください
+    // あなたの話を聞かせてください: 要素556→outer=244px padding=122
     &--11 {
       padding-top: pxtovw-sp(78);
 
-      @include breakpoint( pc ) {
-        padding-top: pxtovw-pc(123);
+      @include breakpoint(pc) {
+        padding-top: pxtovw-pc(122); //123から変更
+        padding-bottom: pxtovw-pc(122); //なしから変更
       }
     }
 
     // その言葉でデザインを作ります
     &--11-2 {
       padding-top: pxtovw-sp(47);
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         padding-top: pxtovw-pc(64);
         // padding-bottom: pxtovw-pc(50);
       }
     }
 
-    // works
+    // works 変更: 要素647→outer=153px padding=76.5
     &--12 {
       padding-top: pxtovw-sp(143);
 
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         // 290
-        padding-top: pxtovw-pc(100);
-        // padding-bottom: pxtovw-pc(80);
+        padding-top: pxtovw-pc(76.5); //100から変更
+        padding-bottom: pxtovw-pc(76.5); //なしから変更
       }
     }
 
-    // Flow
+    // Flow: 要素552→outer=268px padding=134
     &--13 {
       padding-top: pxtovw-sp(90);
 
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         // 242
-        padding-top: pxtovw-pc(100);
-        // padding-bottom: pxtovw-pc(150);
+        padding-top: pxtovw-pc(134); //100から変更
+        padding-bottom: pxtovw-pc(134); //なしから変更
       }
     }
 
-    // price
+    // price: 要素342→outer=458px padding=229
     &--14 {
       padding-top: pxtovw-sp(125);
 
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         // 345
-        padding-top: pxtovw-pc(150);
-        // padding-bottom: pxtovw-pc(150);
+        padding-top: pxtovw-pc(229); //150から変更
+        padding-bottom: pxtovw-pc(229); //なしから変更
       }
     }
 
-    // contact
+    // contact: 要素366 →outer=434px padding=217
+    // footer117 -> padding-bottom=217 - 117 = 100
     &--15 {
       padding-top: pxtovw-sp(220);
 
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         // 443
-        padding-top: pxtovw-pc(250);
-        // padding-bottom: pxtovw-pc(10);
+        padding-top: pxtovw-pc(217); //250から変更
+        padding-bottom: pxtovw-pc(100); //なしから変更
       }
     }
   }
 }
-
-
-
 
 .page-template-about {
   .u-padding {
@@ -85,32 +84,29 @@
       padding-top: pxtovw-sp(15);
       padding-bottom: pxtovw-sp(19);
 
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         padding-top: pxtovw-pc(5);
       }
     }
   }
 }
 
-
-
 .page-template-price {
   .u-padding {
     &--50 {
       padding-top: pxtovw-sp(83);
 
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         padding-top: pxtovw-pc(65);
       }
     }
   }
 }
 
-
 .page-template-qanda {
   .u-padding {
     &--60 {
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         padding-top: pxtovw-pc(70);
       }
     }

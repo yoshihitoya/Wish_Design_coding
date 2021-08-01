@@ -3,7 +3,7 @@
 // ------------------------------
 .p-menu-btn {
   @extend %btnBase;
-  left: 14.3%;//leftにしないとホバーの背景色が効かない
+  left: 14.3%; //leftにしないとホバーの背景色が効かない
 
   width: pxtovw-sp(137.9);
   height: pxtovw-sp(43.31);
@@ -11,24 +11,21 @@
   justify-content: center;
   text-align: right;
 
-  box-shadow:
-  3px 3px 5px 1px $btnShadow-color,
-  -3px -3px 10px -1px #ffffff;
+  box-shadow: 3px 3px 5px 1px $btnShadow-color, -3px -3px 10px -1px #ffffff;
 
   grid-auto-flow: column;
   grid-template-columns: repeat(2, auto);
   column-gap: 20px;
   align-items: center;
 
-  @include breakpoint( pc ) {
+  @include breakpoint(pc) {
     left: 2%;
     width: pxtovw-pc(157);
     height: pxtovw-pc(50);
     margin-top: pxtovw-pc(12);
-    box-shadow:
-    3px 3px 10px 1px $btnShadow-color,
-    -8px -8px 10px -1px #ffffff;
-    }
+
+    box-shadow: 8px 8px 10px 1px $btnShadow-color, -8px -8px 10px -1px #ffffff;
+  }
 
   &:hover {
     span,
@@ -42,7 +39,7 @@
     @include font-didot;
     font-size: pxtovw-sp(16);
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       font-size: pxtovw-pc(20);
       letter-spacing: -0.04rem;
       text-indent: -0.04rem;
@@ -54,25 +51,25 @@
   span::before,
   span::after {
     width: pxtovw-sp(17.92);
-    height: pxtovw-sp(.5);
-    transition: transform .2s;
+    height: pxtovw-sp(0.5);
+    transition: transform 0.2s;
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       width: pxtovw-pc(21);
-      height: pxtovw-pc(.5);
+      height: pxtovw-pc(0.5);
 
       // firefox用
       @-moz-document url-prefix() {
-          width: pxtovw-pc(21);
-          height: .1vw;
+        width: pxtovw-pc(21);
+        height: 0.1vw;
       }
     }
   }
 
   span {
-    font-size: 0;//htmlのテキストを非表示
+    font-size: 0; //htmlのテキストを非表示
     background: $main-color;
-    background-size: auto .1px;
+    background-size: auto 0.1px;
 
     &::before,
     &::after {
@@ -80,27 +77,26 @@
       background: $main-color;
       position: absolute;
       display: block;
-      transition: transform .2s;
+      transition: transform 0.2s;
     }
 
     &::before {
       top: pxtovw-sp(14);
 
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         top: pxtovw-pc(16);
       }
     }
-    
+
     &::after {
       top: pxtovw-sp(28);
 
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         top: pxtovw-pc(33);
       }
     }
   }
 }
-
 
 // ------------------------------
 // メニュー：closeボタン
@@ -111,13 +107,13 @@
   position: absolute;
   left: 70%;
 
-  @include breakpoint( pc ) {
+  @include breakpoint(pc) {
     margin-top: pxtovw-pc(62);
-    }
+  }
 
   &::before {
-    @include breakpoint( pc ) {
-      width: 100%;//再設定しないとホバー背景色の幅が不足する
+    @include breakpoint(pc) {
+      width: 100%; //再設定しないとホバー背景色の幅が不足する
     }
   }
 
@@ -125,7 +121,7 @@
   &__inner {
     position: absolute;
     @include transform50;
-  
+
     grid-auto-flow: column;
     grid-template-columns: repeat(2, auto);
     column-gap: 20px;
@@ -137,7 +133,7 @@
     width: pxtovw-sp(25);
     transform: rotate(-45deg);
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       width: pxtovw-pc(25);
     }
 
@@ -146,7 +142,7 @@
       transform: rotate(90deg);
       top: unset;
 
-      @include breakpoint( pc ) {
+      @include breakpoint(pc) {
         width: pxtovw-pc(25);
       }
     }
@@ -157,6 +153,3 @@
     }
   }
 }
-
-
-

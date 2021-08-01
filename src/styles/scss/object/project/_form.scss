@@ -8,23 +8,23 @@
         }
     }
 
-    &__mainvisual {
-        width: 100%;
-        opacity: 1;
-        height: calc(66.7rem + (1vw - 0.38rem) * 14.6961);
+    // &__mainvisual {
+    //     width: 100%;
+    //     opacity: 1;
+    //     height: calc(66.7rem + (1vw - 0.38rem) * 14.6961);
 
-        background-image: url(../images/contact_mainvisual_sp.svg);
-        background-position-x: 0%;
-        background-position-y: -8rem;
-        background-size: cover;
-        @include breakpoint(pc) {
-            width: 100%;
-            background-image: url(../images/contact_mainvisual_pc.svg);
-            background-position-x: center;
-            background-position-y: -11.2rem;
-            background-size: cover;
-        }
-    }
+    //     background-image: url(../images/contact_mainvisual_sp.svg);
+    //     background-position-x: 0%;
+    //     background-position-y: -8rem;
+    //     background-size: cover;
+    //     @include breakpoint(pc) {
+    //         width: 100%;
+    //         background-image: url(../images/contact_mainvisual_pc.svg);
+    //         background-position-x: center;
+    //         background-position-y: -11.2rem;
+    //         background-size: cover;
+    //     }
+    // }
     &__ttl {
         .p-page-ttl__heading {
             text-transform: capitalize;
@@ -37,15 +37,15 @@
             }
         }
 
-        .p-page-ttl__txt {
-            letter-spacing: calc(0.3rem + (1vw - 0.38rem) * 0.2);
-            text-indent: calc(0rem + (1vw - 0.38rem) * -0.221);
-            transform: translate(-50%, -62%);
+        //     .p-page-ttl__txt {
+        //         letter-spacing: calc(0.3rem + (1vw - 0.38rem) * 0.2);
+        //         text-indent: calc(0rem + (1vw - 0.38rem) * -0.221);
+        //         transform: translate(-50%, -62%);
 
-            @include breakpoint(pc) {
-                transform: translate(-50%, 120%);
-            }
-        }
+        //         @include breakpoint(pc) {
+        //             transform: translate(-50%, 120%);
+        //         }
+        //     }
     }
 
     &__wrap {
@@ -81,7 +81,7 @@
     }
 
     &__form {
-        margin-top: calc(12.3rem + (1vw - 0.38rem) * 50.0994);
+        margin-top: calc(12.3rem + (1vw - 0.38rem) * 31.8232);
         padding-bottom: calc(9rem + (1vw - 0.38rem) * -2.0994);
 
         @include breakpoint(pc) {

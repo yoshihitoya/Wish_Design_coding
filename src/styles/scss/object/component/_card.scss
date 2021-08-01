@@ -1,28 +1,47 @@
 .c-card {
     position: relative;
     margin-top: 5.8rem;
+    border-radius: 2%;
+    box-shadow: 10px 10px 10px 1px $btnShadow-color, -10px -10px 10px -1px #ffffff;
 
-    &:hover {
-        filter: brightness(50%);
-        transition: all 0.8s;
-    }
+    width: calc(32rem + (1vw - 0.38rem) * 27.3684);
+    height: calc((32rem + (1vw - 0.38rem) * 27.3684) * 1.38);
+    max-width: 45rem;
+    max-height: 62rem;
 
     @media (min-width: 850px) {
         margin-top: 0;
+        width: calc(33.5rem + (1vw - 0.85rem) * 26.7442);
+        height: calc((33.5rem + (1vw - 0.85rem) * 26.7442) * 1.38);
     }
 
-    &__bg {
+    @media (min-width: 1280px) {
+        width: 45rem;
+        height: 62rem;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
         border-radius: 2%;
-        box-shadow: 5px 5px 8px 1px #b9b9b9;
+        background-color: rgb(0, 0, 0, 0.4);
+        opacity: 0;
+        transition: all 0.8s;
+        box-shadow: 6px 6px 3px 1px $main-color;
+    }
+
+    &.is-active::before {
+        opacity: 0.5;
+        transition: all 0.8s;
     }
 
     &__eyecatch {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        max-width: 45rem;
-        max-height: 58%;
+        height: 58%;
         overflow: hidden;
 
         &-img {
@@ -34,10 +53,6 @@
     }
 
     &__info {
-        position: absolute;
-        top: 57%;
-        max-width: 45rem;
-        max-height: 42%;
         height: 42%;
         padding: 2.3rem 2.8rem 3rem;
 

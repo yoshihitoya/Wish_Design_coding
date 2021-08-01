@@ -27,10 +27,8 @@ Template Name: media
         if (have_posts()):
         while (have_posts()):the_post();
         ?>
-        <div class="c-card">
+        <div class="c-card js-postcard">
             <a href="<?php the_permalink(); ?>">
-                <img class="c-card__bg"
-                    src="<?php echo esc_url(get_template_directory_uri()); ?>/images/media_card_bg.png" alt="">
                 <div class="c-card__eyecatch">
                     <?php the_post_thumbnail('thumbnail', array('class'=>'c-card__eyecatch-img')); ?>
 

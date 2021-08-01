@@ -16,12 +16,12 @@
   }
 
   li {
-    padding: 1rem;
+    padding: 2rem;
 
-    &:hover {
-      filter: brightness(50%); // 画像を暗くする
-      transition: all 0.8s;
-    }
+    // &:hover {
+    //   filter: brightness(50%); // 画像を暗くする
+    //   transition: all 0.8s;
+    // }
   }
 
   img {

@@ -530,27 +530,46 @@ body.is-open {
 .c-card {
   position: relative;
   margin-top: 5.8rem;
-}
-.c-card:hover {
-  filter: brightness(50%);
-  transition: all 0.8s;
+  border-radius: 2%;
+  box-shadow: 10px 10px 10px 1px #b9b9b9, -10px -10px 10px -1px #ffffff;
+  width: calc(32rem + (1vw - 0.38rem) * 27.3684);
+  height: calc((32rem + (1vw - 0.38rem) * 27.3684) * 1.38);
+  max-width: 45rem;
+  max-height: 62rem;
 }
 @media (min-width: 850px) {
   .c-card {
     margin-top: 0;
+    width: calc(33.5rem + (1vw - 0.85rem) * 26.7442);
+    height: calc((33.5rem + (1vw - 0.85rem) * 26.7442) * 1.38);
   }
 }
-.c-card__bg {
-  border-radius: 2%;
-  box-shadow: 5px 5px 8px 1px #b9b9b9;
+@media (min-width: 1280px) {
+  .c-card {
+    width: 45rem;
+    height: 62rem;
+  }
 }
-.c-card__eyecatch {
+.c-card::before {
+  content: "";
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  max-width: 45rem;
-  max-height: 58%;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  border-radius: 2%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all 0.8s;
+  box-shadow: 6px 6px 3px 1px #707070;
+}
+.c-card.is-active::before {
+  opacity: 0.5;
+  transition: all 0.8s;
+}
+.c-card__eyecatch {
+  height: 58%;
   overflow: hidden;
 }
 .c-card__eyecatch-img {
@@ -561,10 +580,6 @@ body.is-open {
   border-radius: 2% 2% 0 0;
 }
 .c-card__info {
-  position: absolute;
-  top: 57%;
-  max-width: 45rem;
-  max-height: 42%;
   height: 42%;
   padding: 2.3rem 2.8rem 3rem;
 }
@@ -607,7 +622,26 @@ body.is-open {
   height: 100%;
   background-color: #f7f7f7;
   border-radius: 2%;
-  box-shadow: 5px 5px 8px 1px #b9b9b9;
+  box-shadow: 10px 10px 10px 1px #b9b9b9, -10px -10px 10px -1px #ffffff;
+  position: relative;
+}
+.c-slick-card__flex::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  border-radius: 2%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all 0.8s;
+  box-shadow: 6px 6px 3px 1px #707070;
+}
+.c-slick-card__flex.is-active::before {
+  opacity: 0.5;
+  transition: all 0.8s;
 }
 @media (min-width: 480px) {
   .c-slick-card__flex {
@@ -1107,6 +1141,7 @@ desc
   letter-spacing: 0.9rem;
   text-indent: 0.9rem;
   line-height: 1.7;
+  font-weight: 400;
 }
 @media (min-width: 480px) {
   .page-template-about .p-content-ttl, .page-template-about .p-content-ttl--02 {
@@ -1320,6 +1355,16 @@ desc
     height: 1.25vw;
   }
 }
+@media (min-width: 480px) {
+  .p-base-btn.u-margin--02, .u-margin--02.p-page-top {
+    width: 26vw;
+  }
+}
+@media (min-width: 580px) {
+  .p-base-btn.u-margin--02, .u-margin--02.p-page-top {
+    width: 22vw;
+  }
+}
 
 .p-back-to-top {
   width: 13.3333333333vw;
@@ -1397,7 +1442,7 @@ desc
     width: 12.265625vw;
     height: 3.90625vw;
     margin-top: 0.9375vw;
-    box-shadow: 3px 3px 10px 1px #b9b9b9, -8px -8px 10px -1px #ffffff;
+    box-shadow: 8px 8px 10px 1px #b9b9b9, -8px -8px 10px -1px #ffffff;
   }
 }
 .p-menu-btn:hover span, .p-menu-btn-sub:hover span, .p-menu-btn--close:hover span,
@@ -1901,11 +1946,7 @@ desc
   }
 }
 .p-slick li {
-  padding: 1rem;
-}
-.p-slick li:hover {
-  filter: brightness(50%);
-  transition: all 0.8s;
+  padding: 2rem;
 }
 .p-slick img {
   width: 100%;
@@ -2098,6 +2139,7 @@ desc
 .p-introduction {
   margin: auto;
   text-align: center;
+  font-weight: 400;
 }
 .p-introduction span {
   display: inline-block;
@@ -2118,9 +2160,11 @@ desc
 .p-introduction p {
   line-height: 2.7rem;
   letter-spacing: 0.5rem;
+  font-size: 4vw;
 }
 @media (min-width: 480px) {
   .p-introduction p {
+    font-size: 1.171875vw;
     letter-spacing: 0.45vw;
     text-indent: 0.45vw;
   }
@@ -2135,9 +2179,11 @@ desc
   line-height: 2.6rem;
   letter-spacing: 0.6rem;
   text-indent: 0.6rem;
+  font-size: 4vw;
 }
 @media (min-width: 480px) {
   .p-profile p {
+    font-size: 1.171875vw;
     padding-top: 1.171875vw;
     line-height: 3.5rem;
     letter-spacing: 0.4em;
@@ -2283,24 +2329,6 @@ desc
     padding-top: 3.90625vw;
   }
 }
-.p-form__mainvisual {
-  width: 100%;
-  opacity: 1;
-  height: calc(66.7rem + (1vw - 0.38rem) * 14.6961);
-  background-image: url(../images/contact_mainvisual_sp.svg);
-  background-position-x: 0%;
-  background-position-y: -8rem;
-  background-size: cover;
-}
-@media (min-width: 480px) {
-  .p-form__mainvisual {
-    width: 100%;
-    background-image: url(../images/contact_mainvisual_pc.svg);
-    background-position-x: center;
-    background-position-y: -11.2rem;
-    background-size: cover;
-  }
-}
 .p-form__ttl .p-page-ttl__heading {
   text-transform: capitalize;
   letter-spacing: calc(0.5rem + (1vw - 0.38rem) * 3.4917);
@@ -2310,16 +2338,6 @@ desc
 @media (min-width: 480px) {
   .p-form__ttl .p-page-ttl__heading {
     transform: translate(-50%, -86%);
-  }
-}
-.p-form__ttl .p-page-ttl__txt {
-  letter-spacing: calc(0.3rem + (1vw - 0.38rem) * 0.2);
-  text-indent: calc(0rem + (1vw - 0.38rem) * -0.221);
-  transform: translate(-50%, -62%);
-}
-@media (min-width: 480px) {
-  .p-form__ttl .p-page-ttl__txt {
-    transform: translate(-50%, 120%);
   }
 }
 .p-form__wrap {
@@ -2355,7 +2373,7 @@ desc
   }
 }
 .p-form__form {
-  margin-top: calc(12.3rem + (1vw - 0.38rem) * 50.0994);
+  margin-top: calc(12.3rem + (1vw - 0.38rem) * 31.8232);
   padding-bottom: calc(9rem + (1vw - 0.38rem) * -2.0994);
 }
 @media (min-width: 480px) {
@@ -2549,12 +2567,14 @@ desc
 .p-detail {
   padding-top: calc(15rem + (1vw - 0.38rem) * 3);
   padding-bottom: calc(11rem + (1vw - 0.38rem) * -7.7348);
-  margin-left: calc(2rem + (1vw - 0.38rem) * 13.2597);
-  margin-right: calc(2rem + (1vw - 0.38rem) * 13.2597);
+  margin-left: calc(2rem + (1vw - 0.38rem) * 18.7845);
+  margin-right: calc(2rem + (1vw - 0.38rem) * 18.7845);
 }
 @media (min-width: 1280px) {
   .p-detail {
+    max-width: 900px;
     padding-bottom: 4rem;
+    margin: 0 auto;
   }
 }
 .p-detail__header {
@@ -2579,6 +2599,13 @@ desc
   letter-spacing: calc(0.4rem + (1vw - 0.38rem) * 0.884);
   text-indent: calc(0.4rem + (1vw - 0.38rem) * 0.884);
 }
+@media (min-width: 1280px) {
+  .p-detail__ttl {
+    line-height: 6.98891rem;
+    letter-spacing: 1.1956rem;
+    text-indent: 1.1956rem;
+  }
+}
 .p-detail__content h2 {
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
   font-weight: bold;
@@ -2588,6 +2615,11 @@ desc
   margin-top: calc(4.2rem + (1vw - 0.38rem) * 0.884);
   font-size: 3rem;
   line-height: calc(35 / 30);
+}
+@media (min-width: 1280px) {
+  .p-detail__content h2 {
+    margin-top: 4.9956rem;
+  }
 }
 .p-detail__content h3 {
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
@@ -2623,6 +2655,7 @@ desc
     margin-top: 1.93rem;
     letter-spacing: 0.189rem;
     line-height: 3.51rem;
+    font-size: 1.9972rem;
   }
 }
 .p-detail__content ul {
@@ -2641,6 +2674,8 @@ desc
     margin-top: 1.72rem;
     letter-spacing: 0.199rem;
     text-indent: 0.343rem;
+    font-size: 1.9972rem;
+    line-height: 3.43rem;
   }
 }
 .p-detail__content ul li {
@@ -3383,8 +3418,8 @@ desc
   .home .u-padding--10,
 .page-template-index .u-padding--10,
 .page-template-default .u-padding--10 {
-    padding-top: 14.84375vw;
-    padding-bottom: 7.8125vw;
+    padding-top: 13.828125vw;
+    padding-bottom: 13.828125vw;
   }
 }
 .home .u-padding--11,
@@ -3396,7 +3431,8 @@ desc
   .home .u-padding--11,
 .page-template-index .u-padding--11,
 .page-template-default .u-padding--11 {
-    padding-top: 9.609375vw;
+    padding-top: 9.53125vw;
+    padding-bottom: 9.53125vw;
   }
 }
 .home .u-padding--11-2,
@@ -3420,7 +3456,8 @@ desc
   .home .u-padding--12,
 .page-template-index .u-padding--12,
 .page-template-default .u-padding--12 {
-    padding-top: 7.8125vw;
+    padding-top: 5.9765625vw;
+    padding-bottom: 5.9765625vw;
   }
 }
 .home .u-padding--13,
@@ -3432,7 +3469,8 @@ desc
   .home .u-padding--13,
 .page-template-index .u-padding--13,
 .page-template-default .u-padding--13 {
-    padding-top: 7.8125vw;
+    padding-top: 10.46875vw;
+    padding-bottom: 10.46875vw;
   }
 }
 .home .u-padding--14,
@@ -3444,7 +3482,8 @@ desc
   .home .u-padding--14,
 .page-template-index .u-padding--14,
 .page-template-default .u-padding--14 {
-    padding-top: 11.71875vw;
+    padding-top: 17.890625vw;
+    padding-bottom: 17.890625vw;
   }
 }
 .home .u-padding--15,
@@ -3456,7 +3495,8 @@ desc
   .home .u-padding--15,
 .page-template-index .u-padding--15,
 .page-template-default .u-padding--15 {
-    padding-top: 19.53125vw;
+    padding-top: 16.953125vw;
+    padding-bottom: 7.8125vw;
   }
 }
 

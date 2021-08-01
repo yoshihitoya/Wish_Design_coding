@@ -129,7 +129,7 @@ Template Name: contact
         <div class="p-form__list">
             <div class="p-form__flex">
                 <label for="budget" class="p-form__item">ご予算感</label>
-                <p class="p-form__desc">※ご予算感をご提示いただけると<span>ご提案がスムーズになります。</span></p>
+                <p class="p-form__desc">※ご予算感を提示いただきましたら<span>提案がスムーズになります。</span></p>
             </div>
             <input type="text" id="budget" name="budget" placeholder="ご予算感をご記入ください" value=<?php echo $budget; ?>>
         </div>
@@ -142,8 +142,13 @@ Template Name: contact
                 placeholder="ご相談内容をご記入ください（お見積り、サイト制作、サイトリニューアル）"><?php echo $contact; ?></textarea>
         </div>
 
+        <!-- reCAPTCHAの実装: reCAPTCHAにサイトを登録した際にメモしたsite keyを以下に入力 -->
+        <div class="g-recaptcha" data-callback="validateRecaptcha"
+            data-sitekey="6LcmKagbAAAAAGeGTNQEnyTfL4SiE9OpIGSpT0Ii"></div>
+
         <button class="p-form__submit p-base-btn u-margin--54">
-            <input type="submit" class="btn" value="送信">
+            <!-- reCAPTCHAの実装: recaptchaクラス及びdisabledの追加 -->
+            <input type="submit" class="btn recaptcha" value="送信" disabled>
         </button>
     </form>
 

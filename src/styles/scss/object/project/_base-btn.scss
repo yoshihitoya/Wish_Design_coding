@@ -9,7 +9,7 @@
   font-size: pxtovw-sp(15);
   justify-content: center;
 
-  @include breakpoint( pc ) {
+  @include breakpoint(pc) {
     width: pxtovw-pc(256);
     height: pxtovw-pc(57);
     font-size: pxtovw-pc(15);
@@ -21,17 +21,17 @@
     grid-template-columns: repeat(2, auto);
     align-items: center;
     column-gap: pxtovw-sp(12);
-  
-    @include breakpoint( pc ) {
+
+    @include breakpoint(pc) {
       column-gap: pxtovw-pc(8);
     }
   }
 
   p {
-    letter-spacing: .18rem;
-    text-indent: .18rem;
+    letter-spacing: 0.18rem;
+    text-indent: 0.18rem;
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       font-size: pxtovw-pc(15);
       // letter-spacing: -0.04rem;
     }
@@ -39,7 +39,7 @@
 
   // 矢印
   span {
-    font-size: 0;//テキスト非表示
+    font-size: 0; //テキスト非表示
 
     width: pxtovw-sp(16);
     height: pxtovw-sp(16);
@@ -48,20 +48,20 @@
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 
-    @include breakpoint( pc ) {
+    @include breakpoint(pc) {
       width: pxtovw-pc(16);
       height: pxtovw-pc(16);
     }
   }
+
+  //about: レスポンシブの微調整
+  &.u-margin--02 {
+    @media (min-width: 480px) {
+      width: 26vw;
+    }
+
+    @media (min-width: 580px) {
+      width: 22vw;
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-

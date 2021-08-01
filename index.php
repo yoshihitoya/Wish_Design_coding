@@ -85,7 +85,7 @@ Template Name: Top
                 <li>
                     <div class="c-slick-card">
                         <a href="<?php the_permalink(); ?>">
-                            <div class="c-slick-card__flex">
+                            <div class="c-slick-card__flex js-postcard">
                                 <div class="c-slick-card__eyecatch">
                                     <?php the_post_thumbnail('thumbnail', array('class'=>'c-slick-card__eyecatch-img')); ?>
                                 </div>
@@ -108,7 +108,7 @@ Template Name: Top
             </ul>
 
             <button class="p-base-btn u-margin--05 sp-hidden">
-                <a class="u-grid" href="<?php echo esc_html(get_term_link('works', 'works')); ?>">
+                <a class="u-grid" href="<?php echo esc_url(get_term_link('works', 'works')); ?>">
                     <p>制作実績へ</p><span>リンクページへ移動</span>
                 </a>
             </button>

@@ -105,6 +105,7 @@ wp_enqueue_script('jquery');
 wp_enqueue_script('header', get_template_directory_uri() . '/js/header.js', array(), '', true);
 wp_enqueue_script('totopbtn', get_template_directory_uri() . '/js/toTopBtn.js', array(), '', true);
 wp_enqueue_script('sidemenu', get_template_directory_uri() . '/js/sidemenu.js', array(), '', true);
+wp_enqueue_script('postcard', get_template_directory_uri() . '/js/postcard.js', array(), '', true);
 
 
 function file_load_scripts_styles()
@@ -364,6 +365,7 @@ function send_mail()
      * $header: メール送信元の情報
      */
     /* お問い合わせ内容をメールで送信 */
+
     $to = "hairmake.s.kobayashi@gmail.com";//送信先のメールアドレス
     $subject = "お問合せがありました";
     $body =
@@ -373,7 +375,7 @@ function send_mail()
    . "ご予算感 : ".$_SESSION['budget']."\n"
    . "お問合せ内容 : ".$_SESSION['contact']."\n";
     $fromname = "Wish-Design";
-    $from = "hairmake.s.kobayashi@gmail.com";
+    $from = "info@wish-design-sk.com";
     $headers = "From: {$fromname} <{$from}>\r\n";
     $response = wp_mail($to, $subject, $body, $headers) ;
 
@@ -393,3 +395,23 @@ function send_mail()
 * 「thanksページへ移動」
 */
 add_action('template_redirect', 'send_mail');
+
+
+/**(必要かも)送信用メールサーバー（SMTP）設定
+ *
+ * ホスト名、ユーザーアカウント名、パスワードを入力すれば設定完了
+ *
+ *  追記： WordPressの入っているサーバーをSMTPとして認識
+ *          →干渉すると送れない可能性？
+ */
+// add_action('phpmailer_init', 'set_phpmailer_details');
+// function set_phpmailer_details($phpmailer)
+// {
+//     $phpmailer->isSMTP();//SMTP設定の有効化
+//     $phpmailer->Host = 'smtp.lolipop.jp';//入力：SMTPのホスト名（サーバー名）
+//     $phpmailer->SMTPAuth = true;//SMTP認証の有無
+//     $phpmailer->Port = '465';  //587 or 465 デフォルトは587、やむを得ない場合に465
+//     $phpmailer->Username = 'info@wish-design-sk.com';//入力：ユーザー名（メールアカウント）
+//     $phpmailer->Password = 'Shintarou1379';//入力：パスワード
+//     $phpmailer->SMTPSecure = 'ssl';  //tls or ssl 暗号化の方式
+// }
