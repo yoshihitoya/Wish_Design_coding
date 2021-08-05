@@ -54,21 +54,12 @@
         }
     }
 
-    &__submit {
-        transform: translate(-7.3rem, calc(41rem + (1vw - 0.38rem) * 6.0773));
-        width: 14.5rem;
-        height: 3rem;
+    &__wrap {
+        margin: 0 auto;
 
-        @media (min-width: 1280px) {
-            font-size: 0.2vw;
-        }
-
-        a {
-            // transform: translate(calc(0.8rem + (1vw - 0.38rem) * -0.2), calc(-0.2rem + (1vw - 0.38rem) * 0));
-            font-size: 1.5rem;
-            letter-spacing: 0.3em;
-            line-height: 1.2666666666666666;
-            padding-left: 1rem;
+        .p-page-top {
+            left: 0%;
+            transform: translate(0%, 0%);
         }
     }
 }

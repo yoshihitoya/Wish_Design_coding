@@ -395,23 +395,3 @@ function send_mail()
 * 「thanksページへ移動」
 */
 add_action('template_redirect', 'send_mail');
-
-
-/**(必要かも)送信用メールサーバー（SMTP）設定
- *
- * ホスト名、ユーザーアカウント名、パスワードを入力すれば設定完了
- *
- *  追記： WordPressの入っているサーバーをSMTPとして認識
- *          →干渉すると送れない可能性？
- */
-// add_action('phpmailer_init', 'set_phpmailer_details');
-// function set_phpmailer_details($phpmailer)
-// {
-//     $phpmailer->isSMTP();//SMTP設定の有効化
-//     $phpmailer->Host = 'smtp.lolipop.jp';//入力：SMTPのホスト名（サーバー名）
-//     $phpmailer->SMTPAuth = true;//SMTP認証の有無
-//     $phpmailer->Port = '465';  //587 or 465 デフォルトは587、やむを得ない場合に465
-//     $phpmailer->Username = 'info@wish-design-sk.com';//入力：ユーザー名（メールアカウント）
-//     $phpmailer->Password = 'Shintarou1379';//入力：パスワード
-//     $phpmailer->SMTPSecure = 'ssl';  //tls or ssl 暗号化の方式
-// }

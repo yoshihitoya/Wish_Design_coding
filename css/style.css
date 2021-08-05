@@ -1536,7 +1536,8 @@ desc
 }
 @media (min-width: 480px) {
   .p-menu-btn--close {
-    margin-top: 4.84375vw;
+    left: calc(34.8rem + (1vw - 0.48rem) * -10);
+    margin-top: calc(7rem + (1vw - 0.48rem) * 3.25);
   }
 }
 @media (min-width: 480px) {
@@ -1653,21 +1654,20 @@ desc
 }
 
 .p-page-top {
-  width: 38.1333333333vw;
-  height: 8.5333333333vw;
-  margin-top: 17.3333333333vw;
+  width: 14.3rem;
+  height: 3.2rem;
+  margin-top: calc(6.5rem + (1vw - 0.38rem) * 2.7624);
 }
-@media (min-width: 480px) {
+@media (min-width: 1280px) {
   .p-page-top {
-    width: 11.171875vw;
-    height: 2.5vw;
-    margin-top: 7.03125vw;
+    margin-top: 9rem;
   }
 }
 .p-page-top p {
   letter-spacing: 0.4rem;
   text-indent: 0.4rem;
   text-align: center;
+  font-size: 1.5rem;
 }
 .p-page-top span {
   display: none;
@@ -2048,20 +2048,25 @@ desc
 .p-door404 {
   width: 100%;
   height: 100%;
+  margin-top: calc(8.5rem + (1vw - 0.38rem) * -1.2155);
+}
+@media (min-width: 1280px) {
+  .p-door404 {
+    margin-top: 7.4rem;
+  }
 }
 .p-door404__door {
   pointer-events: none;
-  width: 37.0666666667vw;
-  height: 59.7333333333vw;
+  margin-top: 22.6666666667vw;
+  width: calc(13.9rem + (1vw - 0.38rem) * 4.3094);
+  height: calc(22.4rem + (1vw - 0.38rem) * 6.7403);
   border-radius: 10px;
   margin: auto;
-  margin-top: 22.6666666667vw;
 }
-@media (min-width: 480px) {
+@media (min-width: 1280px) {
   .p-door404__door {
-    width: 13.90625vw;
-    height: 22.265625vw;
-    margin-top: 5.78125vw;
+    width: 17.8rem;
+    height: 28.5rem;
   }
 }
 .p-door404__door__num {
@@ -2969,21 +2974,12 @@ desc
     line-height: 3.3rem;
   }
 }
-.p-thanks__submit {
-  transform: translate(-7.3rem, calc(41rem + (1vw - 0.38rem) * 6.0773));
-  width: 14.5rem;
-  height: 3rem;
+.p-thanks__wrap {
+  margin: 0 auto;
 }
-@media (min-width: 1280px) {
-  .p-thanks__submit {
-    font-size: 0.2vw;
-  }
-}
-.p-thanks__submit a {
-  font-size: 1.5rem;
-  letter-spacing: 0.3em;
-  line-height: 1.2666666667;
-  padding-left: 1rem;
+.p-thanks__wrap .p-page-top {
+  left: 0%;
+  transform: translate(0%, 0%);
 }
 
 /* Text meant only for screen readers. */

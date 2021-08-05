@@ -108,7 +108,9 @@
   left: 70%;
 
   @include breakpoint(pc) {
-    margin-top: pxtovw-pc(62);
+    // margin-top: pxtovw-pc(62);
+    left: calc(34.8rem + (1vw - 0.48rem) * -10);
+    margin-top: calc(7rem + (1vw - 0.48rem) * 3.25);
   }
 
   &::before {

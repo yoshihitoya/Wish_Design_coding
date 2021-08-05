@@ -25,7 +25,6 @@ Template Name: works
         </div>
     </section>
 </article>
-<!-- ◇----------------------------------------------------------------------------------------------◇ -->
 <main class="p-media__wrap">
 
     <section class="p-media__grid">
@@ -33,18 +32,19 @@ Template Name: works
         if (have_posts()):
         while (have_posts()):the_post();
         ?>
-        <div class="c-card js-postcard">
+        <div class="c-card__wrap">
             <a href="<?php the_permalink(); ?>">
-                <div class="c-card__eyecatch">
-                    <?php the_post_thumbnail('thumbnail', array('class'=>'c-card__eyecatch-img')); ?>
-
-                </div>
-                <div class="c-card__info">
-                    <h2 class="c-card__ttl">
-                        <?php the_title(); ?>
-                    </h2>
-                    <div class="c-card__desc">
-                        <?php echo the_content(); ?>
+                <div class="c-card js-postcard">
+                    <div class="c-card__eyecatch">
+                        <?php the_post_thumbnail('thumbnail', array('class'=>'c-card__eyecatch-img')); ?>
+                    </div>
+                    <div class="c-card__info">
+                        <h2 class="c-card__ttl">
+                            <?php the_title(); ?>
+                        </h2>
+                        <div class="c-card__desc">
+                            <?php echo the_content(); ?>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -56,12 +56,10 @@ Template Name: works
 
     </section>
 
-    <!-- :::::::::追従ボタン::::::::: -->
     <button class="p-back-to-top u-grid">
         <p>Top</p><span>上へ戻る</span>
     </button>
 
 </main>
 
-<!-- ----フッターのテンプレート化 -> footer.php---- -->
 <?php get_footer(); ?>

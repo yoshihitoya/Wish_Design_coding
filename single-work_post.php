@@ -13,7 +13,6 @@ Template Name: work Detail
         while (have_posts()):the_post();
     ?>
     <article <?php post_class('p-detail__wrap'); ?>>
-        <!-- <article class="p-detail__wrap"> -->
         <h1 class="p-detail__ttl"><?php the_title(); ?></h1>
 
         <div class="p-detail__content">
@@ -21,7 +20,6 @@ Template Name: work Detail
         </div>
 
         <?php the_post_thumbnail('thunmbnail', array('class'=>'p-detail__img')); ?>
-        <!-- <?php wp_link_pages(); ?> -->
 
     </article>
 
@@ -47,12 +45,10 @@ Template Name: work Detail
     ?>
 
 
-    <!-- :::::::::追従ボタン::::::::: -->
     <button class="p-back-to-top u-grid">
         <p>Top</p><span>上へ戻る</span>
     </button>
 
 </main>
 
-<!-- ----フッターのテンプレート化 -> footer.php---- -->
 <?php get_footer(); ?>

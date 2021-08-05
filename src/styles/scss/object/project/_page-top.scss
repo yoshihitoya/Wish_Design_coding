@@ -1,19 +1,19 @@
 .p-page-top {
   @extend .p-base-btn;
-  width: pxtovw-sp(143);
-  height: pxtovw-sp(32);
-  margin-top: pxtovw-sp(65);
 
-  @include breakpoint( pc ) {
-    width: pxtovw-pc(143);
-    height: pxtovw-pc(32);
-    margin-top: pxtovw-pc(90);
+  width: 14.3rem;
+  height: 3.2rem;
+  margin-top: calc(6.5rem + (1vw - 0.38rem) * 2.7624);
+
+  @media (min-width: 1280px) {
+    margin-top: 9rem;
   }
 
   p {
-    letter-spacing: .4rem;
-    text-indent: .4rem;
+    letter-spacing: 0.4rem;
+    text-indent: 0.4rem;
     text-align: center;
+    font-size: 1.5rem;
   }
 
   // 矢印

@@ -6,7 +6,6 @@ Template Name: Top
 
 <?php get_header(); ?>
 
-<!-- メインビジュアル -->
 <article class="l-mainvisual p-mainvisual js-scroll--area" data-section-name="mainvisual">
     <section class="c-section-content">
         <div class="p-page-ttl">
@@ -18,13 +17,10 @@ Template Name: Top
             </div>
         </div>
         <button class="c-scroll-btn" id="section-scroller-button"><span>下へスクロール</span></button>
-        <!-- <a href="#section-scroll" class="c-scroll-btn" id="section-scroller-button"><span>下へスクロール</span></a> -->
     </section>
 </article>
-<!-- ◇----------------------------------------------------------------------------------------------◇ -->
 <main class="l-main">
 
-    <!-- :::::::::about::::::::: -->
     <article class="p-home-about">
 
         <section class="js-scroll--area p-scroll--area u-padding--10" id="section-scroll" data-section-name="about">
@@ -64,23 +60,21 @@ Template Name: Top
         </article>
     </article>
 
-    <!-- :::::::::works::::::::: -->
     <article class="p-home-works js-scroll--area p-scroll--area u-padding--12" data-section-name="works">
         <div class="c-section-content">
             <h2 class="p-content-ttl">Works</h2>
             <p class="c-txt--content u-margin--03 sp-hidden">今までいろんなお客様の「オモイ」を「カタチ」に変えてきました。</p>
 
 
-            <!-- カルーセル：直近のWorks記事を表示 -->
             <ul class="p-slick js-slick u-margin--04" id="slider">
                 <?php
   $args = array(
-    'posts_per_page' => 5, // 表示件数の指定
-    'post_type'=>'work_post'//表示したカスタム投稿名の指定
+    'posts_per_page' => 5,
+    'post_type'=>'work_post'
   );
   $posts = get_posts($args);
-  foreach ($posts as $post): // ループの開始
-  setup_postdata($post); // 記事データの取得
+  foreach ($posts as $post):
+  setup_postdata($post);
 ?>
                 <li>
                     <div class="c-slick-card">
@@ -102,8 +96,8 @@ Template Name: Top
                     </div>
                 </li>
                 <?php
-  endforeach; // ループの終了
-  wp_reset_postdata(); // 直前のクエリを復元する
+  endforeach;
+  wp_reset_postdata();
 ?>
             </ul>
 
@@ -116,7 +110,6 @@ Template Name: Top
     </article>
 
 
-    <!-- :::::::::flow::::::::: -->
     <article class="p-home-flow js-scroll--area p-scroll--area u-padding--13" data-section-name="flow">
         <div class="c-section-content">
             <h2 class="p-content-ttl">Flow</h2>
@@ -145,7 +138,6 @@ Template Name: Top
     </article>
 
 
-    <!-- :::::::::price::::::::: -->
     <article class="p-home-price js-scroll--area p-scroll--area u-padding--14" data-section-name="price">
         <div class="c-section-content">
             <h2 class="p-content-ttl">Price</h2>
@@ -164,7 +156,6 @@ Template Name: Top
         </div>
     </article>
 
-    <!-- :::::::::contact::::::::: -->
     <article class="p-home-contact js-scroll--area p-scroll--area u-padding--15" data-section-name="contact">
         <div class="c-section-content">
             <h2 class="p-content-ttl">Contact</h2>

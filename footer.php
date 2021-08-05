@@ -3,13 +3,11 @@
 </footer>
 </div>
 
-<!-- サイドメニューが表示されたときの背景画面 -->
 <div class="c-box--overlay"></div>
 
 <?php get_sidebar(); ?>
 <?php wp_footer(); ?>
 
-<!-- reCAPTCHAの実装 -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
 function validateRecaptcha(code) {

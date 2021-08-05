@@ -6,21 +6,8 @@ Template Name: contact
 <?php
 
 
-//::::お問い合わせフォームの実装::::
-
-/**$_SESSION['']を利用
- *
- * $_SESSION['']について
- * 値の引き継ぎが可能な変数
- * 処理の最後にdestroyする（値の破棄）
- */
     session_start();
-    
-/**入力値の初期化
- *
- * valueへ入れ込む値を変数として定義
- * 表示初めは何も入ってない状態なので””を表示
- */
+
     $office_name = "";
     $user_name ="";
     $email ="";
@@ -28,12 +15,6 @@ Template Name: contact
     $contact ="";
     $error_user_name ="";
 
-/**値の代入
- *
- * $_SESSIONに値が入っている場合に動作させる
- * functions.phpで作成した$_SESSIONの値を変数に代入
- *
- */
     if (! empty($_SESSION['office_name'])) {
         $office_name = $_SESSION['office_name'];
     }
@@ -66,10 +47,6 @@ Template Name: contact
         $error_contact = $_SESSION['error_contact'];
     }
 
-/**$_SESSIONの破棄
- *
- * 使用した$_SESSIONの値を引き継がないための処理
- */
     session_destroy();
 ?>
 
@@ -91,7 +68,6 @@ Template Name: contact
     </section>
 
 </article>
-<!-- ◇----------------------------------------------------------------------------------------------◇ -->
 <main class="l-main p-form__wrap">
 
     <p class="p-form__txt">
@@ -100,7 +76,6 @@ Template Name: contact
         承っておりますので、まずは一度ご相談ください。
     </p>
 
-    <!-- action: 情報の送信先, method:  -->
     <?php $page = get_page_by_path('thanks'); ?>
     <form class="p-form__form" action="<?php echo esc_url(get_permalink($page->ID)); ?>" method="post">
 
@@ -142,19 +117,16 @@ Template Name: contact
                 placeholder="ご相談内容をご記入ください（お見積り、サイト制作、サイトリニューアル）"><?php echo $contact; ?></textarea>
         </div>
 
-        <!-- reCAPTCHAの実装: reCAPTCHAにサイトを登録した際にメモしたsite keyを以下に入力 -->
         <div class="g-recaptcha" data-callback="validateRecaptcha"
             data-sitekey="6LcmKagbAAAAAGeGTNQEnyTfL4SiE9OpIGSpT0Ii"></div>
 
         <button class="p-form__submit p-base-btn u-margin--54">
-            <!-- reCAPTCHAの実装: recaptchaクラス及びdisabledの追加 -->
             <input type="submit" class="btn recaptcha" value="送信" disabled>
         </button>
     </form>
 
 
 
-    <!-- :::::::::追従ボタン::::::::: -->
     <button class="p-back-to-top u-grid">
         <p>Top</p><span>上へ戻る</span>
     </button>
@@ -162,5 +134,4 @@ Template Name: contact
 </main>
 
 
-<!-- ----フッターのテンプレート化 -> footer.php---- -->
 <?php get_footer(); ?>
