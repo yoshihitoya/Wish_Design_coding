@@ -57,13 +57,17 @@
         padding: 2.3rem 2.8rem 3rem;
 
         @media (min-width: 850px) {
-            padding: 4rem;
+            padding: 3rem;
         }
     }
 
     &__ttl {
-        max-height: 37.2%;
+        max-height: calc(2.8rem * 2);
         overflow: hidden;
+
+        @media (min-width: 850px) {
+            max-height: calc(3.2rem * 2);
+        }
 
         &--sub {
             display: block;
@@ -72,7 +76,36 @@
 
     &__desc {
         margin-top: calc(2.7rem + (1vw - 0.38rem) * -0.9);
-        max-height: 50%;
+        max-height: calc(2.1rem * 3);
         overflow: hidden;
+
+        @media (min-width: 480px) {
+            max-height: calc(2.1rem * 3);
+        }
+
+        @media (min-width: 540px) {
+            max-height: calc(2.1rem * 4);
+        }
+
+        @media (min-width: 650px) {
+            max-height: calc(2.1rem * 5);
+        }
+
+        @media (min-width: 770px) {
+            max-height: calc(2.1rem * 6);
+        }
+
+        @media (min-width: 850px) {
+            margin-top: 2rem;
+            max-height: calc(3rem * 2);
+        }
+
+        @media (min-width: 960px) {
+            max-height: calc(3rem * 3);
+        }
+
+        @media (min-width: 1200px) {
+            max-height: calc(3rem * 4);
+        }
     }
 }

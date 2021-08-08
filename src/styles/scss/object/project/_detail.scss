@@ -20,11 +20,8 @@
         }
     }
 
-    &__wrap {
-        text-align: center;
-    }
-
     &__ttl {
+        text-align: center;
         @include font-didot;
         font-weight: normal;
         font-size: 4rem;
@@ -117,6 +114,10 @@
                 }
             }
         }
+    }
+
+    figure {
+        text-align: center;
     }
 
     &__img {
