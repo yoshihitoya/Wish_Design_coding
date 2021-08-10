@@ -120,6 +120,11 @@ Template Name: contact
         <div class="g-recaptcha" data-callback="validateRecaptcha"
             data-sitekey="6LcmKagbAAAAAGeGTNQEnyTfL4SiE9OpIGSpT0Ii"></div>
 
+        <?php $page = get_page_by_path('privacy'); ?>
+        <button class="p-form__privacy">
+            <a href="<?php echo esc_url(get_permalink($page->ID)); ?>">プライバシーポリシー</a>
+        </button>
+
         <button class="p-form__submit p-base-btn u-margin--54">
             <input type="submit" class="btn recaptcha" value="送信" disabled>
         </button>

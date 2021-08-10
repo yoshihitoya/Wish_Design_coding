@@ -2534,14 +2534,18 @@ body.is-open {
     display: inline;
   }
 }
-.p-form__submit {
-  margin-top: calc(9rem + (1vw - 0.38rem) * -3.3149);
-  transform: translate(-50%, 0);
+.p-form__privacy {
+  display: block;
+  margin: 4rem auto;
 }
-@media (min-width: 1280px) {
-  .p-form__submit {
-    margin-top: 6rem;
-  }
+.p-form__privacy > a {
+  text-decoration: underline;
+}
+.p-form__privacy > a:hover {
+  color: #0000c7;
+}
+.p-form__submit {
+  transform: translate(-50%, 0);
 }
 .p-form__flex {
   margin-top: calc(4.9rem + (1vw - 0.38rem) * -6.1878);
@@ -2576,6 +2580,11 @@ body.is-open {
   .p-form__warning--txt {
     line-height: 2.245rem;
   }
+}
+
+.g-recaptcha {
+  display: flex;
+  justify-content: center;
 }
 
 /* Text meant only for screen readers. */
@@ -3021,6 +3030,99 @@ body.is-open {
 .p-thanks__wrap .p-page-top {
   left: 0%;
   transform: translate(0%, 0%);
+}
+
+.p-privacy {
+  padding-top: calc(15rem + (1vw - 0.38rem) * 5.5555);
+  padding-bottom: calc(9rem + (1vw - 0.38rem) * -2.0994);
+  margin-left: calc(2rem + (1vw - 0.38rem) * 18.7845);
+  margin-right: calc(2rem + (1vw - 0.38rem) * 18.7845);
+}
+@media (min-width: 1280px) {
+  .p-privacy {
+    max-width: 90rem;
+    padding-bottom: 7.1rem;
+    margin: 0 auto;
+  }
+}
+.p-privacy__heading {
+  text-align: center;
+}
+.p-privacy__heading > h1 {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  font-weight: bold;
+  font-weight: 400;
+  font-size: calc(2.5rem + (1vw - 0.38rem) * 0.5525);
+  letter-spacing: 0.3em;
+  line-height: 1.1666666667;
+}
+@media (min-width: 1280px) {
+  .p-privacy__heading > h1 {
+    font-size: 3rem;
+  }
+}
+.p-privacy__body {
+  padding-top: calc(10rem + (1vw - 0.38rem) * 5.5249);
+}
+@media (min-width: 1280px) {
+  .p-privacy__body {
+    padding-top: 15rem;
+  }
+}
+.p-privacy__subTtl {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  font-weight: bold;
+  font-weight: 600;
+  font-size: calc(1.8rem + (1vw - 0.38rem) * 0.221);
+  letter-spacing: 0.3em;
+  line-height: 2.3333333333;
+}
+@media (min-width: 1280px) {
+  .p-privacy__subTtl {
+    font-size: 2rem;
+  }
+}
+.p-privacy__txt {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  font-weight: bold;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.3em;
+  line-height: 2.3333333333;
+  padding-bottom: 3.5rem;
+}
+.p-privacy__subList {
+  padding-bottom: 3.5rem;
+}
+.p-privacy__listTtl, .p-privacy__subList {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  font-weight: bold;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.3em;
+  line-height: 2.3333333333;
+}
+.p-privacy__bottom {
+  padding-bottom: 7.5rem;
+}
+.p-privacy__btn {
+  transform: translate(-50%, 0);
+}
+.p-privacy span {
+  display: block;
+}
+@media (min-width: 480px) {
+  .p-privacy span {
+    display: inline;
+  }
+}
+.p-privacy span:before {
+  content: " 　 ";
+}
+@media (min-width: 480px) {
+  .p-privacy span:before {
+    display: none;
+  }
 }
 
 /* Text meant only for screen readers. */

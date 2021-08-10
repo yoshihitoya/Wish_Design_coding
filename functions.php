@@ -124,9 +124,13 @@ function file_load_scripts_styles()
         wp_enqueue_script('modaal', get_template_directory_uri() . '/js/modaal.js', array(), '', true);
     } elseif (is_page('about') || is_page('flow')) {
         wp_enqueue_script('timelineanime', get_template_directory_uri() . '/js/scrollTimelineAnime.js', array(), '', true);
+    } elseif (is_page('contact')) {
+        wp_enqueue_script('recaptcha', 'https://www.google.com/recaptcha/api.js', array(), '1.0.0');
+        wp_enqueue_script('validateRecaotcha', get_template_directory_uri() . '/js/validateRecaptcha.js', array(), '', true);
     }
 }
 add_action('wp_footer', 'file_load_scripts_styles');// wp_footerに処理を登録
+
 
 
 

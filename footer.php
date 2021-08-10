@@ -8,14 +8,7 @@
 <?php get_sidebar(); ?>
 <?php wp_footer(); ?>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
-function validateRecaptcha(code) {
-    if (!!code) {
-        var form = document.querySelector(".recaptcha");
-        form.removeAttribute('disabled');
-    }
-}
+
 </script>
 </body>
 

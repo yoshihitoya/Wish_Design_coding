@@ -20,6 +20,7 @@ Template Name: work Detail
         </div>
 
         <?php the_post_thumbnail('thunmbnail', array('class'=>'p-detail__img')); ?>
+        <?php wp_link_pages(); ?>
 
     </article>
 

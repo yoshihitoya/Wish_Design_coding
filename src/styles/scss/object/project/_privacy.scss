@@ -1,0 +1,92 @@
+.p-privacy {
+    padding-top: calc(15rem + (1vw - 0.38rem) * 5.5555);
+    padding-bottom: calc(9rem + (1vw - 0.38rem) * -2.0994);
+
+    //ここ変更　PCで900px
+    margin-left: calc(2rem + (1vw - 0.38rem) * 18.7845);
+    margin-right: calc(2rem + (1vw - 0.38rem) * 18.7845);
+
+    @media (min-width: 1280px) {
+        max-width: 90rem;
+        padding-bottom: 7.1rem;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        text-align: center;
+        & > h1 {
+            @include font-yumincho;
+            font-weight: 400;
+            font-size: calc(2.5rem + (1vw - 0.38rem) * 0.5525);
+            letter-spacing: 0.3em;
+            line-height: 1.1666666666666667;
+
+            @media (min-width: 1280px) {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &__body {
+        padding-top: calc(10rem + (1vw - 0.38rem) * 5.5249);
+
+        @media (min-width: 1280px) {
+            padding-top: 15rem;
+        }
+    }
+
+    &__subTtl {
+        @include font-yumincho;
+        font-weight: 600;
+        font-size: calc(1.8rem + (1vw - 0.38rem) * 0.221);
+        letter-spacing: 0.3em;
+        line-height: 2.3333333333333335;
+
+        @media (min-width: 1280px) {
+            font-size: 2rem;
+        }
+    }
+
+    &__txt {
+        @include font-yumincho;
+        font-weight: 400;
+        font-size: 1.5rem;
+        letter-spacing: 0.3em;
+        line-height: 2.3333333333333335;
+        padding-bottom: 3.5rem;
+    }
+
+    &__subList {
+        padding-bottom: 3.5rem;
+    }
+
+    &__listTtl,
+    &__subList {
+        @include font-yumincho;
+        font-weight: 400;
+        font-size: 1.5rem;
+        letter-spacing: 0.3em;
+        line-height: 2.3333333333333335;
+    }
+
+    &__bottom {
+        padding-bottom: 7.5rem;
+    }
+
+    &__btn {
+        transform: translate(-50%, 0);
+    }
+    span {
+        display: block;
+        @include breakpoint(pc) {
+            display: inline;
+        }
+
+        &:before {
+            content: " 　 ";
+            @include breakpoint(pc) {
+                display: none;
+            }
+        }
+    }
+}
