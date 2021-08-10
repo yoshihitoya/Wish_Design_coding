@@ -132,18 +132,6 @@ function file_load_scripts_styles()
 add_action('wp_footer', 'file_load_scripts_styles');// wp_footerに処理を登録
 
 
-
-
-//--------------------------------------------
-// uri指定のショートコード
-//--------------------------------------------
-function shortcode_tp()
-{
-    return get_template_directory_uri();
-}
-add_shortcode('uri', 'shortcode_tp');
-
-
 //--------------------------------------------
 // メニューバー作成
 //--------------------------------------------

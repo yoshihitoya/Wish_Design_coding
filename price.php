@@ -60,9 +60,11 @@ Template Name: Price
                 タップすると詳細が見えます
             </p>
             <figure class="c-img-item u-margin--53">
-                <a href="<?php echo do_shortcode('[uri]'); ?>/images/wishdesign_price_pc.png" class="js-modal">
-                    <img class="" src="<?php echo do_shortcode('[uri]'); ?>/images/wishdesign_price_sp.png"
-                        srcset="<?php echo do_shortcode('[uri]'); ?>/images/wishdesign_price_sp.png 670w,<?php echo do_shortcode('[uri]'); ?>/images/wishdesign_price_pc.png 1728w"
+                <a href="<?php echo esc_url(get_template_directory_uri().'/images/wishdesign_price_pc.png'); ?>"
+                    class="js-modal">
+                    <img class=""
+                        src="<?php echo esc_url(get_template_directory_uri().'/images/wishdesign_price_sp.png'); ?>"
+                        srcset="<?php echo esc_url(get_template_directory_uri().'/images/wishdesign_price_sp.png'); ?> 670w,<?php echo esc_url(get_template_directory_uri().'/images/wishdesign_price_pc.png'); ?> 1728w"
                         sizes="(max-width:480px) 375px, 100vw" alt="">
                 </a>
             </figure>

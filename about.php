@@ -48,7 +48,7 @@ Template Name: About
         <p class="u-margin--24">お客様のお話を深く聞き言葉のキャッチボールするために<br>
             まずは自己紹介をさせていただきます。</p>
         <figure class="p-card--profile u-margin--25">
-            <img src="<?php echo do_shortcode('[uri]'); ?>/images/profile.png" alt="小林真太朗の写真">
+            <img src="<?php echo esc_url(get_template_directory_uri().'/images/profile.png'); ?>" alt="小林真太朗の写真">
             <figcaption class="p-card--profile__caption">
                 <dl class="c-dl--pro">
                     <dt class="u-margin--26">小林真太朗</dt>
