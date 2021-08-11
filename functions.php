@@ -61,7 +61,7 @@ function file_load_scripts_styles()
         wp_enqueue_script('timelineanime', get_template_directory_uri() . '/js/scrollTimelineAnime.js', array(), '', true);
     } elseif (is_page('contact')) {
         wp_enqueue_script('recaptcha', 'https://www.google.com/recaptcha/api.js', array(), '1.0.0');
-        wp_enqueue_script('validateRecaotcha', get_template_directory_uri() . '/js/validateRecaptcha.js', array(), '', true);
+        wp_enqueue_script('validateRecaptcha', get_template_directory_uri() . '/js/validateRecaptcha.js', array(), '', true);
     }
 }
 add_action('wp_footer', 'file_load_scripts_styles');// wp_footerに処理を登録
@@ -71,7 +71,7 @@ add_action('wp_footer', 'file_load_scripts_styles');// wp_footerに処理を登�
 // メニューバー作成
 //--------------------------------------------
 register_nav_menus(array(
-  'global_nav' => esc_html__('グローバルナビゲーション', 'wish_design_m'),
+  'global_nav' => esc_html__('グローバルナビゲーション', 'wish-design'),
 ));
 
 
@@ -132,7 +132,7 @@ if (!isset($content_width)) {
 //--------------------------------------------
 function wishdesign_theme_setup()
 {
-    load_theme_textdomain('wish_design_m', get_template_directory() . '/languages');
+    load_theme_textdomain('wish-design', get_template_directory() . '/languages');
 }
 add_action('after_setup_theme', 'wishdesign_theme_setup');
 
