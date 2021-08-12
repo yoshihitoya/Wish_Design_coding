@@ -43,6 +43,7 @@ wp_enqueue_script('sidemenu', get_template_directory_uri() . '/js/sidemenu.js', 
 wp_enqueue_script('postcard', get_template_directory_uri() . '/js/postcard.js', array(), '', true);
 
 
+
 function file_load_scripts_styles()
 {
     if (is_front_page() || is_home() || is_page('home')) {
@@ -60,12 +61,12 @@ function file_load_scripts_styles()
     } elseif (is_page('about') || is_page('flow')) {
         wp_enqueue_script('timelineanime', get_template_directory_uri() . '/js/scrollTimelineAnime.js', array(), '', true);
     } elseif (is_page('contact')) {
-        wp_enqueue_script('recaptcha', 'https://www.google.com/recaptcha/api.js', array(), '1.0.0');
+        wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), '1.0.0', true);
         wp_enqueue_script('validateRecaptcha', get_template_directory_uri() . '/js/validateRecaptcha.js', array(), '', true);
     }
 }
-add_action('wp_footer', 'file_load_scripts_styles');// wp_footerに処理を登録
-
+    add_action('wp_footer', 'file_load_scripts_styles');// wp_footerに処理を登録
+    
 
 //--------------------------------------------
 // メニューバー作成
