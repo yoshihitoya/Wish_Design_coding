@@ -36,6 +36,10 @@
   }
 
   p {
+    width: 100%;
+    height: 100%;
+    line-height: pxtovw-sp(43.31);
+
     @include font-didot;
     font-size: pxtovw-sp(16);
 
@@ -43,6 +47,7 @@
       font-size: pxtovw-pc(20);
       letter-spacing: -0.04rem;
       text-indent: -0.04rem;
+      line-height: pxtovw-pc(50);
     }
   }
 

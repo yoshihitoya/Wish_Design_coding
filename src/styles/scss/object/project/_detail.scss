@@ -138,4 +138,16 @@
             margin-top: 4rem;
         }
     }
+
+    &__link {
+        &--tax {
+            margin-top: 10rem;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+        }
+
+        &--top {
+            bottom: 10rem;
+        }
+    }
 }

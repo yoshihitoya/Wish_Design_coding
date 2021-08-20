@@ -60,6 +60,20 @@
         }
     }
 
+    &__wrap.works {
+        margin-top: calc(-7.3rem + (1vw - 0.38rem) * 46.3); //headerがfixedの時
+        margin-left: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
+        margin-right: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
+
+        @include breakpoint(pc) {
+            margin-top: calc(-10rem + (1vw - 0.38rem) * 23);
+        }
+
+        @media (min-width: 1280px) {
+            margin-top: 10.7rem;
+        }
+    }
+
     &__grid {
         display: flex;
         justify-content: space-around;

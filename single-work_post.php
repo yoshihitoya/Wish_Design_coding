@@ -15,11 +15,12 @@ Template Name: work Detail
     <article <?php post_class('p-detail__wrap'); ?>>
         <h1 class="p-detail__ttl"><?php the_title(); ?></h1>
 
+        <?php the_post_thumbnail('thunmbnail', array('class'=>'p-detail__img')); ?>
+
         <div class="p-detail__content">
             <?php the_content(); ?>
         </div>
 
-        <?php the_post_thumbnail('thunmbnail', array('class'=>'p-detail__img')); ?>
         <?php wp_link_pages(); ?>
 
     </article>
@@ -45,10 +46,15 @@ Template Name: work Detail
     endif;
     ?>
 
+    <button class="p-detail__link--tax  p-base-btn u-margin--54">
+        <a href="<?php echo get_post_type_archive_link('work_post'); ?>">Works一覧へ</a>
+    </button>
 
-    <button class="p-back-to-top u-grid">
+    <button class="p-back-to-top p-detail__link--top u-grid">
         <p>Top</p><span>上へ戻る</span>
     </button>
+
+
 
 </main>
 

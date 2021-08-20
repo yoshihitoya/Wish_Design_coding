@@ -31,7 +31,14 @@ img {
   height: auto;
 }
 
-h1, h2, h3, h4, h5, h6, p, figure {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -46,12 +53,15 @@ a:hover {
   opacity: 0.6;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
 
-li, dl, dd {
+li,
+dl,
+dd {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -181,7 +191,7 @@ body.is-open {
   cursor: pointer;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0px);
   top: unset;
   background: #F4F4F4;
   box-shadow: 5px 5px 8px 1px #b9b9b9, -5px -5px 8px -1px #ffffff;
@@ -332,7 +342,7 @@ body.is-open {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0px);
   text-align: center;
   width: 100%;
 }
@@ -574,7 +584,7 @@ body.is-open {
 }
 .c-card__eyecatch-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 2% 2% 0 0;
@@ -889,7 +899,7 @@ body.is-open {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0px);
   transform: translate(-50%, -147%);
   z-index: 950;
 }
@@ -912,7 +922,7 @@ body.is-open {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0px);
   z-index: -1;
 }
 @media (min-width: 480px) {
@@ -927,7 +937,7 @@ body.is-open {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0px);
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
   font-weight: bold;
   font-weight: 400;
@@ -954,7 +964,7 @@ body.is-open {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0px);
   z-index: -2;
 }
 @media (min-width: 480px) {
@@ -1303,13 +1313,13 @@ body.is-open {
 }
 
 .page-template-works .p-mainvisual-txt,
-.tax-works .p-mainvisual-txt {
+.post-type-archive-work_post .p-mainvisual-txt {
   margin: 0 5.3333333333vw 0 5.3333333333vw;
   top: 66.5%;
 }
 @media (min-width: 480px) {
   .page-template-works .p-mainvisual-txt,
-.tax-works .p-mainvisual-txt {
+.post-type-archive-work_post .p-mainvisual-txt {
     top: 60%;
     margin: unset;
   }
@@ -1435,6 +1445,8 @@ body.is-open {
   }
 }
 .p-back-to-top p {
+  width: 100%;
+  height: 100%;
   grid-row: 2;
   font-size: 2.1333333333vw;
   align-self: flex-start;
@@ -1495,6 +1507,9 @@ body.is-open {
   background: #ffffff;
 }
 .p-menu-btn p, .p-menu-btn-sub p, .p-menu-btn--close p {
+  width: 100%;
+  height: 100%;
+  line-height: 11.5493333333vw;
   font-family: "GFS Didot", Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
   font-weight: normal;
   font-size: 4.2666666667vw;
@@ -1504,6 +1519,7 @@ body.is-open {
     font-size: 1.5625vw;
     letter-spacing: -0.04rem;
     text-indent: -0.04rem;
+    line-height: 3.90625vw;
   }
 }
 .p-menu-btn span, .p-menu-btn-sub span, .p-menu-btn--close span,
@@ -1589,7 +1605,7 @@ body.is-open {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0px);
   grid-auto-flow: column;
   grid-template-columns: repeat(2, auto);
   -moz-column-gap: 20px;
@@ -1639,6 +1655,9 @@ body.is-open {
   }
 }
 .p-menu-btn-sub p {
+  width: 100%;
+  height: 100%;
+  line-height: 8.2666666667vw;
   font-size: 3.2vw;
 }
 @media (min-width: 480px) {
@@ -1646,6 +1665,7 @@ body.is-open {
     font-size: 1.5625vw;
     letter-spacing: -0.04rem;
     text-indent: -0.04rem;
+    line-height: 3.90625vw;
   }
 }
 .p-menu-btn-sub span {
@@ -2760,6 +2780,14 @@ body.is-open {
     margin-top: 4rem;
   }
 }
+.p-detail__link--tax {
+  margin-top: 10rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+}
+.p-detail__link--top {
+  bottom: 10rem;
+}
 
 .p-media__header {
   position: static;
@@ -2816,6 +2844,21 @@ body.is-open {
 }
 @media (min-width: 1280px) {
   .p-media__wrap {
+    margin-top: 10.7rem;
+  }
+}
+.p-media__wrap.works {
+  margin-top: calc(-7.3rem + (1vw - 0.38rem) * 46.3);
+  margin-left: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
+  margin-right: calc(2.8rem + (1vw - 0.38rem) * 10.7182);
+}
+@media (min-width: 480px) {
+  .p-media__wrap.works {
+    margin-top: calc(-10rem + (1vw - 0.38rem) * 23);
+  }
+}
+@media (min-width: 1280px) {
+  .p-media__wrap.works {
     margin-top: 10.7rem;
   }
 }

@@ -65,7 +65,7 @@ Template Name: Price
                     <img class=""
                         src="<?php echo esc_url(get_template_directory_uri().'/images/wishdesign_price_sp.png'); ?>"
                         srcset="<?php echo esc_url(get_template_directory_uri().'/images/wishdesign_price_sp.png'); ?> 670w,<?php echo esc_url(get_template_directory_uri().'/images/wishdesign_price_pc.png'); ?> 1728w"
-                        sizes="(max-width:480px) 375px, 100vw" alt="">
+                        sizes="(max-width:480px) 375px, 100vw" alt="Wish Design制作料金表">
                 </a>
             </figure>
 

@@ -61,12 +61,36 @@ function file_load_scripts_styles()
     } elseif (is_page('about') || is_page('flow')) {
         wp_enqueue_script('timelineanime', get_template_directory_uri() . '/js/scrollTimelineAnime.js', array(), '', true);
     } elseif (is_page('contact')) {
-        wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), '1.0.0', true);
-        wp_enqueue_script('validateRecaptcha', get_template_directory_uri() . '/js/validateRecaptcha.js', array(), '', true);
+        echo <<< EOM
+        <script>
+        
+        function validateRecaptcha(code) {
+            if (!!code) {
+                var form = document.querySelector(".recaptcha");
+                form.removeAttribute('disabled');
+            }
+        }
+        </script>
+        EOM;
     }
 }
     add_action('wp_footer', 'file_load_scripts_styles');// wp_footerに処理を登録
     
+
+/** reCAPTCHA スクリプトの読み込み */
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), false, false);
+});
+  
+  /** reCAPTCHA スクリプトに async と defer を追加し非同期で読み込み */
+  add_filter('script_loader_tag', function ($tag, $handle, $src) {
+      if ('google-recaptcha' === $handle) {
+          $tag = '<script src="' . esc_url($src) . '" async defer></script>';
+      }
+  
+      return $tag;
+  }, 10, 3);
+
 
 //--------------------------------------------
 // メニューバー作成
