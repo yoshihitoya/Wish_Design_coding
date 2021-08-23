@@ -2,7 +2,7 @@
     <small class="c-copyright">&copy; 2021 Wish Design</small>
 </footer>
 </div>
-
+<div class="u-display--fade"></div>
 <div class="c-box--overlay"></div>
 
 <?php get_sidebar(); ?>

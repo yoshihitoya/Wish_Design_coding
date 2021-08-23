@@ -36,7 +36,7 @@ Template Name: works
             <a href="<?php the_permalink(); ?>">
                 <div class="c-card js-postcard">
                     <div class="c-card__eyecatch">
-                        <?php the_post_thumbnail('full', array('class'=>'c-card__eyecatch-img')); ?>
+                        <?php the_post_thumbnail('midium', array('class'=>'c-card__eyecatch-img')); ?>
                     </div>
                     <div class="c-card__info">
                         <h2 class="c-card__ttl">

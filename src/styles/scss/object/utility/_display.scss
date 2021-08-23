@@ -12,6 +12,15 @@
   justify-content: space-between;
 }
 
+.u-display--fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  background-color: $base-color;
+}
 
 // .u-disp {
 // 	&--sp {

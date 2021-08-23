@@ -10,6 +10,8 @@
     <meta name="keywords" content="検索ワードを記述（５つまで）">
 
     <?php wp_head();?>
+    <link rel="preload" as="image" href="<?php get_template_directory_uri().'../images/home_mainvisual_sp.svg' ?>" />
+    <link rel="preload" as="image" href="<?php get_template_directory_uri().'../images/home_mainvisual_pc.svg' ?>" />
 </head>
 
 <body <?php body_class(); ?>>

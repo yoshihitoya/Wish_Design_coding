@@ -1,13 +1,20 @@
+jQuery(function ($) {
+  $('.u-display--fade').delay(700);
+  $('.u-display--fade').fadeOut(2000);
+});
+
+
 // ヘッダータイトル：スクロールしたら消える
-jQuery(function($) {
+jQuery(function ($) {
   let ttl = $('#js-ttl');
-  
+
   //スクロールしてページトップから100に達したらボタンを表示
-  $(window).on('load scroll', function(){
-    if($(this).scrollTop() > 100) {
+  $(window).on('load scroll', function () {
+    if ($(this).scrollTop() > 100) {
       ttl.addClass('fade');
-    }else{
+    } else {
       ttl.removeClass('fade');
     }
   });
 });
+

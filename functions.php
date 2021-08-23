@@ -37,6 +37,7 @@ add_action('wp_enqueue_scripts', 'wishdesign_script');
 //jqueryを読み込む
 //--------------------------------------------
 wp_enqueue_script('jquery');
+wp_enqueue_script('passive', get_template_directory_uri() . '/js/passive.js', array(), '', true);
 wp_enqueue_script('header', get_template_directory_uri() . '/js/header.js', array(), '', true);
 wp_enqueue_script('totopbtn', get_template_directory_uri() . '/js/toTopBtn.js', array(), '', true);
 wp_enqueue_script('sidemenu', get_template_directory_uri() . '/js/sidemenu.js', array(), '', true);
@@ -62,8 +63,9 @@ function file_load_scripts_styles()
         wp_enqueue_script('timelineanime', get_template_directory_uri() . '/js/scrollTimelineAnime.js', array(), '', true);
     } elseif (is_page('contact')) {
         echo <<< EOM
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
         <script>
-        
         function validateRecaptcha(code) {
             if (!!code) {
                 var form = document.querySelector(".recaptcha");
@@ -77,19 +79,19 @@ function file_load_scripts_styles()
     add_action('wp_footer', 'file_load_scripts_styles');// wp_footerに処理を登録
     
 
-/** reCAPTCHA スクリプトの読み込み */
-add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), false, false);
-});
+// /** reCAPTCHA スクリプトの読み込み */
+// add_action('wp_enqueue_scripts', function () {
+//     wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), false, false);
+// });
   
-  /** reCAPTCHA スクリプトに async と defer を追加し非同期で読み込み */
-  add_filter('script_loader_tag', function ($tag, $handle, $src) {
-      if ('google-recaptcha' === $handle) {
-          $tag = '<script src="' . esc_url($src) . '" async defer></script>';
-      }
+//   /** reCAPTCHA スクリプトに async と defer を追加し非同期で読み込み */
+//   add_filter('script_loader_tag', function ($tag, $handle, $src) {
+//       if ('google-recaptcha' === $handle) {
+//           $tag = '<script src="' . esc_url($src) . '" async defer></script>';
+//       }
   
-      return $tag;
-  }, 10, 3);
+//       return $tag;
+//   }, 10, 3);
 
 
 //--------------------------------------------
