@@ -1,5 +1,7 @@
 # Wish_Design_coding
 
+
+
 2021/07/02
 Wish Designのプロジェクトに途中参加
 ・Contact, Media一覧, Media詳細の3ページのコーディング依頼を受諾
